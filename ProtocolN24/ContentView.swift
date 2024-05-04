@@ -15,7 +15,7 @@ struct ContentView: View {
                 .tabItem{ Label("Progress", systemImage: "chart.line.uptrend.xyaxis") }
 
             LearnView()
-                .tabItem{ Label("Learn", systemImage: "book") }
+                .tabItem{ Label("Learn   ", systemImage: "book") }
         }
     }
 }

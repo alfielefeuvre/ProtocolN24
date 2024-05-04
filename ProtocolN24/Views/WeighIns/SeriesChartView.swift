@@ -11,6 +11,8 @@ import SwiftUI
 
 struct SeriesChartView: View {
     
+    var weekRef: Int 
+    
     var body: some View {
         Section("Series Chart") {
             VStack {
@@ -36,7 +38,7 @@ struct SeriesChartView: View {
                 }
                 .chartYScale(domain: [84, 90])
               
-                Text("Week [n]")
+                Text("Week \(weekRef)")
             }
             .frame(height: 200)
             .padding()

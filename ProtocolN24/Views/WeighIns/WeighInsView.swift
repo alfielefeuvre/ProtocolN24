@@ -9,18 +9,39 @@ import SwiftData
 import SwiftUI
 
 struct WeighInsView: View {
+    @State var weekRef: Int = 0
+    @State var weekRefPrevious: Int = 0
+    var calendar = Calendar(identifier: .gregorian)
     
     var body: some View {
         NavigationView {
             List{
                 AddWeighInView()
-                SeriesChartView()
-                Week4ChartView()
+                SeriesChartView(weekRef: weekRef)
+                SeriesChartView(weekRef: weekRefPrevious)
+               Week4ChartView()
                 WeightWeekView()
                 WeighInDataView()
             }
             .navigationTitle("Progress")
         }
+        .onAppear{
+            weekRef = calendar.component(.weekOfYear, from: Date.now)
+            weekRefPrevious = weekRef - 1
+            if weekRefPrevious < 1 { weekRefPrevious = 52}
+        
+            
+            WeighInData.last7Days[1].weighIns[0].weight = 89
+            
+        }
+    }
+    
+    func updateWeighIns() {
+        
+        
+        
+        // update average
+        
     }
 }
 
@@ -31,6 +52,7 @@ struct AddWeighInView: View {
     
     @State private var dateToAdd = Date.now
     @State private var weightToAdd: Double = 85.1
+    @State private var weightAdded = false
     
     var weekInYear: Int {
         return calendar.component(.weekOfYear, from: dateToAdd)
@@ -49,6 +71,7 @@ struct AddWeighInView: View {
             
             HStack {
                 Button("Add Weight") { addWeighIn() }
+                    .disabled(weightAdded)
                 Spacer()
                 Text("Week: \(weekInYear)")
             }
@@ -56,11 +79,9 @@ struct AddWeighInView: View {
             HStack {
                 Text("Day of Week: \(calendar.component(.weekday, from: dateToAdd))")
                 Spacer()
-                Button("Sample Data") { addSampleData() }
             }
         }.onAppear{
             if weighIns.count > 0 {
-                //weightToAdd = weighIns[weighIns.count-1].weight
                 weightToAdd = 82
             }
         }
@@ -75,32 +96,8 @@ struct AddWeighInView: View {
                                                day: calendar.component(.day, from: dateToAdd)))
         modelContext.insert(newWeighIn)
         try? modelContext.save()
-    }
-    
-    func addSampleData() {
-        let wI1 = WeighIn(weekOfYear: calendar.component(.weekOfYear, from: dateToAdd),
-                          dayOfWeek: 1, weight: 85.1,
-                          date: dateGet(year: 2023, month: 11, day: 12))
-        let wI2 = WeighIn(weekOfYear: calendar.component(.weekOfYear, from: dateToAdd),
-                          dayOfWeek: 3, weight: 85.2,
-                          date: dateGet(year: 2023, month: 11, day: 12))
-        let wI3 = WeighIn(weekOfYear: calendar.component(.weekOfYear, from: dateToAdd),
-                          dayOfWeek: 4, weight: 85.3,
-                          date: dateGet(year: 2023, month: 11, day: 12))
-        let wI4 = WeighIn(weekOfYear: calendar.component(.weekOfYear, from: dateToAdd),
-                          dayOfWeek: 6, weight: 85.4,
-                          date: dateGet(year: 2023, month: 11, day: 12))
-        let wI5 = WeighIn(weekOfYear: calendar.component(.weekOfYear, from: dateToAdd),
-                          dayOfWeek: 7, weight: 85.5,
-                          date: dateGet(year: 2023, month: 11, day: 12))
         
-        modelContext.insert(wI1)
-        modelContext.insert(wI2)
-        modelContext.insert(wI3)
-        modelContext.insert(wI4)
-        modelContext.insert(wI5)
-        
-        try? modelContext.save()
+        weightAdded = true
     }
     
     func dateGet(year: Int, month: Int, day: Int = 1) -> Date {

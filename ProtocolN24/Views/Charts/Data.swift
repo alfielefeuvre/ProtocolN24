@@ -15,7 +15,7 @@ func dateGet(year: Int, month: Int, day: Int = 1) -> Date {
 struct WeighInData {
     /// A data series for the lines.
     struct Series: Identifiable {
-        /// The name of the series displed in teh legend.
+        /// The name of the series displayed in the legend.
         let name: String
 
         /// WeighIn for each week.

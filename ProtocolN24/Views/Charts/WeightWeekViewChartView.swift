@@ -29,7 +29,16 @@ struct WeightWeekViewChartView: View {
                         x: .value("Date", weighIn.dayOfWeek),
                         y: .value("Weight", weighIn.weight)
                     )
+                }              
+                .chartXAxis {
+                    AxisMarks(values: .stride(by: .day)) { _ in
+                        AxisTick()
+                        AxisGridLine()
+                        AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
+                    }
                 }
+                .chartYScale(domain: [80, 85])
+                
                 Button("Week: \(week)"){ filterSort() }
             }
         }.padding()
