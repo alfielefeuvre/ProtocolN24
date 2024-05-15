@@ -17,12 +17,12 @@ struct Lesson1Card: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .frame(width: 250, height: 140)
                 .shadow(radius: 4)
-                .opacity(0.3)
+               // .opacity(0.3)
                 .overlay {
                     RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 1)
                 }
             
-            Text("lesson.headline")
+            Text("Start Here!")
                 .foregroundColor(.black)
                 .multilineTextAlignment(.center)
                 .frame(width: 245)
