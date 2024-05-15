@@ -16,7 +16,6 @@ struct LearnView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .top, spacing: 0) {
                             NavigationLink { Lesson1() } label: { Lesson1Card() }
-                           
                         }
                     }
                     .frame(height: 150)
