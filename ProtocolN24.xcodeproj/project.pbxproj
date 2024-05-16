@@ -21,6 +21,8 @@
 		14AD6F0D2B03ED67005DE26E /* WeighInsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0C2B03ED67005DE26E /* WeighInsView.swift */; };
 		14AD6F102B03F82C005DE26E /* WeighIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0F2B03F82C005DE26E /* WeighIn.swift */; };
 		14AD6F132B03F84F005DE26E /* WeighWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F122B03F84F005DE26E /* WeighWeek.swift */; };
+		14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5212BF695A4006861A7 /* Lesson.swift */; };
+		14B5E5242BF69857006861A7 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5232BF69857006861A7 /* LessonView.swift */; };
 		14D085512B0737020037079F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D085502B0737020037079F /* Data.swift */; };
 		14D085532B073AA70037079F /* SeriesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D085522B073AA70037079F /* SeriesChartView.swift */; };
 		14EC26B22B0A5BC400CAA9B4 /* Lesson1Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26B12B0A5BC400CAA9B4 /* Lesson1Card.swift */; };
@@ -66,6 +68,8 @@
 		14AD6F0C2B03ED67005DE26E /* WeighInsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighInsView.swift; sourceTree = "<group>"; };
 		14AD6F0F2B03F82C005DE26E /* WeighIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighIn.swift; sourceTree = "<group>"; };
 		14AD6F122B03F84F005DE26E /* WeighWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighWeek.swift; sourceTree = "<group>"; };
+		14B5E5212BF695A4006861A7 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		14B5E5232BF69857006861A7 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		14D085502B0737020037079F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		14D085522B073AA70037079F /* SeriesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesChartView.swift; sourceTree = "<group>"; };
 		14EC26B12B0A5BC400CAA9B4 /* Lesson1Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1Card.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 		14AD6F112B03F832005DE26E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				14B5E5212BF695A4006861A7 /* Lesson.swift */,
 				14AD6F122B03F84F005DE26E /* WeighWeek.swift */,
 				14AD6F0F2B03F82C005DE26E /* WeighIn.swift */,
 			);
@@ -203,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				14AD6F0A2B03ED52005DE26E /* LearnView.swift */,
+				14B5E5232BF69857006861A7 /* LessonView.swift */,
 				14EC26B12B0A5BC400CAA9B4 /* Lesson1Card.swift */,
 				14EC26B52B0A5F4000CAA9B4 /* Lesson2Card.swift */,
 				14EC26B32B0A5D0600CAA9B4 /* Lesson1.swift */,
@@ -352,6 +358,7 @@
 			files = (
 				14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */,
 				14AD6EE32B03EA6D005DE26E /* ContentView.swift in Sources */,
+				14B5E5242BF69857006861A7 /* LessonView.swift in Sources */,
 				14D085532B073AA70037079F /* SeriesChartView.swift in Sources */,
 				14EC26B22B0A5BC400CAA9B4 /* Lesson1Card.swift in Sources */,
 				14EC26B62B0A5F4000CAA9B4 /* Lesson2Card.swift in Sources */,
@@ -359,6 +366,7 @@
 				14AD6F132B03F84F005DE26E /* WeighWeek.swift in Sources */,
 				14AD6F102B03F82C005DE26E /* WeighIn.swift in Sources */,
 				14A80C4D2B055683009F46C9 /* WeightWeekViewChartView.swift in Sources */,
+				14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */,
 				14AD6F0D2B03ED67005DE26E /* WeighInsView.swift in Sources */,
 				14EC26B42B0A5D0600CAA9B4 /* Lesson1.swift in Sources */,
 				14D085512B0737020037079F /* Data.swift in Sources */,

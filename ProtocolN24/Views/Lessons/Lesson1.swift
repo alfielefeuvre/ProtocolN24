@@ -8,15 +8,33 @@
 import SwiftUI
 
 struct Lesson1: View {
-    let devideWidth = UIScreen.main.bounds.width
+    let devideWidth = UIScreen.main.bounds.width * 0.95
     
     @State private var selectedSetting = "Fat Loss"
+    @State private var isQ1Showing = false
     let settings = ["Fat Loss", "Muscle Gain"]
-        
-    
+         
     var body: some View {
         ScrollView {
        
+            ZStack {
+                RoundedRectangle(cornerRadius: 12.0)
+            //        .frame(width: devideWidth, height:200)
+                    .foregroundColor(.gray)
+                    .opacity(0.5)
+                    .onTapGesture { isQ1Showing.toggle() }
+                
+                Text(isQ1Showing ?  "Question 1, that goes over one line, for sures? \n Answer to question is yes!" : "Question 1, that goes ove?")
+                    .padding()
+                    .onTapGesture { isQ1Showing.toggle() }
+                   
+                
+                Text("")
+            }.padding()
+            
+                
+            
+            
             ZStack {
                 Image("run-634702_1920")
                     .resizable()
@@ -35,7 +53,7 @@ struct Lesson1: View {
                     
                     Spacer()
                 }
-            }.frame(width: devideWidth * 0.95, height: devideWidth * 0.95 * 0.6)
+            }.frame(width: devideWidth , height: devideWidth * 0.6)
 
             VStack(alignment: .leading) {
                 
@@ -75,11 +93,12 @@ struct Lesson1: View {
                         Spacer()
                     }
                     
-                    Button("Press Me") { buttonPressed() }
-                         .buttonStyle(ButtonStandard())
-                    
+                    Lesson2Card()
+                        .onTapGesture { buttonPressed() }
                 }.padding()
             }.padding()
+            
+   
         }
     }
     

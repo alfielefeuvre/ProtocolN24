@@ -11,7 +11,6 @@ struct LearnView: View {
     var body: some View {
         NavigationView {
             List {
-                
                 Section("Quick Start") {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .top, spacing: 0) {
