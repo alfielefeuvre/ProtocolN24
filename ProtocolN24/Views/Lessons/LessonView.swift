@@ -33,7 +33,12 @@ struct LessonView: View {
             }.frame(width: devideWidth , height: devideWidth * 0.6)
             
             
-            
+            ForEach((0...9), id: \.self) {
+                if lesson.tenTextStrings[$0] != "x" {
+                    Text(lesson.tenTextStrings[$0])
+                }
+                
+            }
             
             
             
@@ -49,7 +54,7 @@ struct LessonView: View {
     LessonView(lesson: Lesson(id: 1,
                               headlineText: "What you will get out the programme",
                               subHeadline: "Focused on results", 
-                              textStrings: ["One1", "Two2"],
+                              tenTextStrings: ["One1", "x", "3", "x", "5", "x", "7", "x", "9", "10"],
                               module: .quickStart,
                               imageName: "run-634702_1920"))
 }

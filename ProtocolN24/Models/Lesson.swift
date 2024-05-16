@@ -12,7 +12,7 @@ struct Lesson {
     var id: Int
     var headlineText: String
     var subHeadline: String
-    var textStrings: [String]
+    var tenTextStrings: [String]
     
     var module: Module
     enum Module: String, CaseIterable, Codable {
