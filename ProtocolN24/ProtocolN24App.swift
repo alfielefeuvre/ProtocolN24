@@ -10,10 +10,13 @@ import SwiftUI
 
 @main
 struct ProtocolN24App: App {
+    @StateObject var appController = AppController()
+   
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .environmentObject(appController)
         .modelContainer(for: WeighWeek.self)
     }
 }

@@ -32,13 +32,25 @@ struct LessonView: View {
                 }
             }.frame(width: viewModel.deviceWidth , height: viewModel.deviceWidth * 0.6)
             
-            
             ForEach((0...9), id: \.self) {
                 if lesson.tenTextStrings[$0].prefix(2) != "xx" {
                     Text(lesson.tenTextStrings[$0])
                 }
                 
                 // images
+                if lesson.tenImageStrings[$0].prefix(2) != "xx" {
+                    Image(lesson.tenImageStrings[$0])
+                        .resizable()
+                        .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                        .opacity(0.7)
+                        .frame(width: viewModel.deviceWidth, height: viewModel.deviceWidth * 0.6)
+                }
+                
+                
+                
+                
+                
+                
                 
                 // selectors?
             }
@@ -150,12 +162,5 @@ extension LessonView {
 
 
 #Preview {
-    LessonView(lesson: Lesson(id: 1,
-                              headlineText: "What you will get out the programme",
-                              subHeadline: "Focused on results",
-                              tenTextStrings: ["One1", "xx2", "3", "xx4", "5", "xx6", "7", "xx8", "9", "10"],
-                              tenQuestions: ["Q1. Question 1?", "Q2. Question 2?", "Q3. Question 3?", "Q4", "Q5", "xQ6", "xQ7", "xQ8", "xQ9", "xQ10"],
-                              tenAnswers: ["One1", "xA2", "3", "xA4", "5", "xA6", "7", "xA8", "9", "10"],
-                              module: .quickStart,
-                              imageName: "run-634702_1920"))
+    LessonView(lesson: AppController().demoLesson)
 }

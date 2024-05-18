@@ -8,11 +8,13 @@
 import Foundation
 import SwiftUI
 
-struct Lesson {
+struct Lesson: Identifiable {
     var id: Int
+    var shortName: String 
     var headlineText: String
     var subHeadline: String
     var tenTextStrings: [String]
+    var tenImageStrings: [String]
     var tenQuestions: [String]
     var tenAnswers: [String]
     

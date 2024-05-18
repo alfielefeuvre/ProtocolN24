@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1403FB962BF54B01008E10DD /* ButtonStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403FB952BF54B01008E10DD /* ButtonStandard.swift */; };
+		144C52872BF904EF006C14EC /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52862BF904EF006C14EC /* AppController.swift */; };
+		144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52882BF90B0D006C14EC /* Lesson010.swift */; };
+		144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C528B2BF90DE5006C14EC /* Lesson020.swift */; };
+		144C528E2BF90DF0006C14EC /* Lesson030.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C528D2BF90DF0006C14EC /* Lesson030.swift */; };
+		144C52902BF92D96006C14EC /* LessonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C528F2BF92D96006C14EC /* LessonItem.swift */; };
+		144C52922BF938DD006C14EC /* Lesson040.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52912BF938DD006C14EC /* Lesson040.swift */; };
+		144C52942BF938E5006C14EC /* Lesson050.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52932BF938E5006C14EC /* Lesson050.swift */; };
+		144C52962BF938EE006C14EC /* Lesson060.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52952BF938EE006C14EC /* Lesson060.swift */; };
+		144C52982BF938F8006C14EC /* Lesson070.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52972BF938F8006C14EC /* Lesson070.swift */; };
+		144C529A2BF93907006C14EC /* Lesson080.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52992BF93907006C14EC /* Lesson080.swift */; };
+		144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C529B2BF9390F006C14EC /* Lesson090.swift */; };
 		14A80C4D2B055683009F46C9 /* WeightWeekViewChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */; };
 		14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */; };
 		14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */; };
@@ -25,10 +36,6 @@
 		14B5E5242BF69857006861A7 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5232BF69857006861A7 /* LessonView.swift */; };
 		14D085512B0737020037079F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D085502B0737020037079F /* Data.swift */; };
 		14D085532B073AA70037079F /* SeriesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D085522B073AA70037079F /* SeriesChartView.swift */; };
-		14EC26B22B0A5BC400CAA9B4 /* Lesson1Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26B12B0A5BC400CAA9B4 /* Lesson1Card.swift */; };
-		14EC26B42B0A5D0600CAA9B4 /* Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26B32B0A5D0600CAA9B4 /* Lesson1.swift */; };
-		14EC26B62B0A5F4000CAA9B4 /* Lesson2Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26B52B0A5F4000CAA9B4 /* Lesson2Card.swift */; };
-		14EC26B82B0A5F4B00CAA9B4 /* Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26B72B0A5F4B00CAA9B4 /* Lesson2.swift */; };
 		14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */; };
 		14EC26BD2B0A824D00CAA9B4 /* Week4ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BC2B0A824D00CAA9B4 /* Week4ChartView.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +59,17 @@
 
 /* Begin PBXFileReference section */
 		1403FB952BF54B01008E10DD /* ButtonStandard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStandard.swift; sourceTree = "<group>"; };
+		144C52862BF904EF006C14EC /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		144C52882BF90B0D006C14EC /* Lesson010.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson010.swift; sourceTree = "<group>"; };
+		144C528B2BF90DE5006C14EC /* Lesson020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson020.swift; sourceTree = "<group>"; };
+		144C528D2BF90DF0006C14EC /* Lesson030.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson030.swift; sourceTree = "<group>"; };
+		144C528F2BF92D96006C14EC /* LessonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonItem.swift; sourceTree = "<group>"; };
+		144C52912BF938DD006C14EC /* Lesson040.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson040.swift; sourceTree = "<group>"; };
+		144C52932BF938E5006C14EC /* Lesson050.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson050.swift; sourceTree = "<group>"; };
+		144C52952BF938EE006C14EC /* Lesson060.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson060.swift; sourceTree = "<group>"; };
+		144C52972BF938F8006C14EC /* Lesson070.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson070.swift; sourceTree = "<group>"; };
+		144C52992BF93907006C14EC /* Lesson080.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson080.swift; sourceTree = "<group>"; };
+		144C529B2BF9390F006C14EC /* Lesson090.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson090.swift; sourceTree = "<group>"; };
 		14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightWeekViewChartView.swift; sourceTree = "<group>"; };
 		14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighInDataView.swift; sourceTree = "<group>"; };
 		14AD6EDD2B03EA6D005DE26E /* ProtocolN24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolN24.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,10 +90,6 @@
 		14B5E5232BF69857006861A7 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		14D085502B0737020037079F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		14D085522B073AA70037079F /* SeriesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesChartView.swift; sourceTree = "<group>"; };
-		14EC26B12B0A5BC400CAA9B4 /* Lesson1Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1Card.swift; sourceTree = "<group>"; };
-		14EC26B32B0A5D0600CAA9B4 /* Lesson1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1.swift; sourceTree = "<group>"; };
-		14EC26B52B0A5F4000CAA9B4 /* Lesson2Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson2Card.swift; sourceTree = "<group>"; };
-		14EC26B72B0A5F4B00CAA9B4 /* Lesson2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson2.swift; sourceTree = "<group>"; };
 		14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		14EC26BC2B0A824D00CAA9B4 /* Week4ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +119,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		144C52852BF904DC006C14EC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				144C52862BF904EF006C14EC /* AppController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		144C528A2BF90B1B006C14EC /* Lessons */ = {
+			isa = PBXGroup;
+			children = (
+				144C52882BF90B0D006C14EC /* Lesson010.swift */,
+				144C528B2BF90DE5006C14EC /* Lesson020.swift */,
+				144C528D2BF90DF0006C14EC /* Lesson030.swift */,
+				144C52912BF938DD006C14EC /* Lesson040.swift */,
+				144C52932BF938E5006C14EC /* Lesson050.swift */,
+				144C52952BF938EE006C14EC /* Lesson060.swift */,
+				144C52972BF938F8006C14EC /* Lesson070.swift */,
+				144C52992BF93907006C14EC /* Lesson080.swift */,
+				144C529B2BF9390F006C14EC /* Lesson090.swift */,
+			);
+			path = Lessons;
+			sourceTree = "<group>";
+		};
 		14A80C492B055381009F46C9 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +177,8 @@
 			children = (
 				14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */,
 				14AD6EE22B03EA6D005DE26E /* ContentView.swift */,
+				144C52852BF904DC006C14EC /* Controllers */,
+				144C528A2BF90B1B006C14EC /* Lessons */,
 				14AD6F112B03F832005DE26E /* Models */,
 				14AD6F0E2B03F7C7005DE26E /* Views */,
 				14AD6EE42B03EA6F005DE26E /* Assets.xcassets */,
@@ -177,7 +217,7 @@
 			children = (
 				14EC26B92B0A626B00CAA9B4 /* Helpers */,
 				14EC26AF2B0A5B3400CAA9B4 /* WeighIns */,
-				14EC26B02B0A5B4000CAA9B4 /* Lessons */,
+				14EC26B02B0A5B4000CAA9B4 /* Learn */,
 				14A80C492B055381009F46C9 /* Charts */,
 			);
 			path = Views;
@@ -204,17 +244,14 @@
 			path = WeighIns;
 			sourceTree = "<group>";
 		};
-		14EC26B02B0A5B4000CAA9B4 /* Lessons */ = {
+		14EC26B02B0A5B4000CAA9B4 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
 				14AD6F0A2B03ED52005DE26E /* LearnView.swift */,
 				14B5E5232BF69857006861A7 /* LessonView.swift */,
-				14EC26B12B0A5BC400CAA9B4 /* Lesson1Card.swift */,
-				14EC26B52B0A5F4000CAA9B4 /* Lesson2Card.swift */,
-				14EC26B32B0A5D0600CAA9B4 /* Lesson1.swift */,
-				14EC26B72B0A5F4B00CAA9B4 /* Lesson2.swift */,
+				144C528F2BF92D96006C14EC /* LessonItem.swift */,
 			);
-			path = Lessons;
+			path = Learn;
 			sourceTree = "<group>";
 		};
 		14EC26B92B0A626B00CAA9B4 /* Helpers */ = {
@@ -357,23 +394,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */,
+				144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */,
 				14AD6EE32B03EA6D005DE26E /* ContentView.swift in Sources */,
+				144C52922BF938DD006C14EC /* Lesson040.swift in Sources */,
+				144C52962BF938EE006C14EC /* Lesson060.swift in Sources */,
+				144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */,
+				144C52982BF938F8006C14EC /* Lesson070.swift in Sources */,
 				14B5E5242BF69857006861A7 /* LessonView.swift in Sources */,
 				14D085532B073AA70037079F /* SeriesChartView.swift in Sources */,
-				14EC26B22B0A5BC400CAA9B4 /* Lesson1Card.swift in Sources */,
-				14EC26B62B0A5F4000CAA9B4 /* Lesson2Card.swift in Sources */,
+				144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */,
 				14AD6F0B2B03ED52005DE26E /* LearnView.swift in Sources */,
 				14AD6F132B03F84F005DE26E /* WeighWeek.swift in Sources */,
+				144C52942BF938E5006C14EC /* Lesson050.swift in Sources */,
 				14AD6F102B03F82C005DE26E /* WeighIn.swift in Sources */,
 				14A80C4D2B055683009F46C9 /* WeightWeekViewChartView.swift in Sources */,
 				14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */,
+				144C52872BF904EF006C14EC /* AppController.swift in Sources */,
+				144C52902BF92D96006C14EC /* LessonItem.swift in Sources */,
 				14AD6F0D2B03ED67005DE26E /* WeighInsView.swift in Sources */,
-				14EC26B42B0A5D0600CAA9B4 /* Lesson1.swift in Sources */,
 				14D085512B0737020037079F /* Data.swift in Sources */,
 				1403FB962BF54B01008E10DD /* ButtonStandard.swift in Sources */,
 				14EC26BD2B0A824D00CAA9B4 /* Week4ChartView.swift in Sources */,
-				14EC26B82B0A5F4B00CAA9B4 /* Lesson2.swift in Sources */,
 				14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */,
+				144C528E2BF90DF0006C14EC /* Lesson030.swift in Sources */,
+				144C529A2BF93907006C14EC /* Lesson080.swift in Sources */,
 				14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
