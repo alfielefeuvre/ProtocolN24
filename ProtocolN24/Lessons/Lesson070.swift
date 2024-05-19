@@ -10,7 +10,7 @@ import Foundation
 class Lesson070: NSObject, ObservableObject {
     
     let lesson070 = Lesson(id: 070,
-                           shortName: "Lesson 7",
+                           dayRef: "Lesson 7",
                            headlineText: "What you will get out the programme",
                            subHeadline: "Lesson070",
                            tenTextStrings: ["One1", "xx2", "3", "xx4", "5", "xx6", "7", "xx8", "9", "10"],

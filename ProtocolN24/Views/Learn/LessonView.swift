@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct LessonView: View {
+    @EnvironmentObject var appController: AppController
+
     var lesson: Lesson
     
     @State private var viewModel = ViewModel()
+    @State private var selectedPickerOption = "Not Sure"
+    var pickerOptions: [String] = ["Not Sure", "Fat Loss", "Muscle Gain"]
 
     var body: some View {
         ScrollView {
@@ -31,6 +35,33 @@ struct LessonView: View {
                     Spacer()
                 }
             }.frame(width: viewModel.deviceWidth , height: viewModel.deviceWidth * 0.6)
+           
+            Divider()
+            
+            
+            // Picker
+            VStack {
+                Text("Select a setting")
+                Picker("", selection: $selectedPickerOption) {
+                               ForEach(pickerOptions, id: \.self) {
+                                   Text($0)
+                               }
+                           }
+                           .pickerStyle(.segmented)
+                           .padding()
+                Text("Setting: \(selectedPickerOption)")
+            }
+            
+            
+            Divider()
+            
+            
+          
+               
+            
+            
+            
+            
             
             ForEach((0...9), id: \.self) {
                 if lesson.tenTextStrings[$0].prefix(2) != "xx" {
@@ -46,13 +77,17 @@ struct LessonView: View {
                         .frame(width: viewModel.deviceWidth, height: viewModel.deviceWidth * 0.6)
                 }
                 
+                // selectors
+                
+                
+
                 
                 
                 
                 
                 
                 
-                // selectors?
+                
             }
             
             Divider()
@@ -88,9 +123,19 @@ struct LessonView: View {
                 }
             }
         }
-        .onAppear{
-            viewModel.clearAnswers()
+        .onAppear{ viewModel.clearAnswers() }
+        .onDisappear{
+           // appController.
         }
+    }
+    
+    func selectorPressed(lessonID: Int, selectedOption: String) {
+        
+        
+        
+        
+        
+        
     }
 }
 

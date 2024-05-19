@@ -10,6 +10,7 @@ import Foundation
 class AppController: NSObject, ObservableObject {
     
     @Published var lessons: [Lesson] = []
+    @Published var modules: [String] = ["Week 1", "Week 2", "Week 3"]
     
     // Set-up
     func setup(){
@@ -24,7 +25,7 @@ class AppController: NSObject, ObservableObject {
         lessons.append(Lesson070().lesson070)
         lessons.append(Lesson080().lesson080)
         lessons.append(Lesson090().lesson090)
-  
+        lessons.sort { $0.id < $1.id }
     }
     
     
@@ -37,13 +38,13 @@ class AppController: NSObject, ObservableObject {
     
     
     // MARK: - Demo
-    let demoLesson = Lesson(id: 010, shortName: "Lesson 1",
+    let demoLesson = Lesson(id: 010, dayRef: "Lesson 1",
                               headlineText: "What you will get out the programme",
                               subHeadline: "Focused on results",
                               tenTextStrings: ["One1", "xx2", "3", "xx4", "5", "xx6", "7", "xx8", "9", "10"],
                               tenImageStrings: ["run-634702_1920", "xx2", "run-634702_1920", "xx4", "xx5", "xx6", "xx7", "xx8", "run-634702_1920", "xx10"],
                               tenQuestions: ["Q1. Question 1?", "xxQ2. Question 2?", "xxQ3. Question 3?", "xxQ4", "xxQ5", "xQ6", "xQ7", "xQ8", "xQ9", "xQ10"],
                               tenAnswers: ["One1", "xxA2", "xx3", "xxA4", "xx5", "xA6", "7", "xA8", "9", "10"],
-                              module: .quickStart,
+                              module: .week1,
                               imageName: "run-634702_1920")
 }

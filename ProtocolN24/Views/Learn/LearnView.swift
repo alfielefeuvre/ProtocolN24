@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LearnView: View {
-    var lessons: [Lesson]
+    @EnvironmentObject var appController: AppController
+
+     var lessons: [Lesson]
     
     var body: some View {
         NavigationView {
@@ -21,24 +23,12 @@ struct LearnView: View {
 //                        .clipped()
 //                        .listRowInsets(EdgeInsets())
 //                }
-                Section("Quick Start") {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 0) {
-                            ForEach(lessons) { lesson in
-                                if lesson.module == .quickStart {
-                                    NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
-                                }
-                            }
-                        }
-                    }
-                    .frame(height: 175)
-                }
                 
                 Section("Week 1") {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .top, spacing: 0) {
                             ForEach(lessons) { lesson in
-                                if lesson.module == .module1 {
+                                if lesson.module == .week1 {
                                     NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
                                 }
                             }
@@ -51,7 +41,7 @@ struct LearnView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .top, spacing: 0) {
                             ForEach(lessons) { lesson in
-                                if lesson.module == .module2 {
+                                if lesson.module == .week2 {
                                     NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
                                 }
                             }
@@ -59,6 +49,21 @@ struct LearnView: View {
                     }
                     .frame(height: 175)
                 }
+                
+                Section("Day 3") {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(alignment: .top, spacing: 0) {
+                            ForEach(lessons) { lesson in
+                                if lesson.module == .week3 {
+                                    NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
+                                }
+                            }
+                        }
+                    }
+                    .frame(height: 175)
+                }
+                
+           
             }.navigationTitle("Lessons")
         } 
     }
@@ -70,5 +75,5 @@ struct LearnView: View {
     let lesson030 = Lesson030().lesson030
     let lessons = [lesson010, lesson020, lesson030]
     
-    return LearnView(lessons: lessons)
+    return LearnView(lessons: lessons).environmentObject(AppController())
 }

@@ -18,7 +18,7 @@ struct LessonItem: View {
                 .frame(width: 155, height: 155)
                 .cornerRadius(5)
                 .padding(.top)
-            Text(lesson.shortName)
+            Text(lesson.dayRef)
                 .foregroundStyle(.primary)
                 .font(.caption)
                 .padding(.bottom)
