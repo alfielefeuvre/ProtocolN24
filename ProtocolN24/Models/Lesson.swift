@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Lesson: Identifiable {
+struct Lesson: Identifiable, Codable {
     var id: Int
     var dayRef: String 
     var headlineText: String
@@ -24,5 +24,38 @@ struct Lesson: Identifiable {
         Image(imageName)
     }
     
-    
+    var uiComponents: [UIComponent]
 }
+
+struct UIComponent: Identifiable, Codable {
+    var id: UUID = .init()
+    var type: UIComponentType
+    var uiData: UIData
+}
+
+enum UIComponentType: String, CaseIterable, Codable {
+    case uiHeader = "Header"
+    case uiTextString = "Text"
+    case uiImageName = "Image"
+    case uiSegPicker = "Segmented Picker"
+}
+
+struct UIData: Codable {
+    // Text
+    var uiText: String
+    var uiText2: String 
+    
+    // Image
+    var uiImage: String
+    var ratioOfDeviceWidth: Double
+    var imageRatio: Double
+    
+    // Segmented Picker
+    var uiSegPickerOptions: [String]
+    
+    // FAQ
+    var uiQuestion: String
+    var uiAnswer: String
+
+}
+

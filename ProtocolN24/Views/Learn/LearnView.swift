@@ -50,7 +50,7 @@ struct LearnView: View {
                     .frame(height: 175)
                 }
                 
-                Section("Day 3") {
+                Section("Week 3") {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .top, spacing: 0) {
                             ForEach(lessons) { lesson in
@@ -62,7 +62,6 @@ struct LearnView: View {
                     }
                     .frame(height: 175)
                 }
-                
            
             }.navigationTitle("Lessons")
         } 

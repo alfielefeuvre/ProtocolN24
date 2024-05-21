@@ -8,125 +8,25 @@
 import SwiftUI
 
 struct LessonView: View {
-    @EnvironmentObject var appController: AppController
-
-    var lesson: Lesson
     
+    var lesson: Lesson
     @State private var viewModel = ViewModel()
-    @State private var selectedPickerOption = "Not Sure"
-    var pickerOptions: [String] = ["Not Sure", "Fat Loss", "Muscle Gain"]
 
     var body: some View {
         ScrollView {
-            ZStack {
-                Image(lesson.imageName)
-                    .resizable()
-                    .clipShape(RoundedRectangle(cornerRadius: 12.0))
-                    .opacity(0.7)
-                
-                VStack {
-                    Text(lesson.headlineText)
-                        .font(.largeTitle)
-                        .padding()
-                    
-                   Text(lesson.subHeadline)
-                        .font(.title2)
-                    
-                    Spacer()
-                }
-            }.frame(width: viewModel.deviceWidth , height: viewModel.deviceWidth * 0.6)
-           
-            Divider()
-            
-            
-            // Picker
-            VStack {
-                Text("Select a setting")
-                Picker("", selection: $selectedPickerOption) {
-                               ForEach(pickerOptions, id: \.self) {
-                                   Text($0)
-                               }
-                           }
-                           .pickerStyle(.segmented)
-                           .padding()
-                Text("Setting: \(selectedPickerOption)")
-            }
-            
-            
-            Divider()
-            
-            
-          
-               
-            
-            
-            
-            
-            
-            ForEach((0...9), id: \.self) {
-                if lesson.tenTextStrings[$0].prefix(2) != "xx" {
-                    Text(lesson.tenTextStrings[$0])
-                }
-                
-                // images
-                if lesson.tenImageStrings[$0].prefix(2) != "xx" {
-                    Image(lesson.tenImageStrings[$0])
-                        .resizable()
-                        .clipShape(RoundedRectangle(cornerRadius: 12.0))
-                        .opacity(0.7)
-                        .frame(width: viewModel.deviceWidth, height: viewModel.deviceWidth * 0.6)
-                }
-                
-                // selectors
-                
-                
-
-                
-                
-                
-                
-                
-                
-                
-            }
-            
-            Divider()
-            
-            // Q&A
-            ForEach((0...9), id: \.self) { index in
-                if lesson.tenQuestions[index].prefix(2) != "xx" {
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 12.0)
-                            .frame(width: viewModel.deviceWidth)
-                            .foregroundColor(.gray)
-                            .opacity(0.5)
-                            .onTapGesture { withAnimation {
-                                viewModel.toggleAnswer(index: index)
-                            }
-                        }
-                        HStack {
-                            VStack {
-                                Text(lesson.tenQuestions[index]).padding()
-                                if viewModel.answersDisplayed[index] {
-                                    Text(lesson.tenAnswers[index]).padding()
-                                }
-                            }
-                            Spacer()
-                            VStack {
-                                Image(systemName: "chevron.down").padding()
-                                    .rotationEffect(viewModel.answersDisplayed[index] ? .degrees(0) : .degrees(180))
-                                Spacer()
-                            }
-                            
-                        }
-                    }.padding()
+            ForEach(lesson.uiComponents) { uiComponent in
+                Divider()
+                switch uiComponent.type {
+                case .uiHeader: UICompHeader(uiData: uiComponent.uiData,
+                                           deviceWidth: viewModel.deviceWidth)
+                case .uiImageName: UICompImage(uiData: uiComponent.uiData,
+                                                   deviceWidth: viewModel.deviceWidth)
+                case .uiTextString: UICompText(uiData: uiComponent.uiData)
+                case .uiSegPicker: UICompSegPicker(uiData: uiComponent.uiData)
                 }
             }
         }
         .onAppear{ viewModel.clearAnswers() }
-        .onDisappear{
-           // appController.
-        }
     }
     
     func selectorPressed(lessonID: Int, selectedOption: String) {
@@ -209,3 +109,56 @@ extension LessonView {
 #Preview {
     LessonView(lesson: AppController().demoLesson)
 }
+
+
+//            ForEach((0...9), id: \.self) {
+//                if lesson.tenTextStrings[$0].prefix(2) != "xx" {
+//                    Text(lesson.tenTextStrings[$0])
+//                }
+//
+//                // images
+//                if lesson.tenImageStrings[$0].prefix(2) != "xx" {
+//                    Image(lesson.tenImageStrings[$0])
+//                        .resizable()
+//                        .clipShape(RoundedRectangle(cornerRadius: 12.0))
+//                        .opacity(0.7)
+//                        .frame(width: viewModel.deviceWidth, height: viewModel.deviceWidth * 0.6)
+//                }
+//
+//                // selectors
+//
+//
+//
+//
+
+
+// Q&A
+//            ForEach((0...9), id: \.self) { index in
+//                if lesson.tenQuestions[index].prefix(2) != "xx" {
+//                    ZStack(alignment: .leading) {
+//                        RoundedRectangle(cornerRadius: 12.0)
+//                            .frame(width: viewModel.deviceWidth)
+//                            .foregroundColor(.gray)
+//                            .opacity(0.5)
+//                            .onTapGesture { withAnimation {
+//                                viewModel.toggleAnswer(index: index)
+//                            }
+//                        }
+//                        HStack {
+//                            VStack {
+//                                Text(lesson.tenQuestions[index]).padding()
+//                                if viewModel.answersDisplayed[index] {
+//                                    Text(lesson.tenAnswers[index]).padding()
+//                                }
+//                            }
+//                            Spacer()
+//                            VStack {
+//                                Image(systemName: "chevron.down").padding()
+//                                    .rotationEffect(viewModel.answersDisplayed[index] ? .degrees(0) : .degrees(180))
+//                                Spacer()
+//                            }
+//
+//                        }
+//                    }.padding()
+//                }
+//            }

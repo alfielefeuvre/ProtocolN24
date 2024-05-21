@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1403FB962BF54B01008E10DD /* ButtonStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403FB952BF54B01008E10DD /* ButtonStandard.swift */; };
+		143A758A2BFD205A00AB8029 /* UICompText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A75892BFD205A00AB8029 /* UICompText.swift */; };
+		143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758B2BFD229700AB8029 /* UICompImage.swift */; };
+		143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758D2BFD298500AB8029 /* UICompHeader.swift */; };
+		143A75902BFD2E2F00AB8029 /* UICompSegPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */; };
 		144C52872BF904EF006C14EC /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52862BF904EF006C14EC /* AppController.swift */; };
 		144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52882BF90B0D006C14EC /* Lesson010.swift */; };
 		144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C528B2BF90DE5006C14EC /* Lesson020.swift */; };
@@ -60,6 +64,10 @@
 
 /* Begin PBXFileReference section */
 		1403FB952BF54B01008E10DD /* ButtonStandard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStandard.swift; sourceTree = "<group>"; };
+		143A75892BFD205A00AB8029 /* UICompText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompText.swift; sourceTree = "<group>"; };
+		143A758B2BFD229700AB8029 /* UICompImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompImage.swift; sourceTree = "<group>"; };
+		143A758D2BFD298500AB8029 /* UICompHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompHeader.swift; sourceTree = "<group>"; };
+		143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompSegPicker.swift; sourceTree = "<group>"; };
 		144C52862BF904EF006C14EC /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		144C52882BF90B0D006C14EC /* Lesson010.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson010.swift; sourceTree = "<group>"; };
 		144C528B2BF90DE5006C14EC /* Lesson020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson020.swift; sourceTree = "<group>"; };
@@ -121,6 +129,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143A75882BFD201D00AB8029 /* LessonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				143A758D2BFD298500AB8029 /* UICompHeader.swift */,
+				143A758B2BFD229700AB8029 /* UICompImage.swift */,
+				143A75892BFD205A00AB8029 /* UICompText.swift */,
+				143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */,
+			);
+			path = LessonComponents;
+			sourceTree = "<group>";
+		};
 		144C52852BF904DC006C14EC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +271,7 @@
 			children = (
 				14AD6F0A2B03ED52005DE26E /* LearnView.swift */,
 				14B5E5232BF69857006861A7 /* LessonView.swift */,
+				143A75882BFD201D00AB8029 /* LessonComponents */,
 				144C528F2BF92D96006C14EC /* LessonItem.swift */,
 			);
 			path = Learn;
@@ -404,6 +424,7 @@
 				144C52962BF938EE006C14EC /* Lesson060.swift in Sources */,
 				144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */,
 				144C52982BF938F8006C14EC /* Lesson070.swift in Sources */,
+				143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */,
 				14B5E5242BF69857006861A7 /* LessonView.swift in Sources */,
 				14D085532B073AA70037079F /* SeriesChartView.swift in Sources */,
 				144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */,
@@ -412,10 +433,12 @@
 				144C52942BF938E5006C14EC /* Lesson050.swift in Sources */,
 				14AD6F102B03F82C005DE26E /* WeighIn.swift in Sources */,
 				14A80C4D2B055683009F46C9 /* WeightWeekViewChartView.swift in Sources */,
+				143A75902BFD2E2F00AB8029 /* UICompSegPicker.swift in Sources */,
 				14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */,
 				144C52872BF904EF006C14EC /* AppController.swift in Sources */,
 				144C52902BF92D96006C14EC /* LessonItem.swift in Sources */,
 				14AD6F0D2B03ED67005DE26E /* WeighInsView.swift in Sources */,
+				143A758A2BFD205A00AB8029 /* UICompText.swift in Sources */,
 				14D085512B0737020037079F /* Data.swift in Sources */,
 				1403FB962BF54B01008E10DD /* ButtonStandard.swift in Sources */,
 				14EC26BD2B0A824D00CAA9B4 /* Week4ChartView.swift in Sources */,
@@ -423,6 +446,7 @@
 				144C528E2BF90DF0006C14EC /* Lesson030.swift in Sources */,
 				144C529A2BF93907006C14EC /* Lesson080.swift in Sources */,
 				14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */,
+				143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

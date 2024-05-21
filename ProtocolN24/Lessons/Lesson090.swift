@@ -18,5 +18,5 @@ class Lesson090: NSObject, ObservableObject {
                            tenQuestions: ["Q1. Question 1?", "xxQ2", "xxQ3", "xxQ4", "xxQ5", "xxQ6", "xxQ7", "xxQ8", "xxQ9", "xxQ10"],
                            tenAnswers: ["Answer 1", "xxA2", "xx3", "xxA4", "xx5", "xxA6", "xxA7", "xxA8", "xxA9", "xxA10"],
                            module: .week3,
-                           imageName: "Gym")
+                           imageName: "Gym", uiComponents: [])
 }
