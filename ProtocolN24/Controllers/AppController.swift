@@ -12,7 +12,7 @@ class AppController: NSObject, ObservableObject {
     @Published var lessons: [Lesson] = []
     @Published var modules: [String] = ["Week 1", "Week 2", "Week 3"]
     
-    // Set-up
+    // MARK: - Set-up
     func setup(){
         
         // Set-up
@@ -27,8 +27,12 @@ class AppController: NSObject, ObservableObject {
         lessons.append(Lesson090().lesson090)
         lessons.sort { $0.id < $1.id }
     }
-    
-    
+        
+    // MARK: - Navigation
+    @Published var readyForNextLesson = false
+    func resetReadyForNextLesson() { readyForNextLesson = false }
+    func nowReadyForNextLesson() { readyForNextLesson = true }
+
     
     
     // MARK: - Demo
@@ -51,13 +55,15 @@ class AppController: NSObject, ObservableObject {
                                                                                           uiSegPickerOptions: ["xx"],
                                                                                           uiQuestion: "App Demo Q1", uiAnswer: "App Demo A1")),
                                            
-                                           UIComponent(type: .uiSegPicker, uiData: UIData(uiText: "Select your setting...", uiText2: "xx",
+                                           UIComponent(type: .uiSegPicker, uiData: UIData(uiText: "Select your setting...", uiText2: "Lesson 1",
                                                                                           uiImage: "Gym", ratioOfDeviceWidth: 0, imageRatio: 0, 
                                                                                           uiSegPickerOptions: ["Not Sure", "Fat Loss", "Muscle Gain"],
                                                                                           uiQuestion: "xx", uiAnswer: "xx")),
                                            
-                                           UIComponent(type: .uiTextString, uiData: UIData(uiText: "String 22from App Demo Data", uiText2: "UI Text 22 ",
-                                                                                           uiImage: "Bench", ratioOfDeviceWidth: 0, imageRatio: 0, 
+                                           UIComponent(type: .uiNextLesson, uiData: UIData(uiText: "String 22from App Demo Data", uiText2: "UI Text 22 ",
+                                                                                           uiImage: "Bench", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                            uiSegPickerOptions: ["xx"],
-                                                                                           uiQuestion: "xx", uiAnswer: "xx"))])
+                                                                                           uiQuestion: "xx", uiAnswer: "xx"))
+                                          
+                                          ])
 }

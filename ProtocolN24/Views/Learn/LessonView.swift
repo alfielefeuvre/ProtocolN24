@@ -21,21 +21,14 @@ struct LessonView: View {
                                            deviceWidth: viewModel.deviceWidth)
                 case .uiImageName: UICompImage(uiData: uiComponent.uiData,
                                                    deviceWidth: viewModel.deviceWidth)
-                case .uiTextString: UICompText(uiData: uiComponent.uiData)
+                case .uiNextLesson: UICompNextLesson(uiData: uiComponent.uiData,
+                                                     deviceWidth: viewModel.deviceWidth)
                 case .uiSegPicker: UICompSegPicker(uiData: uiComponent.uiData)
+                case .uiTextString: UICompText(uiData: uiComponent.uiData)
                 }
             }
         }
         .onAppear{ viewModel.clearAnswers() }
-    }
-    
-    func selectorPressed(lessonID: Int, selectedOption: String) {
-        
-        
-        
-        
-        
-        
     }
 }
 

@@ -33,7 +33,6 @@ struct WeighInDataView: View {
     do {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: WeighIn.self, configurations: config)
-        var calendar = Calendar(identifier: .gregorian)
         
 //        let wI1 = WeighIn(weekRef: calendar.component(.weekOfYear, from: .now),
 //                          weight: 85.1, date: .now)

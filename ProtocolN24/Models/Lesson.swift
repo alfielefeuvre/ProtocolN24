@@ -35,9 +35,11 @@ struct UIComponent: Identifiable, Codable {
 
 enum UIComponentType: String, CaseIterable, Codable {
     case uiHeader = "Header"
-    case uiTextString = "Text"
     case uiImageName = "Image"
+    case uiNextLesson = "Next Lesson"
     case uiSegPicker = "Segmented Picker"
+    case uiTextString = "Text"
+   
 }
 
 struct UIData: Codable {

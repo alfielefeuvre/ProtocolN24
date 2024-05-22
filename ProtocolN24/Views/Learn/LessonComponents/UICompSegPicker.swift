@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct UICompSegPicker: View {
-   // @EnvironmentObject var appController: AppController
+    @EnvironmentObject var appController: AppController
     var uiData: UIData
     
-    @State private var selectedPickerOption = "Not Sure"
-//    var pickerOptions: [String] = ["Not Sure", "Fat Loss", "Muscle Gain"]
+    @State private var selectedPickerOption = "Not Sure" { didSet { print("Changed") }}
+//        uiSegmentedPickerResponse() }}
+    here
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -24,25 +25,35 @@ struct UICompSegPicker: View {
                 }
                 .pickerStyle(.segmented)
                 .padding()
-            HStack {
                 Text("Setting: \(selectedPickerOption)")
-                Spacer()
-                Button("Confirm") { selectionConfirmed() }.padding(.trailing)
-            }
+     
         }.padding()
     }
     
-    func selectionConfirmed() {
+    // Segmented Picker Response
+    func uiSegmentedPickerResponse() {
+        print("seg pressed")
+        switch uiData.uiText2 {
+        case "Lesson 1": selectCutOrBulk(response: selectedPickerOption)
+        default: print("Error: UICompSegPicker: uiSegmentedPickerResponse(): lessonRef: \(uiData.uiText2)")
+        }
+    }
+    
+    // Lesson 1 - Bulk or Cut
+    func selectCutOrBulk(response: String) {
         
-        print("Button pressed")
-        here 
+        
+        
+        if response != "Not Sure" { appController.nowReadyForNextLesson()
+        } else { appController.resetReadyForNextLesson() }
+        print("Button pressed: \(response)")
         
     }
 }
 
 #Preview {
     let uiData = UIData(uiText: "Select a setting",
-                        uiText2: "xx",
+                        uiText2: "Lesson 1",
                         uiImage: "xx",
                         ratioOfDeviceWidth: 1,
                         imageRatio: 0, 
