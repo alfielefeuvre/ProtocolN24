@@ -62,9 +62,8 @@ struct LearnView: View {
                     }
                     .frame(height: 175)
                 }
-           
             }.navigationTitle("Lessons")
-        } 
+        }
     }
 }
 

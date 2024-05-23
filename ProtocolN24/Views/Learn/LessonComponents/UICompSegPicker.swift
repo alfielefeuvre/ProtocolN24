@@ -11,13 +11,12 @@ struct UICompSegPicker: View {
     @EnvironmentObject var appController: AppController
     var uiData: UIData
     
-    @State private var selectedPickerOption = "Not Sure" { didSet { print("Changed") }}
-//        uiSegmentedPickerResponse() }}
-    here
+    @State private var selectedPickerOption = "Not Sure"
+    
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(uiData.uiText)
+            Text(uiData.uiText).padding(.leading)
             Picker("", selection: $selectedPickerOption) {
                 ForEach(uiData.uiSegPickerOptions, id: \.self) {
                     Text($0)
@@ -25,29 +24,22 @@ struct UICompSegPicker: View {
                 }
                 .pickerStyle(.segmented)
                 .padding()
-                Text("Setting: \(selectedPickerOption)")
-     
+            HStack {
+                Text("Setting: \(selectedPickerOption)").padding(.leading)
+                Spacer()
+                Button("Confirm") { uiSegmentedPickerResponse() }.padding(.trailing)
+            }
+               
         }.padding()
     }
     
     // Segmented Picker Response
     func uiSegmentedPickerResponse() {
-        print("seg pressed")
+        print("selectedPickerOption: \(selectedPickerOption)")
         switch uiData.uiText2 {
-        case "Lesson 1": selectCutOrBulk(response: selectedPickerOption)
+        case "Lesson 1": appController.selectCutOrBulk(response: selectedPickerOption)
         default: print("Error: UICompSegPicker: uiSegmentedPickerResponse(): lessonRef: \(uiData.uiText2)")
         }
-    }
-    
-    // Lesson 1 - Bulk or Cut
-    func selectCutOrBulk(response: String) {
-        
-        
-        
-        if response != "Not Sure" { appController.nowReadyForNextLesson()
-        } else { appController.resetReadyForNextLesson() }
-        print("Button pressed: \(response)")
-        
     }
 }
 

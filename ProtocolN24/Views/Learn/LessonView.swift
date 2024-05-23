@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct LessonView: View {
-    
+    @EnvironmentObject var appController: AppController
+
     var lesson: Lesson
     @State private var viewModel = ViewModel()
 
@@ -21,14 +22,28 @@ struct LessonView: View {
                                            deviceWidth: viewModel.deviceWidth)
                 case .uiImageName: UICompImage(uiData: uiComponent.uiData,
                                                    deviceWidth: viewModel.deviceWidth)
-                case .uiNextLesson: UICompNextLesson(uiData: uiComponent.uiData,
-                                                     deviceWidth: viewModel.deviceWidth)
                 case .uiSegPicker: UICompSegPicker(uiData: uiComponent.uiData)
                 case .uiTextString: UICompText(uiData: uiComponent.uiData)
                 }
             }
         }
         .onAppear{ viewModel.clearAnswers() }
+        .toolbar {
+            ToolbarItemGroup(placement: .primaryAction) {
+                Image(systemName: "checkmark.circle.fill").padding()
+                    .opacity(appController.lessonComplete ? 1 : 0)
+            }
+
+//            ToolbarItemGroup(placement: .secondaryAction) {
+//                Button("Settings") {
+//                    print("Credits tapped")
+//                }
+//
+//                Button("Email Me") {
+//                    print("Email tapped")
+//                }
+//            }
+        }
     }
 }
 
@@ -100,7 +115,15 @@ extension LessonView {
 
 
 #Preview {
-    LessonView(lesson: AppController().demoLesson)
+ 
+    let lesson010 = Lesson010().lesson010
+    let lesson020 = Lesson020().lesson020
+    let lesson030 = Lesson030().lesson030
+    let lessons = [lesson010, lesson020, lesson030]
+    
+    return LearnView(lessons: lessons).environmentObject(AppController())
+    
+    //LessonView(lesson: AppController().demoLesson).environmentObject(AppController())
 }
 
 

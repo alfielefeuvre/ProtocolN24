@@ -13,10 +13,6 @@ struct Lesson: Identifiable, Codable {
     var dayRef: String 
     var headlineText: String
     var subHeadline: String
-    var tenTextStrings: [String]
-    var tenImageStrings: [String]
-    var tenQuestions: [String]
-    var tenAnswers: [String]
     var module: Module
     
     var imageName: String
@@ -36,7 +32,6 @@ struct UIComponent: Identifiable, Codable {
 enum UIComponentType: String, CaseIterable, Codable {
     case uiHeader = "Header"
     case uiImageName = "Image"
-    case uiNextLesson = "Next Lesson"
     case uiSegPicker = "Segmented Picker"
     case uiTextString = "Text"
    
