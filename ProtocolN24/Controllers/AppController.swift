@@ -13,9 +13,7 @@ class AppController: NSObject, ObservableObject {
     @Published var modules: [String] = ["Week 1", "Week 2", "Week 3"]
     
     // MARK: - Set-up
-    func setup(){
-        
-        // Set-up
+    func loadLessonsFromStorage() {
         lessons.append(Lesson010().lesson010)
         lessons.append(Lesson020().lesson020)
         lessons.append(Lesson030().lesson030)
@@ -27,45 +25,26 @@ class AppController: NSObject, ObservableObject {
         lessons.append(Lesson090().lesson090)
         lessons.sort { $0.id < $1.id }
     }
+    
+    func updateLessonsWithUserConfig(userConfig: UserConfig) {
+        for index in (0...lessons.count-1) {
+            let isCompleted = userConfig.isLessonComplete[lessons[index].id]
+            if isCompleted == true { lessons[index].isComplete = true
+            } else { lessons[index].isComplete = false}
+        }
+    }
+
         
     // MARK: - Navigation
     @Published var lessonComplete = false
     func notReadyForNextLesson() { lessonComplete = false }
     func nowReadyForNextLesson() { lessonComplete = true }
-
-    // MARK: - Bulk or Cut
-    @Published var bulkOrCut: BulkOrCut = .notSure
-    func bulkCutNotSure() { bulkOrCut = .notSure }
-    func bulkCutBulk() { bulkOrCut = .bulk }
-    func bulkCutCut() { bulkOrCut = .cut }
-
-    enum BulkOrCut: String, CaseIterable, Codable {
-        case notSure = "Not Sure"
-        case bulk = "Bulk"
-        case cut = "Cut"
-    }
    
-    // Lesson 1 - Bulk or Cut
-    func selectCutOrBulk(response: String) {
-        print("response: \(response)")
-        if response == "Not Sure" {
-            bulkCutNotSure()
-            notReadyForNextLesson()
-        } else if response == "Cut" {
-            nowReadyForNextLesson()
-            bulkCutCut()
-        } else {
-            nowReadyForNextLesson()
-            bulkCutBulk()
-        }
-    }
     
     // MARK: - Demo
     let demoLesson = Lesson(id: 010, dayRef: "Lesson 1",
-                              headlineText: "What you will get out the programme",
-                              subHeadline: "Focused on results",
-                              module: .week1,
-                            imageName: "run-634702_1920",
+                            module: .week1,
+                            isComplete: false, imageName: "Gym",
                             uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "Header", uiText2: "Sub-Header",
                                                                                        uiImage: "Dumbell", ratioOfDeviceWidth: 1, imageRatio: 0.6, 
                                                                                        uiSegPickerOptions: ["xx"],

@@ -22,7 +22,8 @@ struct LessonView: View {
                                            deviceWidth: viewModel.deviceWidth)
                 case .uiImageName: UICompImage(uiData: uiComponent.uiData,
                                                    deviceWidth: viewModel.deviceWidth)
-                case .uiSegPicker: UICompSegPicker(uiData: uiComponent.uiData)
+                case .uiSegPicker: UICompSegPicker(uiData: uiComponent.uiData,
+                                                   lessonId: lesson.id)
                 case .uiTextString: UICompText(uiData: uiComponent.uiData)
                 }
             }
@@ -31,18 +32,8 @@ struct LessonView: View {
         .toolbar {
             ToolbarItemGroup(placement: .primaryAction) {
                 Image(systemName: "checkmark.circle.fill").padding()
-                    .opacity(appController.lessonComplete ? 1 : 0)
+                    .opacity(lesson.isComplete ? 1 : 0)
             }
-
-//            ToolbarItemGroup(placement: .secondaryAction) {
-//                Button("Settings") {
-//                    print("Credits tapped")
-//                }
-//
-//                Button("Email Me") {
-//                    print("Email tapped")
-//                }
-//            }
         }
     }
 }
@@ -113,7 +104,6 @@ extension LessonView {
 
 }
 
-
 #Preview {
  
     let lesson010 = Lesson010().lesson010
@@ -122,30 +112,7 @@ extension LessonView {
     let lessons = [lesson010, lesson020, lesson030]
     
     return LearnView(lessons: lessons).environmentObject(AppController())
-    
-    //LessonView(lesson: AppController().demoLesson).environmentObject(AppController())
 }
-
-
-//            ForEach((0...9), id: \.self) {
-//                if lesson.tenTextStrings[$0].prefix(2) != "xx" {
-//                    Text(lesson.tenTextStrings[$0])
-//                }
-//
-//                // images
-//                if lesson.tenImageStrings[$0].prefix(2) != "xx" {
-//                    Image(lesson.tenImageStrings[$0])
-//                        .resizable()
-//                        .clipShape(RoundedRectangle(cornerRadius: 12.0))
-//                        .opacity(0.7)
-//                        .frame(width: viewModel.deviceWidth, height: viewModel.deviceWidth * 0.6)
-//                }
-//
-//                // selectors
-//
-//
-//
-//
 
 
 // Q&A
@@ -176,5 +143,18 @@ extension LessonView {
 //
 //                        }
 //                    }.padding()
+//                }
+//            }
+
+
+
+
+//            ToolbarItemGroup(placement: .secondaryAction) {
+//                Button("Settings") {
+//                    print("Credits tapped")
+//                }
+//
+//                Button("Email Me") {
+//                    print("Email tapped")
 //                }
 //            }

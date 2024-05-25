@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     @EnvironmentObject var appController: AppController
-
+    @Environment(\.modelContext) private var modelContext
+    @Query(sort: \WeighIn.weekOfYear) var weighIns: [WeighIn]
+    @Query var userConfig: [UserConfig]
+     
     var body: some View {
         TabView {
             WeighInsView()
@@ -19,13 +23,21 @@ struct ContentView: View {
                 .tabItem{ Label("Learn   ", systemImage: "book") }
         }
         .onAppear{
-            appController.setup()
+            appController.loadLessonsFromStorage()
+            if userConfig.count == 0 { setupDefaultUserConfig()
+            } else { appController.updateLessonsWithUserConfig(userConfig: userConfig[0]) }
         }
+    }
+    
+    func setupDefaultUserConfig() {
+        let userConfig = UserConfig(isLessonComplete: [ 010 : false ])
+        modelContext.insert(userConfig)
+        try? modelContext.save()
     }
 }
 
 #Preview {
     ContentView()
         .environmentObject(AppController())
-        .modelContainer(for: WeighWeek.self)
+        .modelContainer(for: [WeighWeek.self, UserConfig.self])
 }

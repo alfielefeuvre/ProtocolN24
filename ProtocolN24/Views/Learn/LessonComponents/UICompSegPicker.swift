@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct UICompSegPicker: View {
     @EnvironmentObject var appController: AppController
+    @Environment(\.modelContext) private var modelContext
+    @Query var userConfig: [UserConfig]
+  
     var uiData: UIData
-    
-    @State private var selectedPickerOption = "Not Sure"
-    
+    var lessonId: Int
+    @State private var selectedPickerOption = "Error"
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -31,15 +34,32 @@ struct UICompSegPicker: View {
             }
                
         }.padding()
+         .onAppear{ assignPickerSelection()}
+    }
+    
+    func assignPickerSelection() {
+        switch uiData.uiText2 {
+        case "Lesson 1": selectedPickerOption = userConfig[0].cutOrBulk
+        default: selectedPickerOption = "Not Sure"
+            print("Error: UICompSegPicker: assignPickerSelection(): \(lessonId)")
+        }
     }
     
     // Segmented Picker Response
     func uiSegmentedPickerResponse() {
-        print("selectedPickerOption: \(selectedPickerOption)")
         switch uiData.uiText2 {
-        case "Lesson 1": appController.selectCutOrBulk(response: selectedPickerOption)
+        case "Lesson 1": selectCutOrBulk(response: selectedPickerOption)
         default: print("Error: UICompSegPicker: uiSegmentedPickerResponse(): lessonRef: \(uiData.uiText2)")
         }
+    }
+    
+    func selectCutOrBulk(response: String) { // Lesson 1 - Bulk or Cut
+        if response == "Not Sure" { userConfig[0].isLessonComplete[10] = false
+        } else { userConfig[0].isLessonComplete[10] = true }
+        
+        userConfig[0].cutOrBulk = response
+        try? modelContext.save()
+        appController.updateLessonsWithUserConfig(userConfig: userConfig[0])
     }
 }
 
@@ -52,5 +72,8 @@ struct UICompSegPicker: View {
                         uiSegPickerOptions: ["Not Sure", "Fat Loss", "Muscle Gain"],
                         uiQuestion: "xx",
                         uiAnswer: "xx")
-    return UICompSegPicker(uiData: uiData).environmentObject(AppController())
+    
+    return UICompSegPicker(uiData: uiData, lessonId: 20)
+                .environmentObject(AppController())
+                .modelContainer(for: [WeighWeek.self, UserConfig.self])
 }

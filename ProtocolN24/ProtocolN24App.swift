@@ -17,6 +17,6 @@ struct ProtocolN24App: App {
             ContentView()
         }
         .environmentObject(appController)
-        .modelContainer(for: WeighWeek.self)
+        .modelContainer(for: [WeighWeek.self, UserConfig.self])
     }
 }

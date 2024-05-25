@@ -9,10 +9,9 @@ import Foundation
 
 class Lesson080: NSObject, ObservableObject {
     
-    let lesson080 = Lesson(id: 080,
+    var lesson080 = Lesson(id: 080,
                            dayRef: "Lesson 8",
-                           headlineText: "What you will get out the programme",
-                           subHeadline: "Lesson080",
                            module: .week2,
+                           isComplete: false,
                            imageName: "Bench", uiComponents: [])
 }

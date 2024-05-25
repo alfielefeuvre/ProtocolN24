@@ -9,8 +9,7 @@ import SwiftUI
 
 struct LearnView: View {
     @EnvironmentObject var appController: AppController
-
-     var lessons: [Lesson]
+    var lessons: [Lesson]
     
     var body: some View {
         NavigationView {

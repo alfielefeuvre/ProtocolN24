@@ -12,6 +12,7 @@
 		143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758B2BFD229700AB8029 /* UICompImage.swift */; };
 		143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758D2BFD298500AB8029 /* UICompHeader.swift */; };
 		143A75902BFD2E2F00AB8029 /* UICompSegPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */; };
+		143A759C2C0213CF00AB8029 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A759B2C0213CF00AB8029 /* UserConfig.swift */; };
 		144C52872BF904EF006C14EC /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52862BF904EF006C14EC /* AppController.swift */; };
 		144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52882BF90B0D006C14EC /* Lesson010.swift */; };
 		144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C528B2BF90DE5006C14EC /* Lesson020.swift */; };
@@ -68,6 +69,7 @@
 		143A758B2BFD229700AB8029 /* UICompImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompImage.swift; sourceTree = "<group>"; };
 		143A758D2BFD298500AB8029 /* UICompHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompHeader.swift; sourceTree = "<group>"; };
 		143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompSegPicker.swift; sourceTree = "<group>"; };
+		143A759B2C0213CF00AB8029 /* UserConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
 		144C52862BF904EF006C14EC /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		144C52882BF90B0D006C14EC /* Lesson010.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson010.swift; sourceTree = "<group>"; };
 		144C528B2BF90DE5006C14EC /* Lesson020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson020.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				14B5E5212BF695A4006861A7 /* Lesson.swift */,
+				143A759B2C0213CF00AB8029 /* UserConfig.swift */,
 				144C529D2BFA8834006C14EC /* Module.swift */,
 				14AD6F122B03F84F005DE26E /* WeighWeek.swift */,
 				14AD6F0F2B03F82C005DE26E /* WeighIn.swift */,
@@ -442,6 +445,7 @@
 				14D085512B0737020037079F /* Data.swift in Sources */,
 				1403FB962BF54B01008E10DD /* ButtonStandard.swift in Sources */,
 				14EC26BD2B0A824D00CAA9B4 /* Week4ChartView.swift in Sources */,
+				143A759C2C0213CF00AB8029 /* UserConfig.swift in Sources */,
 				14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */,
 				144C528E2BF90DF0006C14EC /* Lesson030.swift in Sources */,
 				144C529A2BF93907006C14EC /* Lesson080.swift in Sources */,

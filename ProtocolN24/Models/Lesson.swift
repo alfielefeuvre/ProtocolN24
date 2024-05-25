@@ -11,9 +11,8 @@ import SwiftUI
 struct Lesson: Identifiable, Codable {
     var id: Int
     var dayRef: String 
-    var headlineText: String
-    var subHeadline: String
     var module: Module
+    var isComplete: Bool
     
     var imageName: String
     var image: Image {
