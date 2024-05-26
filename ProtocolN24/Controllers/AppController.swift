@@ -30,21 +30,19 @@ class AppController: NSObject, ObservableObject {
         for index in (0...lessons.count-1) {
             let isCompleted = userConfig.isLessonComplete[lessons[index].id]
             if isCompleted == true { lessons[index].isComplete = true
-            } else { lessons[index].isComplete = false}
+            } else { lessons[index].isComplete = false }
+            
+            let isLocked = userConfig.isLessonLocked[lessons[index].id]
+            if isLocked == true { lessons[index].isLocked = true
+            } else { lessons[index].isLocked = false }
         }
     }
-
-        
-    // MARK: - Navigation
-    @Published var lessonComplete = false
-    func notReadyForNextLesson() { lessonComplete = false }
-    func nowReadyForNextLesson() { lessonComplete = true }
    
     
     // MARK: - Demo
     let demoLesson = Lesson(id: 010, dayRef: "Lesson 1",
                             module: .week1,
-                            isComplete: false, imageName: "Gym",
+                            isComplete: false,  isLocked: false, imageName: "Gym",
                             uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "Header", uiText2: "Sub-Header",
                                                                                        uiImage: "Dumbell", ratioOfDeviceWidth: 1, imageRatio: 0.6, 
                                                                                        uiSegPickerOptions: ["xx"],

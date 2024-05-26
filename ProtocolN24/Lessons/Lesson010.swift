@@ -12,7 +12,7 @@ class Lesson010: NSObject, ObservableObject {
     var lesson010 = Lesson(id: 010,
                            dayRef: "Day 1 (1/3)",
                            module: .week1,
-                           isComplete: false,
+                           isComplete: false, isLocked: false,
                            imageName: "run-634702_1920", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "Header", uiText2: "Sub-Header",
                                                                                                                                    uiImage: "Dumbell", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                    uiSegPickerOptions: ["xx"],

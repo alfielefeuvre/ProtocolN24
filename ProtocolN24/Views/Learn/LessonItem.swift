@@ -27,6 +27,9 @@ struct LessonItem: View {
             
             VStack {
                 HStack {
+                    Image(systemName: "lock.fill")
+                        .opacity(lesson.isLocked ? 1 : 0)
+                        .padding(.leading)
                     Spacer()
                     Image(systemName: "checkmark.circle.fill")
                         .opacity(lesson.isComplete ? 1 : 0)

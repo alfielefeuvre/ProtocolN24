@@ -13,6 +13,7 @@ struct Lesson: Identifiable, Codable {
     var dayRef: String 
     var module: Module
     var isComplete: Bool
+    var isLocked: Bool
     
     var imageName: String
     var image: Image {

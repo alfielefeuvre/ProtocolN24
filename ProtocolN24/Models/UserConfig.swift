@@ -12,11 +12,17 @@ import SwiftData
 class UserConfig {
     // Dictionary ["Lesson Id" : isComplete?]
     var isLessonComplete: [Int : Bool] = [:]
+    var isLessonLocked: [Int : Bool] = [:]
     
     var cutOrBulk = "Not Sure"
     
     
-    init(isLessonComplete: [Int : Bool]) {
+    init(isLessonComplete: [Int : Bool],
+         isLessonLocked: [Int : Bool],
+         cutOrBulk: String
+    ) {
         self.isLessonComplete = isLessonComplete
+        self.isLessonLocked = isLessonLocked
+        self.cutOrBulk = cutOrBulk
     }
 }

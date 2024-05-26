@@ -12,6 +12,7 @@ class Lesson020: NSObject, ObservableObject {
     var lesson020 = Lesson(id: 020,
                            dayRef: "Lesson 2",
                            module: .week1,
-                           isComplete: false,
+                           isComplete: false, 
+                           isLocked: false,
                            imageName: "Dumbell", uiComponents: [])
 }

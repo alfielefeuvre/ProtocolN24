@@ -51,7 +51,7 @@ struct AddWeighInView: View {
     var calendar = Calendar(identifier: .gregorian)
     
     @State private var dateToAdd = Date.now
-    @State private var weightToAdd: Double = 85.1
+    @State private var weightToAdd: Double = 82.1
     @State private var weightAdded = false
     
     var weekInYear: Int {

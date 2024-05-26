@@ -30,7 +30,9 @@ struct ContentView: View {
     }
     
     func setupDefaultUserConfig() {
-        let userConfig = UserConfig(isLessonComplete: [ 010 : false ])
+        let userConfig = UserConfig(isLessonComplete: [ 010 : false ],
+                                    isLessonLocked: [ 10: false ],
+                                    cutOrBulk: "Not Sure")
         modelContext.insert(userConfig)
         try? modelContext.save()
     }
