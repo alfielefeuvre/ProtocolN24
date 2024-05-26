@@ -12,16 +12,21 @@ struct LessonItem: View {
     
     var body: some View {
         ZStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .center) {
                 lesson.image
                     .renderingMode(.original)
                     .resizable()
                     .frame(width: 155, height: 155)
                     .cornerRadius(5)
                     .padding(.top)
+
+                Text(lesson.headline)
+                    .foregroundStyle(.primary)
+                    .frame(width: 155)
+                    .font(.caption)
+                
                 Text(lesson.dayRef)
                     .foregroundStyle(.primary)
-                    .font(.caption)
                     .padding(.bottom)
             }
             
@@ -36,7 +41,7 @@ struct LessonItem: View {
                    
                 }.padding(.trailing)
                 Spacer()
-            }.frame(width: 155, height: 155)
+            }.frame(width: 155, height: 240)
                 .padding()
         }.opacity(lesson.isComplete ? 0.5 : 1)
     }

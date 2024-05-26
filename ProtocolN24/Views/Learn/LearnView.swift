@@ -33,7 +33,7 @@ struct LearnView: View {
                             }
                         }
                     }
-                    .frame(height: 175)
+                    .frame(height: 235)
                 }
                 
                 Section("Week 2") {

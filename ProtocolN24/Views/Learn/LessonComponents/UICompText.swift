@@ -20,13 +20,11 @@ struct UICompText: View {
 }
 
 #Preview {
-    let uiData = UIData(uiText: "Test to be displayed!", 
+    let uiData = UIData(uiText: "Text to be displayed!", 
                         uiText2: "xx",
                         uiImage: "xx",
                         ratioOfDeviceWidth: 1, 
                         imageRatio: 0, 
-                        uiSegPickerOptions: ["xx"],
-                        uiQuestion: "xx",
-                        uiAnswer: "xx")
+                        uiSegPickerOptions: ["xx"])
     return UICompText(uiData: uiData)
 }

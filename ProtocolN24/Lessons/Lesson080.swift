@@ -9,7 +9,7 @@ import Foundation
 
 class Lesson080: NSObject, ObservableObject {
     
-    var lesson080 = Lesson(id: 080,
+    var lesson080 = Lesson(id: 080, headline: "Headline",
                            dayRef: "Lesson 8",
                            module: .week2,
                            isComplete: false, isLocked: false,

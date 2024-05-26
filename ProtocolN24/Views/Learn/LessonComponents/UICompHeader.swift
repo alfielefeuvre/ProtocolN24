@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UICompHeader: View {
     var uiData: UIData
-    var deviceWidth: CGFloat
+    let deviceWidth = UIScreen.main.bounds.width * 0.95
     
     var body: some View {
         ZStack {
@@ -40,9 +40,7 @@ struct UICompHeader: View {
                         uiImage: "Gym",
                         ratioOfDeviceWidth: 1,
                         imageRatio: 0.6, 
-                        uiSegPickerOptions: ["xx"],
-                        uiQuestion: "xx",
-                        uiAnswer: "xx")
+                        uiSegPickerOptions: ["xx"])
     let deviceWidth = UIScreen.main.bounds.width * 0.95
-    return UICompHeader(uiData: uiData, deviceWidth: deviceWidth)
+    return UICompHeader(uiData: uiData)
 }

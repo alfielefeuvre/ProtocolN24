@@ -10,7 +10,8 @@ import SwiftUI
 
 struct Lesson: Identifiable, Codable {
     var id: Int
-    var dayRef: String 
+    var headline: String
+    var dayRef: String
     var module: Module
     var isComplete: Bool
     var isLocked: Bool
@@ -32,6 +33,7 @@ struct UIComponent: Identifiable, Codable {
 enum UIComponentType: String, CaseIterable, Codable {
     case uiHeader = "Header"
     case uiImageName = "Image"
+    case uiQandA = "Q & A"
     case uiSegPicker = "Segmented Picker"
     case uiTextString = "Text"
    
@@ -49,10 +51,6 @@ struct UIData: Codable {
     
     // Segmented Picker
     var uiSegPickerOptions: [String]
-    
-    // FAQ
-    var uiQuestion: String
-    var uiAnswer: String
 
 }
 

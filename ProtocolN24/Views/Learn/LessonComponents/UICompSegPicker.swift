@@ -69,9 +69,7 @@ struct UICompSegPicker: View {
                         uiImage: "xx",
                         ratioOfDeviceWidth: 1,
                         imageRatio: 0, 
-                        uiSegPickerOptions: ["Not Sure", "Fat Loss", "Muscle Gain"],
-                        uiQuestion: "xx",
-                        uiAnswer: "xx")
+                        uiSegPickerOptions: ["Not Sure", "Fat Loss", "Muscle Gain"])
     
     return UICompSegPicker(uiData: uiData, lessonId: 20)
                 .environmentObject(AppController())

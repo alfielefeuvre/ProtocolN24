@@ -40,23 +40,19 @@ class AppController: NSObject, ObservableObject {
    
     
     // MARK: - Demo
-    let demoLesson = Lesson(id: 010, dayRef: "Lesson 1",
+    let demoLesson = Lesson(id: 090, headline: "Headline", dayRef: "Lesson 1",
                             module: .week1,
                             isComplete: false,  isLocked: false, imageName: "Gym",
                             uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "Header", uiText2: "Sub-Header",
                                                                                        uiImage: "Dumbell", ratioOfDeviceWidth: 1, imageRatio: 0.6, 
-                                                                                       uiSegPickerOptions: ["xx"],
-                                                                                       uiQuestion: "xx", uiAnswer: "xx")),
+                                                                                       uiSegPickerOptions: ["xx"])),
                                            
                                            UIComponent(type: .uiImageName, uiData: UIData(uiText: "String from App Demo Data", uiText2: "UI Text No.2",
                                                                                           uiImage: "Gym", ratioOfDeviceWidth: 0.5, imageRatio: 1, 
-                                                                                          uiSegPickerOptions: ["xx"],
-                                                                                          uiQuestion: "App Demo Q1", uiAnswer: "App Demo A1")),
+                                                                                          uiSegPickerOptions: ["xx"])),
                                            
                                            UIComponent(type: .uiSegPicker, uiData: UIData(uiText: "Select your setting...", uiText2: "Lesson 1",
                                                                                           uiImage: "Gym", ratioOfDeviceWidth: 0, imageRatio: 0, 
-                                                                                          uiSegPickerOptions: ["Not Sure", "Fat Loss", "Muscle Gain"],
-                                                                                          uiQuestion: "xx", uiAnswer: "xx"))
-                                          
+                                                                                          uiSegPickerOptions: ["Not Sure", "Fat Loss", "Muscle Gain"]))
                                           ])
 }

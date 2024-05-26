@@ -13,6 +13,7 @@
 		143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758D2BFD298500AB8029 /* UICompHeader.swift */; };
 		143A75902BFD2E2F00AB8029 /* UICompSegPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */; };
 		143A759C2C0213CF00AB8029 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A759B2C0213CF00AB8029 /* UserConfig.swift */; };
+		143A759E2C03BF6A00AB8029 /* UICompQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A759D2C03BF6A00AB8029 /* UICompQuestion.swift */; };
 		144C52872BF904EF006C14EC /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52862BF904EF006C14EC /* AppController.swift */; };
 		144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52882BF90B0D006C14EC /* Lesson010.swift */; };
 		144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C528B2BF90DE5006C14EC /* Lesson020.swift */; };
@@ -70,6 +71,7 @@
 		143A758D2BFD298500AB8029 /* UICompHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompHeader.swift; sourceTree = "<group>"; };
 		143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompSegPicker.swift; sourceTree = "<group>"; };
 		143A759B2C0213CF00AB8029 /* UserConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
+		143A759D2C03BF6A00AB8029 /* UICompQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompQuestion.swift; sourceTree = "<group>"; };
 		144C52862BF904EF006C14EC /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		144C52882BF90B0D006C14EC /* Lesson010.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson010.swift; sourceTree = "<group>"; };
 		144C528B2BF90DE5006C14EC /* Lesson020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson020.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				143A758D2BFD298500AB8029 /* UICompHeader.swift */,
 				143A758B2BFD229700AB8029 /* UICompImage.swift */,
+				143A759D2C03BF6A00AB8029 /* UICompQuestion.swift */,
 				143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */,
 				143A75892BFD205A00AB8029 /* UICompText.swift */,
 			);
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */,
+				143A759E2C03BF6A00AB8029 /* UICompQuestion.swift in Sources */,
 				144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */,
 				144C529E2BFA8834006C14EC /* Module.swift in Sources */,
 				14AD6EE32B03EA6D005DE26E /* ContentView.swift in Sources */,
