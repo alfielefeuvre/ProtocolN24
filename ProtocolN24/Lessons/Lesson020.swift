@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
+import SwiftData
 
 class Lesson020: NSObject, ObservableObject {
+    @EnvironmentObject var appController: AppController
     
     var lesson020 = Lesson(id: 020, headline: "How do you know ProtocolN24 will work?",
                            dayRef: "Lesson 2",
@@ -43,9 +46,9 @@ class Lesson020: NSObject, ObservableObject {
                                                                                                                                                  uiImage: "Dumbell", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                                  uiSegPickerOptions: ["xx"])),
                                                                 
-                                                                UIComponent(type: .uiTextString, uiData: UIData(uiText: "Header", uiText2: "Sub-Header",
+                                                                UIComponent(type: .uiStepper, uiData: UIData(uiText: "Header", uiText2: "Sub-Header",
                                                                                                                                                  uiImage: "Dumbell", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                                                                                 uiSegPickerOptions: ["xx"])),
+                                                                                                                                                 uiSegPickerOptions: ["xx"]))
                                                                 
                                                              ])
 

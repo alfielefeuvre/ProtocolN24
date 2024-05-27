@@ -31,7 +31,6 @@ struct UICompQuestion: View {
                         if answerDisplayed {
                             Text(uiData.uiText2).padding()
                         }
-                        Text("")
                     }
                     Spacer()
                     VStack {

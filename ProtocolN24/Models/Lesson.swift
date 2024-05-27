@@ -35,6 +35,7 @@ enum UIComponentType: String, CaseIterable, Codable {
     case uiImageName = "Image"
     case uiQandA = "Q & A"
     case uiSegPicker = "Segmented Picker"
+    case uiStepper = "Stepper Int"
     case uiTextString = "Text"
    
 }
@@ -49,8 +50,11 @@ struct UIData: Codable {
     var ratioOfDeviceWidth: Double
     var imageRatio: Double
     
-    // Segmented Picker
+    // Segmented Picker - Text
     var uiSegPickerOptions: [String]
 
+    
+    
+    
 }
 

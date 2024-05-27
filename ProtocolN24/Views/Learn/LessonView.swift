@@ -21,7 +21,8 @@ struct LessonView: View {
                 case .uiQandA: UICompQuestion(uiData: uiComponent.uiData)
                 case .uiSegPicker: UICompSegPicker(uiData: uiComponent.uiData,
                                                    lessonId: lesson.id)
-                case .uiTextString: UICompText(uiData: uiComponent.uiData)
+                case .uiStepper: UICompStepper(lessonId: lesson.id)
+                case .uiTextString: UICompText(uiData: uiComponent.uiData, lessonId: lesson.id)
                 }
             }
         }

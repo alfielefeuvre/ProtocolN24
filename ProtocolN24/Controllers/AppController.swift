@@ -12,6 +12,8 @@ class AppController: NSObject, ObservableObject {
     @Published var lessons: [Lesson] = []
     @Published var modules: [String] = ["Week 1", "Week 2", "Week 3"]
     
+    @Published var expectedWeightLoss = 0.0
+    
     // MARK: - Set-up
     func loadLessonsFromStorage() {
         lessons.append(Lesson010().lesson010)
@@ -36,6 +38,7 @@ class AppController: NSObject, ObservableObject {
             if isLocked == true { lessons[index].isLocked = true
             } else { lessons[index].isLocked = false }
         }
+        expectedWeightLoss = Double(userConfig.startBodyweightKG) * 0.06
     }
    
     

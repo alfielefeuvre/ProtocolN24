@@ -38,18 +38,18 @@ struct UICompSegPicker: View {
     }
     
     func assignPickerSelection() {
-        switch uiData.uiText2 {
-        case "Lesson 1": selectedPickerOption = userConfig[0].cutOrBulk
+        switch lessonId {
+        case 10: selectedPickerOption = userConfig[0].cutOrBulk
         default: selectedPickerOption = "Not Sure"
-            print("Error: UICompSegPicker: assignPickerSelection(): \(lessonId)")
+            print("Error: UICompSegPicker: assignPickerSelection(): lessonId: \(lessonId)")
         }
     }
     
     // Segmented Picker Response
     func uiSegmentedPickerResponse() {
-        switch uiData.uiText2 {
-        case "Lesson 1": selectCutOrBulk(response: selectedPickerOption)
-        default: print("Error: UICompSegPicker: uiSegmentedPickerResponse(): lessonRef: \(uiData.uiText2)")
+        switch lessonId {
+        case 10: selectCutOrBulk(response: selectedPickerOption)
+        default: print("Error: UICompSegPicker: uiSegmentedPickerResponse(): lessonId: \(lessonId)")
         }
     }
     
