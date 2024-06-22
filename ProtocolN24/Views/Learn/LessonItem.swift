@@ -55,6 +55,6 @@ struct LessonItem: View {
 }
 
 #Preview {
-    let lesson = Lesson(id: 046, headline: "Headliner, multi line that goes over 2 lines ", dayRef: "Day 1 (1/3)", module: .week1, isComplete: true, isLocked: true, imageName: "Gym", uiComponents: [])
+    let lesson = Lesson(id: 000, headline: "Headliner, multi line that goes over 2 lines ", dayRef: "Day 1 (1/3)", module: .quickStart, isComplete: false, isLocked: false, imageName: "Gym", uiComponents: [])
     return LessonItem(lesson: lesson)
 }

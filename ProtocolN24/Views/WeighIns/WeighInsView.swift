@@ -29,19 +29,12 @@ struct WeighInsView: View {
             weekRef = calendar.component(.weekOfYear, from: Date.now)
             weekRefPrevious = weekRef - 1
             if weekRefPrevious < 1 { weekRefPrevious = 52}
-        
-            
             WeighInData.last7Days[1].weighIns[0].weight = 89
-            
         }
     }
     
     func updateWeighIns() {
-        
-        
-        
         // update average
-        
     }
 }
 
@@ -51,7 +44,7 @@ struct AddWeighInView: View {
     var calendar = Calendar(identifier: .gregorian)
     
     @State private var dateToAdd = Date.now
-    @State private var weightToAdd: Double = 82.1
+    @State private var weightToAdd: Double = 0
     @State private var weightAdded = false
     
     var weekInYear: Int {
@@ -82,7 +75,7 @@ struct AddWeighInView: View {
             }
         }.onAppear{
             if weighIns.count > 0 {
-                weightToAdd = 82
+                weightToAdd = 79
             }
         }
     }
@@ -98,6 +91,9 @@ struct AddWeighInView: View {
         try? modelContext.save()
         
         weightAdded = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 12) {
+            weightAdded = false
+        }
     }
     
     func dateGet(year: Int, month: Int, day: Int = 1) -> Date {

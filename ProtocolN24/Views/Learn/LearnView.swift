@@ -11,56 +11,59 @@ struct LearnView: View {
     @EnvironmentObject var appController: AppController
     var lessons: [Lesson]
     
+    let deviceWidth = UIScreen.main.bounds.width * 0.95
+    
     var body: some View {
         NavigationView {
-            List {
-//                ZStack {
-//                    Image("run-634702_1920")
-//                        .resizable()
-//                        .scaledToFill()
-//                        .frame(height: 250)
-//                        .clipped()
-//                        .listRowInsets(EdgeInsets())
-//                }
-                
-                Section("Week 1") {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 0) {
-                            ForEach(lessons) { lesson in
-                                if lesson.module == .week1 {
-                                    NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
+                List {
+//                    NavigationLink { LessonView(lesson: Lesson000().lesson000)} label: {
+//                            ZStack {
+//                                Image("Gym")
+//                                    .resizable()
+//                                    .scaledToFill()
+//                                    .frame(width: deviceWidth, height: deviceWidth * 0.7)
+//                                Text("Start Here!").foregroundColor(.white).font(.largeTitle)
+//                            }
+//                    }
+                    
+                    Section("Week 1") {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(alignment: .top, spacing: 0) {
+                                ForEach(lessons) { lesson in
+                                    if lesson.module == .week1 {
+                                        NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
+                                    }
                                 }
                             }
                         }
+                        .frame(height: 235)
                     }
-                    .frame(height: 235)
-                }
-                
-                Section("Week 2") {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 0) {
-                            ForEach(lessons) { lesson in
-                                if lesson.module == .week2 {
-                                    NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
+                    
+                    Section("Week 2") {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(alignment: .top, spacing: 0) {
+                                ForEach(lessons) { lesson in
+                                    if lesson.module == .week2 {
+                                        NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
+                                    }
                                 }
                             }
                         }
+                        .frame(height: 175)
                     }
-                    .frame(height: 175)
-                }
-                
-                Section("Week 3") {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 0) {
-                            ForEach(lessons) { lesson in
-                                if lesson.module == .week3 {
-                                    NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
+                    
+                    Section("Week 3") {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(alignment: .top, spacing: 0) {
+                                ForEach(lessons) { lesson in
+                                    if lesson.module == .week3 {
+                                        NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
+                                    }
                                 }
                             }
                         }
+                        .frame(height: 175)
                     }
-                    .frame(height: 175)
-                }
             }.navigationTitle("Lessons")
         }
     }

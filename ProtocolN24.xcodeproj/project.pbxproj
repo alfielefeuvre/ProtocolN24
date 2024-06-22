@@ -44,6 +44,7 @@
 		14B5E5242BF69857006861A7 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5232BF69857006861A7 /* LessonView.swift */; };
 		14D085512B0737020037079F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D085502B0737020037079F /* Data.swift */; };
 		14D085532B073AA70037079F /* SeriesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D085522B073AA70037079F /* SeriesChartView.swift */; };
+		14DDBCA02C273FE2006F9392 /* Lesson000.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDBC9F2C273FE2006F9392 /* Lesson000.swift */; };
 		14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */; };
 		14EC26BD2B0A824D00CAA9B4 /* Week4ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BC2B0A824D00CAA9B4 /* Week4ChartView.swift */; };
 /* End PBXBuildFile section */
@@ -106,6 +107,7 @@
 		14B5E5232BF69857006861A7 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		14D085502B0737020037079F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		14D085522B073AA70037079F /* SeriesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesChartView.swift; sourceTree = "<group>"; };
+		14DDBC9F2C273FE2006F9392 /* Lesson000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson000.swift; sourceTree = "<group>"; };
 		14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		14EC26BC2B0A824D00CAA9B4 /* Week4ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 		144C528A2BF90B1B006C14EC /* Lessons */ = {
 			isa = PBXGroup;
 			children = (
+				14DDBC9F2C273FE2006F9392 /* Lesson000.swift */,
 				144C52882BF90B0D006C14EC /* Lesson010.swift */,
 				144C528B2BF90DE5006C14EC /* Lesson020.swift */,
 				144C528D2BF90DF0006C14EC /* Lesson030.swift */,
@@ -434,6 +437,7 @@
 				144C52922BF938DD006C14EC /* Lesson040.swift in Sources */,
 				144C52962BF938EE006C14EC /* Lesson060.swift in Sources */,
 				144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */,
+				14DDBCA02C273FE2006F9392 /* Lesson000.swift in Sources */,
 				144C52982BF938F8006C14EC /* Lesson070.swift in Sources */,
 				143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */,
 				14B5E5242BF69857006861A7 /* LessonView.swift in Sources */,

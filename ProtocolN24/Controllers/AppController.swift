@@ -16,6 +16,7 @@ class AppController: NSObject, ObservableObject {
     
     // MARK: - Set-up
     func loadLessonsFromStorage() {
+        lessons.append(Lesson000().lesson000)
         lessons.append(Lesson010().lesson010)
         lessons.append(Lesson020().lesson020)
         lessons.append(Lesson030().lesson030)
