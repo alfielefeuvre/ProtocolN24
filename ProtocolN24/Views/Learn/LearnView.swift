@@ -5,27 +5,21 @@
 //  Created by Alfie Le Feuvre on 14/11/2023.
 //
 
+import SwiftData
 import SwiftUI
 
 struct LearnView: View {
     @EnvironmentObject var appController: AppController
+    @Environment(\.modelContext) private var modelContext
+    @Query var userConfig: [UserConfig]
+    
     var lessons: [Lesson]
     
     let deviceWidth = UIScreen.main.bounds.width * 0.95
     
     var body: some View {
         NavigationView {
-                List {
-//                    NavigationLink { LessonView(lesson: Lesson000().lesson000)} label: {
-//                            ZStack {
-//                                Image("Gym")
-//                                    .resizable()
-//                                    .scaledToFill()
-//                                    .frame(width: deviceWidth, height: deviceWidth * 0.7)
-//                                Text("Start Here!").foregroundColor(.white).font(.largeTitle)
-//                            }
-//                    }
-                    
+                List {                    
                     Section("Week 1") {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(alignment: .top, spacing: 0) {
@@ -64,6 +58,19 @@ struct LearnView: View {
                         }
                         .frame(height: 175)
                     }
+                    Button("RESET DATA"){
+                        userConfig[0].isLessonComplete = [ 010: false ]
+                        userConfig[0].isLessonLocked = [ 010: false ]
+                        userConfig[0].cutOrBulk = "Not Sure"
+                        userConfig[0].startBodyweightKG = 0
+                        userConfig[0].calories = 0
+                        userConfig[0].carbs = 0
+                        userConfig[0].protein = 0
+                        userConfig[0].fat = 0
+                        
+                        try? modelContext.save()
+                        appController.updateLessonsWithUserConfig(userConfig: userConfig[0])
+                    }
             }.navigationTitle("Lessons")
         }
     }
@@ -75,5 +82,7 @@ struct LearnView: View {
     let lesson030 = Lesson030().lesson030
     let lessons = [lesson010, lesson020, lesson030]
     
-    return LearnView(lessons: lessons).environmentObject(AppController())
+    return LearnView(lessons: lessons)
+        .environmentObject(AppController())
+        .modelContainer(for: [WeighWeek.self, UserConfig.self])
 }

@@ -27,6 +27,7 @@
 		144C529A2BF93907006C14EC /* Lesson080.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52992BF93907006C14EC /* Lesson080.swift */; };
 		144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C529B2BF9390F006C14EC /* Lesson090.swift */; };
 		144C529E2BFA8834006C14EC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C529D2BFA8834006C14EC /* Module.swift */; };
+		147B9D382C2DEBD400227D80 /* UICompEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D372C2DEBD400227D80 /* UICompEnd.swift */; };
 		14A80C4D2B055683009F46C9 /* WeightWeekViewChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */; };
 		14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */; };
 		14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */; };
@@ -87,6 +88,7 @@
 		144C52992BF93907006C14EC /* Lesson080.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson080.swift; sourceTree = "<group>"; };
 		144C529B2BF9390F006C14EC /* Lesson090.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson090.swift; sourceTree = "<group>"; };
 		144C529D2BFA8834006C14EC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		147B9D372C2DEBD400227D80 /* UICompEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompEnd.swift; sourceTree = "<group>"; };
 		14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightWeekViewChartView.swift; sourceTree = "<group>"; };
 		14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighInDataView.swift; sourceTree = "<group>"; };
 		14AD6EDD2B03EA6D005DE26E /* ProtocolN24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolN24.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 		143A75882BFD201D00AB8029 /* LessonComponents */ = {
 			isa = PBXGroup;
 			children = (
+				147B9D372C2DEBD400227D80 /* UICompEnd.swift */,
 				143A758D2BFD298500AB8029 /* UICompHeader.swift */,
 				143A758B2BFD229700AB8029 /* UICompImage.swift */,
 				143A759D2C03BF6A00AB8029 /* UICompQuestion.swift */,
@@ -434,6 +437,7 @@
 				144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */,
 				144C529E2BFA8834006C14EC /* Module.swift in Sources */,
 				14AD6EE32B03EA6D005DE26E /* ContentView.swift in Sources */,
+				147B9D382C2DEBD400227D80 /* UICompEnd.swift in Sources */,
 				144C52922BF938DD006C14EC /* Lesson040.swift in Sources */,
 				144C52962BF938EE006C14EC /* Lesson060.swift in Sources */,
 				144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */,

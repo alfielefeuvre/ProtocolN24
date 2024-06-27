@@ -31,6 +31,7 @@ struct UIComponent: Identifiable, Codable {
 }
 
 enum UIComponentType: String, CaseIterable, Codable {
+    case uiEnd = "End"
     case uiHeader = "Header"
     case uiImageName = "Image"
     case uiQandA = "Q & A"

@@ -16,6 +16,7 @@ struct LessonView: View {
         ScrollView {
             ForEach(lesson.uiComponents) { uiComponent in
                 switch uiComponent.type {
+                case .uiEnd: UICompEnd(uiData: uiComponent.uiData, lessonId: lesson.id)
                 case .uiHeader: UICompHeader(uiData: uiComponent.uiData)
                 case .uiImageName: UICompImage(uiData: uiComponent.uiData)
                 case .uiQandA: UICompQuestion(uiData: uiComponent.uiData)
