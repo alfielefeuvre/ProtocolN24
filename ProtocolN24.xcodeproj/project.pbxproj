@@ -28,6 +28,8 @@
 		144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C529B2BF9390F006C14EC /* Lesson090.swift */; };
 		144C529E2BFA8834006C14EC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C529D2BFA8834006C14EC /* Module.swift */; };
 		147B9D382C2DEBD400227D80 /* UICompEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D372C2DEBD400227D80 /* UICompEnd.swift */; };
+		147B9D3B2C2F440000227D80 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D3A2C2F440000227D80 /* FoodView.swift */; };
+		147B9D3D2C2F448C00227D80 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D3C2C2F448C00227D80 /* WorkoutView.swift */; };
 		14A80C4D2B055683009F46C9 /* WeightWeekViewChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */; };
 		14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */; };
 		14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */; };
@@ -89,6 +91,8 @@
 		144C529B2BF9390F006C14EC /* Lesson090.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson090.swift; sourceTree = "<group>"; };
 		144C529D2BFA8834006C14EC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		147B9D372C2DEBD400227D80 /* UICompEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompEnd.swift; sourceTree = "<group>"; };
+		147B9D3A2C2F440000227D80 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		147B9D3C2C2F448C00227D80 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightWeekViewChartView.swift; sourceTree = "<group>"; };
 		14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighInDataView.swift; sourceTree = "<group>"; };
 		14AD6EDD2B03EA6D005DE26E /* ProtocolN24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolN24.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +182,22 @@
 			path = Lessons;
 			sourceTree = "<group>";
 		};
+		147B9D392C2F43EE00227D80 /* FoodView */ = {
+			isa = PBXGroup;
+			children = (
+				147B9D3A2C2F440000227D80 /* FoodView.swift */,
+			);
+			path = FoodView;
+			sourceTree = "<group>";
+		};
+		147B9D3E2C2F469900227D80 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				147B9D3C2C2F448C00227D80 /* WorkoutView.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
 		14A80C492B055381009F46C9 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,10 +270,12 @@
 		14AD6F0E2B03F7C7005DE26E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				14EC26B92B0A626B00CAA9B4 /* Helpers */,
-				14EC26AF2B0A5B3400CAA9B4 /* WeighIns */,
+				147B9D392C2F43EE00227D80 /* FoodView */,
+				14EC26AF2B0A5B3400CAA9B4 /* Progress */,
 				14EC26B02B0A5B4000CAA9B4 /* Learn */,
+				147B9D3E2C2F469900227D80 /* Workouts */,
 				14A80C492B055381009F46C9 /* Charts */,
+				14EC26B92B0A626B00CAA9B4 /* Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,7 +292,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		14EC26AF2B0A5B3400CAA9B4 /* WeighIns */ = {
+		14EC26AF2B0A5B3400CAA9B4 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
 				14AD6F0C2B03ED67005DE26E /* WeighInsView.swift */,
@@ -278,7 +300,7 @@
 				14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */,
 				14D085522B073AA70037079F /* SeriesChartView.swift */,
 			);
-			path = WeighIns;
+			path = Progress;
 			sourceTree = "<group>";
 		};
 		14EC26B02B0A5B4000CAA9B4 /* Learn */ = {
@@ -435,6 +457,7 @@
 				14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */,
 				143A759E2C03BF6A00AB8029 /* UICompQuestion.swift in Sources */,
 				144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */,
+				147B9D3D2C2F448C00227D80 /* WorkoutView.swift in Sources */,
 				144C529E2BFA8834006C14EC /* Module.swift in Sources */,
 				14AD6EE32B03EA6D005DE26E /* ContentView.swift in Sources */,
 				147B9D382C2DEBD400227D80 /* UICompEnd.swift in Sources */,
@@ -443,6 +466,7 @@
 				144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */,
 				14DDBCA02C273FE2006F9392 /* Lesson000.swift in Sources */,
 				144C52982BF938F8006C14EC /* Lesson070.swift in Sources */,
+				147B9D3B2C2F440000227D80 /* FoodView.swift in Sources */,
 				143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */,
 				14B5E5242BF69857006861A7 /* LessonView.swift in Sources */,
 				14D085532B073AA70037079F /* SeriesChartView.swift in Sources */,

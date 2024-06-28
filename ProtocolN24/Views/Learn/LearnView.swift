@@ -43,7 +43,7 @@ struct LearnView: View {
                                 }
                             }
                         }
-                        .frame(height: 175)
+                        .frame(height: 235)
                     }
                     
                     Section("Week 3") {
@@ -56,7 +56,7 @@ struct LearnView: View {
                                 }
                             }
                         }
-                        .frame(height: 175)
+                        .frame(height: 235)
                     }
                     Button("RESET DATA"){
                         userConfig[0].isLessonComplete = [ 010: false ]

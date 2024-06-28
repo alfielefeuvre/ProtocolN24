@@ -13,14 +13,22 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \WeighIn.weekOfYear) var weighIns: [WeighIn]
     @Query var userConfig: [UserConfig]
+    
+    @State private var selection = 3
      
     var body: some View {
-        TabView {
+        TabView(selection:$selection) {
+            FoodView()
+                .tabItem{ Label("Food & Drink", systemImage: "fork.knife") } .tag(1)
+            
             WeighInsView()
-                .tabItem{ Label("Progress", systemImage: "chart.line.uptrend.xyaxis") }
+                .tabItem{ Label("Progress", systemImage: "chart.line.uptrend.xyaxis") } .tag(2)
 
             LearnView(lessons: appController.lessons)
-                .tabItem{ Label("Learn   ", systemImage: "book") }
+                .tabItem{ Label("Learn", systemImage: "book") } .tag(3)
+            
+            WorkoutView()
+                .tabItem{ Label("Workout", systemImage: "dumbbell") } .tag(4)
         }
         .onAppear{
             appController.loadLessonsFromStorage()

@@ -45,14 +45,13 @@ struct UICompStepper: View {
     
     func lesson20Setup() {
         if userConfig[0].startBodyweightKG == 0 {
-            print(": \(userConfig[0].cutOrBulk)")
             if userConfig[0].cutOrBulk == "Muscle Gain" {
                 selectedInt = 45
             }
         } else {
             selectedInt = userConfig[0].startBodyweightKG
         }
-        summaryText = "Expected fat loss: \(String(format: "%.1f", Double(userConfig[0].startBodyweightKG) * 0.06)) kg"
+        setText()
     }
     
     func selectionConfirmed() {
@@ -67,15 +66,20 @@ struct UICompStepper: View {
         userConfig[0].startBodyweightKG = inKG
         try? modelContext.save()
         appController.updateLessonsWithUserConfig(userConfig: userConfig[0])
-        summaryText = "Expected fat loss: \(String(format: "%.1f", Double(userConfig[0].startBodyweightKG) * 0.06)) kg"
+        setText()
     }
     
-    
-    
-    
+    func setText() {
+        if userConfig[0].cutOrBulk == "Muscle Gain" {
+            summaryText = "Muscle gain: \(String(format: "%.1f", Double(userConfig[0].startBodyweightKG) * 0.015)) kg"
+        } else {
+            summaryText = "Target fat loss: \(String(format: "%.1f", Double(userConfig[0].startBodyweightKG) * 0.06)) kg"
+        }
+    }
 }
 
 #Preview {
     UICompStepper(lessonId: 20)
+        .environmentObject(AppController())
         .modelContainer(for: [WeighWeek.self, UserConfig.self])
 }
