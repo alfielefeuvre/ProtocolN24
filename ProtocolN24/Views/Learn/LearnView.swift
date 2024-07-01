@@ -58,21 +58,46 @@ struct LearnView: View {
                         }
                         .frame(height: 235)
                     }
-                    Button("RESET DATA"){
-                        userConfig[0].isLessonComplete = [ 010: false ]
-                        userConfig[0].isLessonLocked = [ 010: false ]
-                        userConfig[0].cutOrBulk = "Not Sure"
-                        userConfig[0].startBodyweightKG = 0
-                        userConfig[0].calories = 0
-                        userConfig[0].carbs = 0
-                        userConfig[0].protein = 0
-                        userConfig[0].fat = 0
-                        
-                        try? modelContext.save()
-                        appController.updateLessonsWithUserConfig(userConfig: userConfig[0])
+                    Section("RESET DATA") {
+                        Button("RESET DATA"){ resetData() }
+                    }
+                    
+                    Section("Use Alfie Data") {
+                        Button("Alfie Data"){
+                            resetData()
+                            alfieData()
+                        }
                     }
             }.navigationTitle("Lessons")
         }
+    }
+    
+    func resetData() {
+        userConfig[0].isLessonComplete = [ 010: false ]
+        userConfig[0].isLessonLocked = [ 010: false ]
+        userConfig[0].cutOrBulk = "Not Sure"
+        userConfig[0].recentAvgBodyweightKG = 0
+        userConfig[0].recentAvgBodyweightKG = 0
+        userConfig[0].calories = 0
+        userConfig[0].carbs = 0
+        userConfig[0].protein = 0
+        userConfig[0].fat = 0
+        saveData()
+    }
+    
+    func alfieData()  {
+        userConfig[0].isLessonComplete = [ 000: true, 010: true, 020 : true  ]
+        userConfig[0].isLessonLocked = [ 010: false ]
+        userConfig[0].cutOrBulk = "Fat Loss"
+        userConfig[0].startWeightKGDouble = 87.3
+        userConfig[0].recentAvgBodyweightKG = 82.3
+        userConfig[0].weeksIn = 7
+        saveData()
+    }
+    
+    func saveData() {
+        try? modelContext.save()
+        appController.updateLessonsWithUserConfig(userConfig: userConfig[0])
     }
 }
 

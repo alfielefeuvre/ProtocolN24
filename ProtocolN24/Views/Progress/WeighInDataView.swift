@@ -47,7 +47,7 @@ struct WeighInDataView: View {
 //        
 //        let weighIns = [wI1, wI2]
         
-        return WeighInsView()
+        return TrackingView()
            .modelContainer(container)
     } catch {
         fatalError("Failed to create model container.")

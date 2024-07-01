@@ -14,7 +14,7 @@ struct UICompStepper: View {
     @Query var userConfig: [UserConfig]
   
     var lessonId: Int
-    @State private var selectedInt: Int = 90
+    @State private var selectedInt: Double = 90
     @State private var summaryText = ""
     
     var body: some View {
@@ -44,12 +44,12 @@ struct UICompStepper: View {
     }
     
     func lesson20Setup() {
-        if userConfig[0].startBodyweightKG == 0 {
+        if userConfig[0].startWeightKGDouble == 0 {
             if userConfig[0].cutOrBulk == "Muscle Gain" {
                 selectedInt = 45
             }
         } else {
-            selectedInt = userConfig[0].startBodyweightKG
+            selectedInt = userConfig[0].startWeightKGDouble
         }
         setText()
     }
@@ -61,9 +61,9 @@ struct UICompStepper: View {
         }
     }
     
-    func assignBodyWeight(inKG: Int) {
+    func assignBodyWeight(inKG: Double) {
         userConfig[0].isLessonComplete[20] = true
-        userConfig[0].startBodyweightKG = inKG
+        userConfig[0].startWeightKGDouble = inKG
         try? modelContext.save()
         appController.updateLessonsWithUserConfig(userConfig: userConfig[0])
         setText()
@@ -71,9 +71,9 @@ struct UICompStepper: View {
     
     func setText() {
         if userConfig[0].cutOrBulk == "Muscle Gain" {
-            summaryText = "Muscle gain: \(String(format: "%.1f", Double(userConfig[0].startBodyweightKG) * 0.015)) kg"
+            summaryText = "Muscle gain: \(String(format: "%.1f", Double(userConfig[0].startWeightKGDouble) * 0.015)) kg"
         } else {
-            summaryText = "Target fat loss: \(String(format: "%.1f", Double(userConfig[0].startBodyweightKG) * 0.06)) kg"
+            summaryText = "Target fat loss: \(String(format: "%.1f", Double(userConfig[0].startWeightKGDouble) * 0.06)) kg"
         }
     }
 }

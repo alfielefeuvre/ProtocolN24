@@ -8,7 +8,7 @@
 import SwiftData
 import SwiftUI
 
-struct WeighInsView: View {
+struct TrackingView: View {
     @State var weekRef: Int = 0
     @State var weekRefPrevious: Int = 0
     var calendar = Calendar(identifier: .gregorian)
@@ -17,10 +17,10 @@ struct WeighInsView: View {
         NavigationView {
             List{
                 AddWeighInView()
+                ProgressSummaryView()
                 SeriesChartView(weekRef: weekRef)
                 SeriesChartView(weekRef: weekRefPrevious)
-               Week4ChartView()
-                WeightWeekView()
+                Week4ChartView()
                 WeighInDataView()
             }
             .navigationTitle("Progress")
@@ -32,11 +32,72 @@ struct WeighInsView: View {
             WeighInData.last7Days[1].weighIns[0].weight = 89
         }
     }
+}
+
+
+
+struct ProgressSummaryView: View {
+    @EnvironmentObject var appController: AppController
+    @Environment(\.modelContext) private var modelContext
+    @Query var userConfig: [UserConfig]
     
-    func updateWeighIns() {
-        // update average
+     var body: some View {
+         Section("Week: \(userConfig[0].weeksIn)") {
+            HStack {
+                ProgressItem(titleText: "Weight Loss",
+                             kiloWeightLoss: userConfig[0].lostWeight,
+                             percentWeightLoss: userConfig[0].lostWeightPercent )
+                Spacer()
+                ProgressItem(titleText: "8-Week Forecast Weight Loss",
+                             kiloWeightLoss: userConfig[0].forecastLostWeight,
+                             percentWeightLoss: userConfig[0].forecastLostWeightPercent )
+            }
+        }
     }
 }
+
+struct ProgressItem: View {
+    let squareWidth = UIScreen.main.bounds.width * 0.95 / 2.3
+    let titleText: String
+    let kiloWeightLoss: String
+    let percentWeightLoss: String
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerSize: CGSize(width: 12, height: 12))
+                .foregroundColor(.primary)
+                .opacity(0.03)
+                .frame(width: squareWidth, height: squareWidth)
+            
+            VStack {
+                Text(titleText).padding(.top)
+                    .font(.callout)
+                    .multilineTextAlignment(.center)
+                Spacer()
+            }
+            
+            VStack {
+                Spacer()
+                HStack {
+                    Text(kiloWeightLoss)
+                       .padding(.leading)
+                    Spacer()
+                }
+                Text("")
+                HStack {
+                    Spacer()
+                    Text(percentWeightLoss)
+                        .padding(.trailing)
+                }
+            }
+            .font(.largeTitle)
+            .padding(.bottom)
+        }
+    }
+}
+
+
+
 
 struct AddWeighInView: View {
     @Environment(\.modelContext) private var modelContext
@@ -52,7 +113,7 @@ struct AddWeighInView: View {
     }
     
     var body: some View {
-        Section("Add Weight") {
+        Section("Weigh-in") {
             
             DatePicker(selection: $dateToAdd, in: ...Date.now, displayedComponents: .date) {
                 Text("Select a date")
@@ -101,27 +162,23 @@ struct AddWeighInView: View {
     }
 }
 
-struct WeightWeekView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query(sort: \WeighWeek.weekRef) var weeks: [WeighWeek]
-    var calendar = Calendar(identifier: .gregorian)
-    @State var selectedWeek: WeighWeek = WeighWeek(weekRef: 0)
-   
-    var body: some View {
-        Section("Week Chart: \(calendar.component(.weekOfYear, from: .now))") {
-            WeightWeekViewChartView(week: calendar.component(.weekOfYear, from: .now))
-        }
-    }
-}
+//struct WeightWeekView: View {
+//    @Environment(\.modelContext) private var modelContext
+//    @Query(sort: \WeighWeek.weekRef) var weeks: [WeighWeek]
+//    var calendar = Calendar(identifier: .gregorian)
+//    @State var selectedWeek: WeighWeek = WeighWeek(weekRef: 0)
+//   
+//    var body: some View {
+//        Section("Week Chart: \(calendar.component(.weekOfYear, from: .now))") {
+//            WeightWeekViewChartView(week: calendar.component(.weekOfYear, from: .now))
+//        }
+//    }
+//}
 
 #Preview {
-    do {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try ModelContainer(for: WeighIn.self, configurations: config)
-        
-        return WeighInsView()
-            .modelContainer(container)
-    } catch {
-        fatalError("Failed to create model container.")
-    }
+    
+    TrackingView()
+        .environmentObject(AppController())
+        .modelContainer(for: [WeighWeek.self, UserConfig.self])
+
 }

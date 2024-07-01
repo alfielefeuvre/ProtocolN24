@@ -30,6 +30,7 @@
 		147B9D382C2DEBD400227D80 /* UICompEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D372C2DEBD400227D80 /* UICompEnd.swift */; };
 		147B9D3B2C2F440000227D80 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D3A2C2F440000227D80 /* FoodView.swift */; };
 		147B9D3D2C2F448C00227D80 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D3C2C2F448C00227D80 /* WorkoutView.swift */; };
+		147B9D402C31EB5A00227D80 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D3F2C31EB5A00227D80 /* TimeView.swift */; };
 		14A80C4D2B055683009F46C9 /* WeightWeekViewChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */; };
 		14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */; };
 		14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */; };
@@ -40,7 +41,7 @@
 		14AD6EFC2B03EA6F005DE26E /* ProtocolN24UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EFB2B03EA6F005DE26E /* ProtocolN24UITests.swift */; };
 		14AD6EFE2B03EA6F005DE26E /* ProtocolN24UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EFD2B03EA6F005DE26E /* ProtocolN24UITestsLaunchTests.swift */; };
 		14AD6F0B2B03ED52005DE26E /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0A2B03ED52005DE26E /* LearnView.swift */; };
-		14AD6F0D2B03ED67005DE26E /* WeighInsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0C2B03ED67005DE26E /* WeighInsView.swift */; };
+		14AD6F0D2B03ED67005DE26E /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0C2B03ED67005DE26E /* TrackingView.swift */; };
 		14AD6F102B03F82C005DE26E /* WeighIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0F2B03F82C005DE26E /* WeighIn.swift */; };
 		14AD6F132B03F84F005DE26E /* WeighWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F122B03F84F005DE26E /* WeighWeek.swift */; };
 		14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5212BF695A4006861A7 /* Lesson.swift */; };
@@ -93,6 +94,7 @@
 		147B9D372C2DEBD400227D80 /* UICompEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompEnd.swift; sourceTree = "<group>"; };
 		147B9D3A2C2F440000227D80 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		147B9D3C2C2F448C00227D80 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		147B9D3F2C31EB5A00227D80 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightWeekViewChartView.swift; sourceTree = "<group>"; };
 		14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighInDataView.swift; sourceTree = "<group>"; };
 		14AD6EDD2B03EA6D005DE26E /* ProtocolN24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolN24.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +108,7 @@
 		14AD6EFB2B03EA6F005DE26E /* ProtocolN24UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolN24UITests.swift; sourceTree = "<group>"; };
 		14AD6EFD2B03EA6F005DE26E /* ProtocolN24UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolN24UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14AD6F0A2B03ED52005DE26E /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
-		14AD6F0C2B03ED67005DE26E /* WeighInsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighInsView.swift; sourceTree = "<group>"; };
+		14AD6F0C2B03ED67005DE26E /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		14AD6F0F2B03F82C005DE26E /* WeighIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighIn.swift; sourceTree = "<group>"; };
 		14AD6F122B03F84F005DE26E /* WeighWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighWeek.swift; sourceTree = "<group>"; };
 		14B5E5212BF695A4006861A7 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
@@ -295,7 +297,8 @@
 		14EC26AF2B0A5B3400CAA9B4 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
-				14AD6F0C2B03ED67005DE26E /* WeighInsView.swift */,
+				14AD6F0C2B03ED67005DE26E /* TrackingView.swift */,
+				147B9D3F2C31EB5A00227D80 /* TimeView.swift */,
 				14EC26BC2B0A824D00CAA9B4 /* Week4ChartView.swift */,
 				14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */,
 				14D085522B073AA70037079F /* SeriesChartView.swift */,
@@ -480,7 +483,7 @@
 				14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */,
 				144C52872BF904EF006C14EC /* AppController.swift in Sources */,
 				144C52902BF92D96006C14EC /* LessonItem.swift in Sources */,
-				14AD6F0D2B03ED67005DE26E /* WeighInsView.swift in Sources */,
+				14AD6F0D2B03ED67005DE26E /* TrackingView.swift in Sources */,
 				143A758A2BFD205A00AB8029 /* UICompText.swift in Sources */,
 				14D085512B0737020037079F /* Data.swift in Sources */,
 				1403FB962BF54B01008E10DD /* ButtonStandard.swift in Sources */,
@@ -491,6 +494,7 @@
 				144C529A2BF93907006C14EC /* Lesson080.swift in Sources */,
 				14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */,
 				143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */,
+				147B9D402C31EB5A00227D80 /* TimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

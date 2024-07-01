@@ -18,7 +18,7 @@ class Lesson000: NSObject, ObservableObject {
                                                                                                                                    uiSegPickerOptions: ["xx"])),
                                                                                    
                                                                                     UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                                            uiImage: "BeforeAfter", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+                                                                                                            uiImage: "BeforeAfter1", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                                                     uiSegPickerOptions: ["xx"])),
                                                             
                                                                                      UIComponent(type: .uiTextString, uiData: UIData(uiText: """
@@ -30,7 +30,7 @@ class Lesson000: NSObject, ObservableObject {
                                                                                                                                      uiSegPickerOptions: ["xx"])),
                                                             
                                                             UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                    uiImage: "BeforeAfter", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+                                                                                    uiImage: "BeforeAfter2", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                             uiSegPickerOptions: ["xx"])),
                                                             
                                                             UIComponent(type: .uiTextString, uiData: UIData(uiText: """
@@ -42,7 +42,7 @@ class Lesson000: NSObject, ObservableObject {
                                                                                                             uiSegPickerOptions: ["xx"])),
                                                             
                                                             UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                    uiImage: "BeforeAfter", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+                                                                                    uiImage: "BeforeAfter3", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                             uiSegPickerOptions: ["xx"])),
                                                             
                                                             UIComponent(type: .uiTextString, uiData: UIData(uiText: """
@@ -54,7 +54,7 @@ class Lesson000: NSObject, ObservableObject {
                                                                                                             uiSegPickerOptions: ["xx"])),
                                                             
                                                             UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                    uiImage: "BeforeAfter", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+                                                                                    uiImage: "BeforeAfter4", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                             uiSegPickerOptions: ["xx"])),
                                                             
                                                             UIComponent(type: .uiTextString, uiData: UIData(uiText: """
@@ -66,7 +66,7 @@ class Lesson000: NSObject, ObservableObject {
                                                                                                             uiSegPickerOptions: ["xx"])),
                                                             
                                                             UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                    uiImage: "BeforeAfter", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+                                                                                    uiImage: "BeforeAfter1", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                             uiSegPickerOptions: ["xx"])),
                                                             UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                     That’s why we have developed an 8-week process that will teach you all you need to know to get started building the body that you dream about. Here’s how it works:

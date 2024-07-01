@@ -39,7 +39,7 @@ class AppController: NSObject, ObservableObject {
             if isLocked == true { lessons[index].isLocked = true
             } else { lessons[index].isLocked = false }
         }
-        expectedWeightLoss = Double(userConfig.startBodyweightKG) * 0.06
+        expectedWeightLoss = Double(userConfig.recentAvgBodyweightKG) * 0.06
     }
    
     
