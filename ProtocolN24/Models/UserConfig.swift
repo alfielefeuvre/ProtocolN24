@@ -70,6 +70,17 @@ class UserConfig {
         return String(format: "%.1f", lossIn8Percent) + " %"
     }
             
-            
+    func resetData() {
+        isLessonComplete = [ 010: false ]
+        isLessonLocked = [ 010: false ]
+        cutOrBulk = "Not Sure"
+        startWeightKGDouble = 0
+        recentAvgBodyweightKG = 0
+        weeksIn = 1
+        calories = 0
+        carbs = 0
+        protein = 0
+        fat = 0
+    }
             
 }

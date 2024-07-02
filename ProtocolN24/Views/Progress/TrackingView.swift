@@ -9,6 +9,7 @@ import SwiftData
 import SwiftUI
 
 struct TrackingView: View {
+    
     @State var weekRef: Int = 0
     @State var weekRefPrevious: Int = 0
     var calendar = Calendar(identifier: .gregorian)
@@ -16,12 +17,14 @@ struct TrackingView: View {
     var body: some View {
         NavigationView {
             List{
+                FatLossView()
+                ScreenshotView()
                 AddWeighInView()
-                ProgressSummaryView()
-                SeriesChartView(weekRef: weekRef)
-                SeriesChartView(weekRef: weekRefPrevious)
-                Week4ChartView()
-                WeighInDataView()
+//                ProgressSummaryView()
+////                SeriesChartView(weekRef: weekRef)
+////                SeriesChartView(weekRef: weekRefPrevious)
+//                Week4ChartView()
+//                WeighInDataView()
             }
             .navigationTitle("Progress")
         }
@@ -95,8 +98,6 @@ struct ProgressItem: View {
         }
     }
 }
-
-
 
 
 struct AddWeighInView: View {

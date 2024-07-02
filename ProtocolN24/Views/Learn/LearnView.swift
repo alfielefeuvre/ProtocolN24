@@ -73,15 +73,7 @@ struct LearnView: View {
     }
     
     func resetData() {
-        userConfig[0].isLessonComplete = [ 010: false ]
-        userConfig[0].isLessonLocked = [ 010: false ]
-        userConfig[0].cutOrBulk = "Not Sure"
-        userConfig[0].recentAvgBodyweightKG = 0
-        userConfig[0].recentAvgBodyweightKG = 0
-        userConfig[0].calories = 0
-        userConfig[0].carbs = 0
-        userConfig[0].protein = 0
-        userConfig[0].fat = 0
+        userConfig[0].resetData()
         saveData()
     }
     

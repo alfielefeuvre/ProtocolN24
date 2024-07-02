@@ -44,6 +44,7 @@ struct ContentView: View {
                                     startWeightKGDouble: 0,
                                     recentAvgBodyweightKG: 0,
                                     calories: 0, protein: 0, fat: 0, carbs: 0)
+        
         modelContext.insert(userConfig)
         try? modelContext.save()
     }
