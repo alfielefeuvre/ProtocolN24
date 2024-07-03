@@ -4,22 +4,29 @@
 //
 //  Created by Alfie Le Feuvre on 02/07/2024.
 //
-
+import Foundation
 import SwiftUI
 
 struct BusStopTextView: View {
+    
+    let weekIn: Int 
+    let startDate: Date
+    let endDate: Date
+    
+    var calendar = Calendar(identifier: .gregorian)
+    
     var body: some View {
         HStack {
             VStack {
-                Text(" Sep, 20")
-                Text(" 2024")
+                Text(Date.getMonth(date: startDate) + ", \(Date.getDay(date: startDate))")
+               Text(Date.getYear(date: startDate))
             }
             Spacer()
-            Text("Week 6").font(.largeTitle)
+            Text("Week \(weekIn)").font(.largeTitle)
             Spacer()
             VStack {
-                Text("Oct, 15 ")
-                Text("2024 ")
+                Text(Date.getMonth(date: endDate) + ", \(Date.getDay(date: endDate))")
+               Text(Date.getYear(date: endDate))
             }
         }
     }

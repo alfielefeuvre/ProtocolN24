@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ArcProgressView: View {
-    let max: Int
-    let current: Int
+    @Environment(\.modelContext) private var modelContext
+    @Query var userConfig: [UserConfig]
     
     var body: some View {
         ZStack {
             ArcProgressBGView()
+            ArcPercentageView(percent: userConfig[0].lostWeightPercent)
             ArcTextView()
         }.offset(y: 30)
     }
@@ -21,10 +23,29 @@ struct ArcProgressView: View {
 
 #Preview {
     TrackingView()
-     //   .environmentObject(AppController())
+        .environmentObject(AppController())
         .modelContainer(for: [WeighWeek.self, UserConfig.self])
 }
 
+struct ArcPercentageView: View {
+    let percent: Double
+    
+    @State private var progress = 0.5
+    
+    var body: some View {
+        ZStack {
+            ProgressView(value: progress, total: 1.0)
+                .progressViewStyle(GaugeProgressStyle())
+                .frame(width: 200, height: 200)
+                .contentShape(Rectangle())
+                .rotationEffect(Angle(degrees: 242.5))
+        }.onAppear{ setProgress() }
+    }
+    
+    func setProgress() {
+        progress = percent / 12
+    }
+}
 
 struct ArcProgressBGView: View {
     let progress = 0.65
@@ -40,6 +61,9 @@ struct ArcProgressBGView: View {
 }
 
 struct ArcTextView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query var userConfig: [UserConfig]
+   
     var body: some View {
         ZStack {
             ZStack {
@@ -47,17 +71,33 @@ struct ArcTextView: View {
                     Text("Target")
                     Text("6%")
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                }.foregroundColor(.orange)
-                    .offset(CGSize(width: 45, height: -5))
+                }.foregroundColor(userConfig[0].lostWeightPercent > 6 ? .green : .orange)
+                .offset(CGSize(width: 45, height: -5))
                 
                 Circle()
                     .frame(width: 25)
-                    .foregroundColor(.orange)
-            }.offset(CGSize(width: 92, height: -40))
+                    .foregroundColor(userConfig[0].lostWeightPercent > 6 ? .green : .orange)
+            }.offset(CGSize(width: 90, height: -43))
             
-            Text("4.9%")
+            Text("\(String(format: "%.1f", userConfig[0].lostWeightPercent))%")
                 .font(.custom("system", size: 55))
                 .offset(CGSize(width: 0, height: -12))
+        }
+    }
+}
+
+struct GaugeProgressStyle: ProgressViewStyle {
+    var strokeColor = Color.blue
+    var strokeWidth = 12.0      //25
+
+    func makeBody(configuration: Configuration) -> some View {
+        let fractionCompleted = configuration.fractionCompleted ?? 0
+
+        return ZStack {
+            Circle()
+                .trim(from: 0, to: fractionCompleted)
+                .stroke(strokeColor, style: StrokeStyle(lineWidth: strokeWidth, lineCap: .round))
+                .rotationEffect(.degrees(-90))
         }
     }
 }

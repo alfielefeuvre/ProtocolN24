@@ -30,27 +30,8 @@ struct WeighInDataView: View {
 }
 
 #Preview {
-    do {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try ModelContainer(for: WeighIn.self, configurations: config)
-        
-//        let wI1 = WeighIn(weekRef: calendar.component(.weekOfYear, from: .now),
-//                          weight: 85.1, date: .now)
-//        let wI2 = WeighIn(weekRef: calendar.component(.weekOfYear, from: .now),
-//                          weight: 85.0, date: .now)
-//        let wI3 = WeighIn(weekRef: calendar.component(.weekOfYear, from: .now),
-//                          weight: 86.4, date: .now)
-//        let wI4 = WeighIn(weekRef: calendar.component(.weekOfYear, from: .now),
-//                          weight: 84.9, date: .now)
-//        let wI5 = WeighIn(weekRef: calendar.component(.weekOfYear, from: .now),
-//                          weight: 85.3, date: .now)
-//        
-//        let weighIns = [wI1, wI2]
-        
-        return TrackingView()
-           .modelContainer(container)
-    } catch {
-        fatalError("Failed to create model container.")
-    }
+    TrackingView()
+        .environmentObject(AppController())
+        .modelContainer(for: [WeighWeek.self, UserConfig.self])
 }
 

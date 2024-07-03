@@ -25,6 +25,9 @@ class UserConfig {
     // start at week 1
     var weeksIn = 1
     
+    var startDate: Date = Date.getDate(year: 2024, month: 09, day: 20)
+    var endDate: Date = Date.getDate(year: 2024, month: 10, day: 15)
+    
     init(isLessonComplete: [Int : Bool],
          isLessonLocked: [Int : Bool],
          cutOrBulk: String,
@@ -46,30 +49,43 @@ class UserConfig {
         self.carbs = carbs
     }
     
-    var lostWeight: String {
-        let lostKG = startWeightKGDouble - recentAvgBodyweightKG
-        return String(format: "%.1f", lostKG) + " kg"
+    var lostWeightKg: Double {
+        return startWeightKGDouble - recentAvgBodyweightKG
     }
     
-    var lostWeightPercent: String {
+    var lostWeightText: String {
+        return String(format: "%.1f", lostWeightKg) + " kg"
+    }
+    
+    var lostWeightPercent: Double {
         var lostKGPercent = (startWeightKGDouble - recentAvgBodyweightKG) * 100 / startWeightKGDouble
         if startWeightKGDouble == 0 { lostKGPercent = 1 }
-        return String(format: "%.1f", lostKGPercent) + " %"
+        return lostKGPercent
     }
     
-    var forecastLostWeight: String {
+    var lostWeightPercentText: String {
+        return String(format: "%.1f", lostWeightPercent) + " %"
+    }
+    
+    var forecastLostWeight: Double {
+        let lossPerWeek = (startWeightKGDouble - recentAvgBodyweightKG) / Double(weeksIn)
+        return 8 * lossPerWeek
+    }
+    
+    var forecastLostWeightText: String  {
+        return String(format: "%.1f", forecastLostWeight) + " kg"
+    }
+          
+    var forecastLostWeightPercent: Double {
         let lossPerWeek = (startWeightKGDouble - recentAvgBodyweightKG) / Double(weeksIn)
         let lossIn8Weeks = 8 * lossPerWeek
-        return String(format: "%.1f", lossIn8Weeks) + " kg"
+        return lossIn8Weeks * 100 / startWeightKGDouble
     }
-            
-    var forecastLostWeightPercent: String {
-        let lossPerWeek = (startWeightKGDouble - recentAvgBodyweightKG) / Double(weeksIn)
-        let lossIn8Weeks = 8 * lossPerWeek
-        let lossIn8Percent = lossIn8Weeks * 100 / startWeightKGDouble
-        return String(format: "%.1f", lossIn8Percent) + " %"
+    
+    var forecastLostWeightPercentText: String {
+        return String(format: "%.1f", forecastLostWeightPercent) + " %"
     }
-            
+    
     func resetData() {
         isLessonComplete = [ 010: false ]
         isLessonLocked = [ 010: false ]

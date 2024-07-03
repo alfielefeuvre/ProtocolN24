@@ -18,9 +18,8 @@ struct TrackingView: View {
         NavigationView {
             List{
                 FatLossView()
-                ScreenshotView()
-                AddWeighInView()
-//                ProgressSummaryView()
+                FatStatsView()
+                
 ////                SeriesChartView(weekRef: weekRef)
 ////                SeriesChartView(weekRef: weekRefPrevious)
 //                Week4ChartView()
@@ -36,69 +35,6 @@ struct TrackingView: View {
         }
     }
 }
-
-
-
-struct ProgressSummaryView: View {
-    @EnvironmentObject var appController: AppController
-    @Environment(\.modelContext) private var modelContext
-    @Query var userConfig: [UserConfig]
-    
-     var body: some View {
-         Section("Week: \(userConfig[0].weeksIn)") {
-            HStack {
-                ProgressItem(titleText: "Weight Loss",
-                             kiloWeightLoss: userConfig[0].lostWeight,
-                             percentWeightLoss: userConfig[0].lostWeightPercent )
-                Spacer()
-                ProgressItem(titleText: "8-Week Forecast Weight Loss",
-                             kiloWeightLoss: userConfig[0].forecastLostWeight,
-                             percentWeightLoss: userConfig[0].forecastLostWeightPercent )
-            }
-        }
-    }
-}
-
-struct ProgressItem: View {
-    let squareWidth = UIScreen.main.bounds.width * 0.95 / 2.3
-    let titleText: String
-    let kiloWeightLoss: String
-    let percentWeightLoss: String
-    
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerSize: CGSize(width: 12, height: 12))
-                .foregroundColor(.primary)
-                .opacity(0.03)
-                .frame(width: squareWidth, height: squareWidth)
-            
-            VStack {
-                Text(titleText).padding(.top)
-                    .font(.callout)
-                    .multilineTextAlignment(.center)
-                Spacer()
-            }
-            
-            VStack {
-                Spacer()
-                HStack {
-                    Text(kiloWeightLoss)
-                       .padding(.leading)
-                    Spacer()
-                }
-                Text("")
-                HStack {
-                    Spacer()
-                    Text(percentWeightLoss)
-                        .padding(.trailing)
-                }
-            }
-            .font(.largeTitle)
-            .padding(.bottom)
-        }
-    }
-}
-
 
 struct AddWeighInView: View {
     @Environment(\.modelContext) private var modelContext
@@ -156,10 +92,6 @@ struct AddWeighInView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 12) {
             weightAdded = false
         }
-    }
-    
-    func dateGet(year: Int, month: Int, day: Int = 1) -> Date {
-        Calendar.current.date(from: DateComponents(year: year, month: month, day: day)) ?? Date()
     }
 }
 
