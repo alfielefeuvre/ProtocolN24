@@ -26,14 +26,29 @@ struct UICompEnd: View {
     
     func lessonComplete() {
         switch lessonId {
-        case 00: lesson000Complete()
-        default: print("Error: UICompEnd, LessonId: \(lessonId)")
+        case 000: lesson000Complete()
+        case 030: lesson030Complete()
+        case 040: lesson040Complete()
+       default: print("Error: UICompEnd, LessonId: \(lessonId)")
         }
         
     }
     
     func lesson000Complete() {
         userConfig[0].isLessonComplete[000] = true
+        save()
+    }
+    func lesson030Complete() {
+        userConfig[0].isLessonComplete[030] = true
+        save()
+    }
+    
+    func lesson040Complete() {
+        userConfig[0].isLessonComplete[040] = true
+        save()
+    }
+    
+    func save() {
         try? modelContext.save()
         appController.updateLessonsWithUserConfig(userConfig: userConfig[0])
     }

@@ -10,7 +10,7 @@ import Foundation
 class Lesson010: NSObject, ObservableObject {
     
     var lesson010 = Lesson(id: 010, headline: "What can this app do for you?",
-                           dayRef: "",
+                           dayRef: "Day 1 (2/5)",
                            module: .week1,
                            isComplete: false, isLocked: false,
                            imageName: "Dumbell", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "What can ProtocolN24 do for you?", uiText2: "",
@@ -32,7 +32,7 @@ class Lesson010: NSObject, ObservableObject {
 
                                                                             All the above are waiting patiently for you within the ProtocolN24 programme. This has all become a reality for the people that complete the programme and it can become a reality for you too.
 
-                                                                            What makes this programme different is that it does not rely on shortcuts, hacks and work arounds. There are no secret methods and the process is designed to give you the knowledge to continue these practices long into the future.
+                                                                            What makes this programme different is that it does not rely on shortcuts, hacks and work arounds, there are no secret methods. This process is designed to give YOU the knowledge to continue these practices long into the future.
 
                                                                             ProtocolN24 will be your guide on your fitness adventure, it is available 24hrs a day, 7 days a week, 52 weeks a year. It will give you the knowledge you need to take ownership for how your body looks and performs. ProtocolN24 will teach you how to implement your training and nutrition so that it has the minimum impact on your day-to-day life.
 
@@ -66,11 +66,11 @@ class Lesson010: NSObject, ObservableObject {
 
                                                                             Would you like to set-up ProtocolN24 for ‘Fat Loss’ or ‘Muscle Gain’?
                                                                             """, uiText2: "UI Text 22 ",
-                                                                                                                                    uiImage: "Bench", ratioOfDeviceWidth: 0, imageRatio: 0,
+                                                                                                                                    uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                                                     uiSegPickerOptions: ["xx"])),
                                                                                        
                                                                                        UIComponent(type: .uiSegPicker, uiData: UIData(uiText: "Pick your setting...", uiText2: "Lesson 1",
-                                                                                                                                      uiImage: "Gym", ratioOfDeviceWidth: 0, imageRatio: 0,
+                                                                                                                                      uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                                                       uiSegPickerOptions: ["Not Sure", "Fat Loss", "Muscle Gain"])),
                                                                         
                                                                         UIComponent(type: .uiQandA, uiData: UIData(uiText: "Question 1", uiText2: "Answer 1",

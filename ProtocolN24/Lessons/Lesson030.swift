@@ -10,7 +10,7 @@ import Foundation
 class Lesson030: NSObject, ObservableObject {
     
     var lesson030 = Lesson(id: 030, headline: "How to control your weight",
-                           dayRef: "Day 1 (3/3)",
+                           dayRef: "Day 1 (4/5)",
                            module: .week1,
                            isComplete: false, isLocked: false,
                            imageName: "Gym", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "How to control your weight", uiText2: "",
@@ -66,7 +66,7 @@ class Lesson030: NSObject, ObservableObject {
                                                                                                    
                                                                                                    At a basic level, this is what happens each day in you body when you take in energy through food/drink and you burn energy through movement and exercise.
 
-                                                                                                   If we consume more energy than we burn through movement/exercise, our body stores this energy as fat. 
+                                                                                                   If we take in more energy (food/drink) than we burn (movement/exercise), our body stores this energy as fat.
                                                                                                    
                                                                                                    If we burn more energy than we take in, our body burns our fat stores to meet the demands of our movement and exercise.
                                                                                                    """, uiText2: "UI Text 22 ",
@@ -78,14 +78,19 @@ class Lesson030: NSObject, ObservableObject {
                                                                                                                                             uiSegPickerOptions: ["xx"])),
                                                             
                                                             UIComponent(type: .uiTextString, uiData: UIData(uiText: """
-                                                                                                   So how do you track this in real life? You track food/drink consumption using the 'Food & Drink' tab 
+                                                                                                   So how do you track this in real life? You track food/drink consumption using the 'Food & Drink' tab.
                                                                                                    
-                                                                                                   ProtocolN24 estimates the energy you will burn using your height, age, weight and how often you workout. You can track your progress over time using the 'Progress' tab.
+                                                                                                   The 'Workout' tab will guide you through resistance training.
                                                                                                    
-                                                                                                   At ProtocolN24, it is our aim to make this process as easy as possible. Without this information, you are guessing whether or not your body composition will change in the right direction.
+                                                                                                   And, you can track your progress using the 'Progress' tab.
+                                                                                                   
+                                                                                                   Finally the 'Learn" tab will provide you with the knowledge that you need to take ownership for how your body looks and performs.
+                                                                                                   
                                                                                                    """, uiText2: "UI Text 22 ",
                                                                                                             uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
-                                                                                                            uiSegPickerOptions: ["xx"]))
-                           
-                           ])
+                                                                                                            uiSegPickerOptions: ["xx"])),
+                               
+                                                                                            UIComponent(type: .uiEnd, uiData: UIData(uiText: "xx", uiText2: "xx", uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
+                                                                                                                uiSegPickerOptions: ["xx"]))
+                                ])
 }

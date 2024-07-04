@@ -19,11 +19,7 @@ struct TrackingView: View {
             List{
                 FatLossView()
                 FatStatsView()
-                
-////                SeriesChartView(weekRef: weekRef)
-////                SeriesChartView(weekRef: weekRefPrevious)
-//                Week4ChartView()
-//                WeighInDataView()
+                AddWeighInView()
             }
             .navigationTitle("Progress")
         }
@@ -107,6 +103,12 @@ struct AddWeighInView: View {
 //        }
 //    }
 //}
+
+
+////                SeriesChartView(weekRef: weekRef)
+////                SeriesChartView(weekRef: weekRefPrevious)
+//                Week4ChartView()
+//                WeighInDataView()
 
 #Preview {
     
