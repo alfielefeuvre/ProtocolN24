@@ -47,13 +47,18 @@ struct SeriesChartView: View {
 }
 
 #Preview {
-    do {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try ModelContainer(for: WeighIn.self, configurations: config)
-        
-        return TrackingView()
-            .modelContainer(container)
-    } catch {
-        fatalError("Failed to create model container.")
-    }
+//    do {
+//        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//        let container = try ModelContainer(for: WeighIn.self, configurations: config)
+//        
+//        return TrackingView()
+//            .modelContainer(container)
+//    } catch {
+//        fatalError("Failed to create model container.")
+//    }
+    
+    SeriesChartView(weekRef: 1)
+        .environmentObject(AppController())
+        .modelContainer(for: [WeighWeek.self, UserConfig.self])
+    
 }

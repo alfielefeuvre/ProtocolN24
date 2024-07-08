@@ -18,7 +18,7 @@ class Lesson045: NSObject, ObservableObject {
                                                                                                         uiSegPickerOptions: ["xx"])),
                                                             
                                                          UIComponent(type: .uiTextString, uiData: UIData(uiText: """
-                                                                                                The first thing we should do is to set a base line of where our bodyweight currently is. To do this we collect some data by recording our bodyweight each morning. .
+                                                                                                The first thing we should do is to set a base line of where our bodyweight currently is. To do this we collect some data by recording our bodyweight each morning.
                                                                                                 """, uiText2: "xx",
                                                                                                          uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                          uiSegPickerOptions: ["xx"])),

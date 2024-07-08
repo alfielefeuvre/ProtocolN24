@@ -17,6 +17,12 @@ struct TrackingView: View {
     var body: some View {
         NavigationView {
             List{
+                WeighInChart()
+                
+                
+                Chart2View()
+                SeriesChartView(weekRef: weekRef)
+                SeriesChartView(weekRef: weekRefPrevious)
                 FatLossView()
                 FatStatsView()
                 AddWeighInView()
@@ -91,18 +97,18 @@ struct AddWeighInView: View {
     }
 }
 
-//struct WeightWeekView: View {
-//    @Environment(\.modelContext) private var modelContext
-//    @Query(sort: \WeighWeek.weekRef) var weeks: [WeighWeek]
-//    var calendar = Calendar(identifier: .gregorian)
-//    @State var selectedWeek: WeighWeek = WeighWeek(weekRef: 0)
-//   
-//    var body: some View {
-//        Section("Week Chart: \(calendar.component(.weekOfYear, from: .now))") {
-//            WeightWeekViewChartView(week: calendar.component(.weekOfYear, from: .now))
-//        }
-//    }
-//}
+struct WeightWeekView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query(sort: \WeighWeek.weekRef) var weeks: [WeighWeek]
+    var calendar = Calendar(identifier: .gregorian)
+    @State var selectedWeek: WeighWeek = WeighWeek(weekRef: 0)
+   
+    var body: some View {
+        Section("Week Chart: \(calendar.component(.weekOfYear, from: .now))") {
+            WeightWeekViewChartView(week: calendar.component(.weekOfYear, from: .now))
+        }
+    }
+}
 
 
 ////                SeriesChartView(weekRef: weekRef)
