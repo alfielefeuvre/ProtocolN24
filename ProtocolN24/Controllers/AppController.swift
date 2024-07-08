@@ -21,6 +21,7 @@ class AppController: NSObject, ObservableObject {
         lessons.append(Lesson020().lesson020)
         lessons.append(Lesson030().lesson030)
         lessons.append(Lesson040().lesson040)
+        lessons.append(Lesson045().lesson045)
         lessons.append(Lesson050().lesson050)
         lessons.append(Lesson060().lesson060)
         lessons.append(Lesson070().lesson070)
