@@ -12,9 +12,11 @@ import SwiftData
 struct WeighInChart: View {
     @EnvironmentObject var appController: AppController
     
-    let includeAverage = true
+    let includeAverage: Bool
+    let includeAveragePoint: Bool
     @State private var weighInSeries = WeighInSeries()
     @State private var averageSeries = WeighInSeries()
+    @State private var averagePointSeries = WeighInSeries()
     @State private var chartSeries = [WeighInSeries]()
     
      var body: some View {
@@ -29,9 +31,10 @@ struct WeighInChart: View {
                          LineMark(
                              x: .value("Day", element.date, unit: .day),
                              y: .value("Sales", element.weight)
-                         ).opacity(series.name == "Average" ? 1 : 0)
+                         ).opacity(series.name == "Weigh Ins" ? 0 : 1)
                      }
                      .foregroundStyle(by: .value("Series", series.name))
+             //        .symbol(by: .value("City", series.name))
                  }
              }
              .chartXAxis {
@@ -41,7 +44,7 @@ struct WeighInChart: View {
                      AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
                  }
              }
-             .chartYScale(domain: [78, 82])
+             .chartYScale(domain: [98, 101])
          }
          .frame(height: 200)
          .padding()
@@ -51,47 +54,45 @@ struct WeighInChart: View {
     
     func setupChart() {
         loadWeighInSeries()
-        if includeAverage == true {
-            calcAverages()
-        }
+        if includeAverage == true { calcAverages() }
+        if includeAveragePoint == true { calcAveragePoint() }
     }
     
     func loadWeighInSeries() {
         let weighIns = [
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 80.5,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 99.5,
                     date: dateGet(year: 2024, month: 7, day: 8)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.9,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 100.4,
                     date: dateGet(year: 2024, month: 7, day: 9)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 80.6,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 99.8,
                     date: dateGet(year: 2024, month: 7, day: 10)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 80.2,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 99.9,
                     date: dateGet(year: 2024, month: 7, day: 11)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 80.0,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 99.5,
                     date: dateGet(year: 2024, month: 7, day: 12)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 80.1,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 99.9,
                     date: dateGet(year: 2024, month: 7, day: 13)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.8,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 99.1,
+                    
                     date: dateGet(year: 2024, month: 7, day: 14)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.7,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 99.6,
                     date: dateGet(year: 2024, month: 7, day: 15)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.5,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 98.7,
                     date: dateGet(year: 2024, month: 7, day: 16)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.8,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 99.1,
                     date: dateGet(year: 2024, month: 7, day: 17)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.3,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 98.5,
                     date: dateGet(year: 2024, month: 7, day: 18)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.5,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 98.9,
                     date: dateGet(year: 2024, month: 7, day: 19)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.2,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 98.2,
                     date: dateGet(year: 2024, month: 7, day: 20)),
-            WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.3,
+            WeighIn(weekOfYear: 9, dayOfWeek: 2, weight: 98.6,
                     date: dateGet(year: 2024, month: 7, day: 21))
         ]
         
         weighInSeries.name = "Weigh Ins"
         weighInSeries.weighIns = weighIns
-   //     weighInSeries.weighIns = appController.demoData.weighIns
-        
         weighInSeries.weighIns = weighInSeries.weighIns.sorted()
         chartSeries.append(weighInSeries)
     }
@@ -111,6 +112,42 @@ struct WeighInChart: View {
         averageSeries.name = "Average"
         averageSeries.weighIns = averageWeighIns
         chartSeries.append(averageSeries)
+    }
+    
+    func calcAveragePoint() {
+        var averagePoints = [WeighIn]()
+        var runningTotalWeight: Double = 0
+        var numberOfPoints: Double = 0
+        var averagePoint1: Double = 0
+        var averagePoint2: Double = 0
+        
+        for index in 0...weighInSeries.weighIns.count-1 {
+            numberOfPoints += 1
+            runningTotalWeight += weighInSeries.weighIns[index].weight
+            if numberOfPoints <= 7 {
+                averagePoint1 = runningTotalWeight / numberOfPoints
+            } else {
+                averagePoint2 = runningTotalWeight / (numberOfPoints - 7)
+            }
+            
+            if numberOfPoints == 7 {
+                let newAveragePoint =  WeighIn(weekOfYear: weighInSeries.weighIns[index-3].weekOfYear,
+                                               dayOfWeek: weighInSeries.weighIns[index-3].dayOfWeek,
+                                               weight: averagePoint1,
+                                               date: weighInSeries.weighIns[index-3].date)
+                averagePoints.append(newAveragePoint)
+                runningTotalWeight = 0
+            } else if numberOfPoints == 14 {
+                let newAveragePoint =  WeighIn(weekOfYear: weighInSeries.weighIns[index-3].weekOfYear,
+                                               dayOfWeek: weighInSeries.weighIns[index-3].dayOfWeek,
+                                               weight: averagePoint2,
+                                               date: weighInSeries.weighIns[index-3].date)
+                averagePoints.append(newAveragePoint)
+            }
+        }
+        averagePointSeries.name = "Average Point"
+        averagePointSeries.weighIns = averagePoints
+        chartSeries.append(averagePointSeries)
     }
 }
 

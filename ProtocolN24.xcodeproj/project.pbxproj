@@ -41,6 +41,7 @@
 		147B9D542C3C179B00227D80 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D532C3C179B00227D80 /* DemoData.swift */; };
 		147B9D582C3C582C00227D80 /* WeighInChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D572C3C582C00227D80 /* WeighInChart.swift */; };
 		147B9D5A2C3C745E00227D80 /* Demo4Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D592C3C745E00227D80 /* Demo4Data.swift */; };
+		147B9D5C2C3DCD5600227D80 /* UICompWIChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D5B2C3DCD5600227D80 /* UICompWIChart.swift */; };
 		14A80C4D2B055683009F46C9 /* WeightWeekViewChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */; };
 		14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */; };
 		14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */; };
@@ -115,6 +116,7 @@
 		147B9D532C3C179B00227D80 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		147B9D572C3C582C00227D80 /* WeighInChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighInChart.swift; sourceTree = "<group>"; };
 		147B9D592C3C745E00227D80 /* Demo4Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo4Data.swift; sourceTree = "<group>"; };
+		147B9D5B2C3DCD5600227D80 /* UICompWIChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompWIChart.swift; sourceTree = "<group>"; };
 		14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightWeekViewChartView.swift; sourceTree = "<group>"; };
 		14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighInDataView.swift; sourceTree = "<group>"; };
 		14AD6EDD2B03EA6D005DE26E /* ProtocolN24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolN24.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */,
 				143A759F2C0484D300AB8029 /* UICompStepper.swift */,
 				143A75892BFD205A00AB8029 /* UICompText.swift */,
+				147B9D5B2C3DCD5600227D80 /* UICompWIChart.swift */,
 			);
 			path = LessonComponents;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				14D085532B073AA70037079F /* SeriesChartView.swift in Sources */,
 				144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */,
 				14AD6F0B2B03ED52005DE26E /* LearnView.swift in Sources */,
+				147B9D5C2C3DCD5600227D80 /* UICompWIChart.swift in Sources */,
 				14AD6F132B03F84F005DE26E /* WeighWeek.swift in Sources */,
 				144C52942BF938E5006C14EC /* Lesson050.swift in Sources */,
 				14AD6F102B03F82C005DE26E /* WeighIn.swift in Sources */,

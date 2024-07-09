@@ -23,9 +23,9 @@ class Lesson045: NSObject, ObservableObject {
                                                                                                          uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                          uiSegPickerOptions: ["xx"])),
                                                             
-                                                              UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                      uiImage: "BodyWeightDataPoints", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                                                                              uiSegPickerOptions: ["xx"])),
+                                                              UIComponent(type: .uiWIChart, uiData: UIData(uiText: "xx", uiText2: "xx",
+                                                                                      uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+                                                                                    uiSegPickerOptions: ["xx"])),
                                                               
                                                               UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                                                                      Next we display the 7-day average for these data points. This brings the data to life, using this information, we can start to see trends in our bodyweight.
@@ -33,9 +33,9 @@ class Lesson045: NSObject, ObservableObject {
                                                                                                               uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                               uiSegPickerOptions: ["xx"])),
                                                                  
-                                                                   UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                           uiImage: "BodyWeight7DayAvgDropping", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                                                                                   uiSegPickerOptions: ["xx"])),
+                                                              UIComponent(type: .uiWIChart, uiData: UIData(uiText: "xx", uiText2: "xx",
+                                                                                      uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+                                                                                    uiSegPickerOptions: ["xx"])),
                                                               
                                                               UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                                                                      If our weight is dropping over time, the line will move down.

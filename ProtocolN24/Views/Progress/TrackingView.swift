@@ -17,12 +17,6 @@ struct TrackingView: View {
     var body: some View {
         NavigationView {
             List{
-                WeighInChart()
-                
-                
-                Chart2View()
-                SeriesChartView(weekRef: weekRef)
-                SeriesChartView(weekRef: weekRefPrevious)
                 FatLossView()
                 FatStatsView()
                 AddWeighInView()
