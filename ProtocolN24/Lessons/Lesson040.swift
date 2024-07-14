@@ -9,11 +9,11 @@ import Foundation
 
 class Lesson040: NSObject, ObservableObject {
     
-    var lesson040 = Lesson(id: 040, headline: "How to control your weight - II",
+    var lesson040 = Lesson(id: 040, headline: "Fat-loss process",
                            dayRef: "Day 5",
                            module: .week1,
                            isComplete: false, isLocked: false,
-                           imageName: "Bench", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "How to control your weight - II", uiText2: "",
+                           imageName: "Dumbell", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "How to control your weight - II", uiText2: "",
                                                                                                         uiImage: "Bench", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                         uiSegPickerOptions: ["xx"])),
                                                             

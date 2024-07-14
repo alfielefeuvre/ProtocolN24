@@ -43,14 +43,13 @@ struct LessonItem: View {
                 Text(lesson.headline)
                     .foregroundStyle(.primary)
                     .frame(width: 255)
-                    .lineLimit(nil)
-                 //   .font(.caption)
-                
+                    .multilineTextAlignment(.center)
+                 
                 Text(lesson.dayRef)
                     .foregroundStyle(.primary)
                     .padding(.bottom)
                 Spacer()
-            }.frame(width: 255, height: 255)
+            }.frame(width: 255, height: 300)
                 .padding()
         }.opacity(lesson.isComplete ? 0.5 : 1)
     }

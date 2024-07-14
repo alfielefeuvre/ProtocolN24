@@ -17,7 +17,7 @@ class Lesson020: NSObject, ObservableObject {
                            module: .week1,
                            isComplete: false, 
                            isLocked: false,
-                           imageName: "Dumbell", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "How do you know it will work?", uiText2: "",
+                           imageName: "Bench", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "How do you know it will work?", uiText2: "",
                                                                                                             uiImage: "Dumbell", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                             uiSegPickerOptions: ["xx"])),
                                                                 
