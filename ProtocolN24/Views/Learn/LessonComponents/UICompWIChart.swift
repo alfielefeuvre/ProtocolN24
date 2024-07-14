@@ -12,8 +12,14 @@ struct UICompWIChart: View {
     
     var body: some View {
         ZStack {
-            WeighInChart(includeAverage: uiData.uiText == "true" ? true : false ,
-                         includeAveragePoint: uiData.uiText2 == "true" ? true : false )
+            if uiData.uiImage == "xx" {
+                WeighInChart(includeAverage: uiData.uiText == "true" ? true : false ,
+                             includeAveragePoint: uiData.uiText2 == "true" ? true : false )
+            } else {
+                WeighInChartUp(includeAverage: uiData.uiText == "true" ? true : false ,
+                             includeAveragePoint: uiData.uiText2 == "true" ? true : false )
+            }
+            
         }
     }
 }

@@ -17,6 +17,7 @@ struct TrackingView: View {
     var body: some View {
         NavigationView {
             List{
+                WeighInChart(includeAverage: false, includeAveragePoint: false)
                 FatLossView()
                 FatStatsView()
                 AddWeighInView()

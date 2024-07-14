@@ -13,7 +13,7 @@ class Lesson020: NSObject, ObservableObject {
     @EnvironmentObject var appController: AppController
     
     var lesson020 = Lesson(id: 020, headline: "How do you know it will work?",
-                           dayRef: "Day 1 (3/5)",
+                           dayRef: "Day 3",
                            module: .week1,
                            isComplete: false, 
                            isLocked: false,

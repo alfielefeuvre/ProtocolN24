@@ -10,7 +10,6 @@ import SwiftUI
 import SwiftData
 
 struct WeighInChart: View {
-    @EnvironmentObject var appController: AppController
     
     let includeAverage: Bool
     let includeAveragePoint: Bool
@@ -39,17 +38,22 @@ struct WeighInChart: View {
              }
              .chartXAxis {
                  AxisMarks(values: .stride(by: .day)) { _ in
-                     AxisTick()
+        //             AxisTick()
                      AxisGridLine()
                      AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
                  }
+           
              }
              .chartYScale(domain: [98, 101])
+//             .chartYAxis {
+//                       AxisMarks(position: .leading)
+//                          AxisMarks(position: .trailing)
+//                 
+//             }
          }
          .frame(height: 200)
          .padding()
-         .onAppear{ setupChart() }
-       
+         .onAppear{ setupChart() }       
     }
     
     func setupChart() {

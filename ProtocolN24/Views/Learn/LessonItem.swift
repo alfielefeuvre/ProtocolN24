@@ -17,7 +17,7 @@ struct LessonItem: View {
                     lesson.image
                         .renderingMode(.original)
                         .resizable()
-                        .frame(width: 155, height: 155)
+                        .frame(width: 255, height: 155)
                         .cornerRadius(5)
                         .padding(.top)
                     
@@ -36,26 +36,39 @@ struct LessonItem: View {
                                 .opacity(lesson.isComplete ? 1 : 0)
                         }
                         Spacer()
-                    }.frame(width: 155, height: 125)
+                    }.frame(width: 255, height: 125)
                     .padding(.trailing)
                 }
 
                 Text(lesson.headline)
                     .foregroundStyle(.primary)
-                    .frame(width: 155)
+                    .frame(width: 255)
+                    .lineLimit(nil)
                  //   .font(.caption)
                 
-//                Text(lesson.dayRef)
-//                    .foregroundStyle(.primary)
-//                    .padding(.bottom)
+                Text(lesson.dayRef)
+                    .foregroundStyle(.primary)
+                    .padding(.bottom)
                 Spacer()
-            }.frame(width: 155, height: 255)
+            }.frame(width: 255, height: 255)
                 .padding()
         }.opacity(lesson.isComplete ? 0.5 : 1)
     }
 }
 
+//#Preview {
+//    let lesson = Lesson(id: 000, headline: "Headliner, multi line that goes over 2 lines ", dayRef: "Day 1 (1/3)", module: .quickStart, isComplete: false, isLocked: false, imageName: "Gym", uiComponents: [])
+//    return LessonItem(lesson: lesson)
+//}
+
+
 #Preview {
-    let lesson = Lesson(id: 000, headline: "Headliner, multi line that goes over 2 lines ", dayRef: "Day 1 (1/3)", module: .quickStart, isComplete: false, isLocked: false, imageName: "Gym", uiComponents: [])
-    return LessonItem(lesson: lesson)
+    let lesson010 = Lesson010().lesson010
+    let lesson020 = Lesson020().lesson020
+    let lesson030 = Lesson030().lesson030
+    let lessons = [lesson010, lesson020, lesson030]
+    
+    return LearnView(lessons: lessons)
+        .environmentObject(AppController())
+        .modelContainer(for: [WeighWeek.self, UserConfig.self])
 }

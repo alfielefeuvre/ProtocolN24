@@ -14,6 +14,8 @@ struct FoodView: View {
         NavigationView {
             List {
                 Text("Food View")
+                Last14Chart()
+                Last28Chart()
             }.navigationTitle("Food & Drink")
         }
     }

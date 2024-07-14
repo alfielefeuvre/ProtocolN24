@@ -19,8 +19,9 @@ struct LearnView: View {
     
     var body: some View {
         NavigationView {
-                List {                    
-                    Section("Demo - Theory") {
+                List {
+                    
+                    Section("Week 1") {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(alignment: .top, spacing: 0) {
                                 ForEach(lessons) { lesson in
@@ -33,7 +34,7 @@ struct LearnView: View {
                         .frame(height: 235)
                     }
                     
-                    Section("Demo - Practical") {
+                    Section("Week 2") {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(alignment: .top, spacing: 0) {
                                 ForEach(lessons) { lesson in
@@ -46,18 +47,6 @@ struct LearnView: View {
                         .frame(height: 235)
                     }
                     
-                    Section("Week 3") {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(alignment: .top, spacing: 0) {
-                                ForEach(lessons) { lesson in
-                                    if lesson.module == .week3 {
-                                        NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
-                                    }
-                                }
-                            }
-                        }
-                        .frame(height: 235)
-                    }
                     Section("RESET DATA") {
                         Button("RESET DATA"){ resetData() }
                     }
@@ -97,7 +86,19 @@ struct LearnView: View {
     let lesson010 = Lesson010().lesson010
     let lesson020 = Lesson020().lesson020
     let lesson030 = Lesson030().lesson030
-    let lessons = [lesson010, lesson020, lesson030]
+    let lesson040 = Lesson040().lesson040
+    let lesson050 = Lesson050().lesson050
+    let lesson060 = Lesson060().lesson060
+    let lesson070 = Lesson070().lesson070
+    let lesson080 = Lesson080().lesson080
+    let lesson090 = Lesson090().lesson090
+    let lesson100 = Lesson100().lesson100
+    let lesson110 = Lesson110().lesson110
+    let lesson120 = Lesson120().lesson120
+    let lessons = [lesson010, lesson020, lesson030,
+                   lesson040, lesson050, lesson060,
+                   lesson070, lesson080, lesson090,
+                   lesson100, lesson110, lesson120]
     
     return LearnView(lessons: lessons)
         .environmentObject(AppController())

@@ -10,7 +10,7 @@ import Foundation
 class Lesson010: NSObject, ObservableObject {
     
     var lesson010 = Lesson(id: 010, headline: "What can this app do for you?",
-                           dayRef: "Day 1 (2/5)",
+                           dayRef: "Day 2",
                            module: .week1,
                            isComplete: false, isLocked: false,
                            imageName: "Dumbell", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "What can ProtocolN24 do for you?", uiText2: "",

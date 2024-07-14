@@ -15,6 +15,7 @@ struct ContentView: View {
     @Query var userConfig: [UserConfig]
     
     @State private var selection = 3
+    @State private var hasPaid = false
      
     var body: some View {
         TabView(selection:$selection) {
@@ -27,14 +28,20 @@ struct ContentView: View {
             LearnView(lessons: appController.lessons)
                 .tabItem{ Label("Learn", systemImage: "book") } .tag(3)
             
-            WorkoutView()
-                .tabItem{ Label("Workout", systemImage: "dumbbell") } .tag(4)
+            if hasPaid == true {
+                ChatView()
+                    .tabItem{ Label("Chat", systemImage: "bubble.left") } .tag(4)
+                
+                WorkoutView()
+                    .tabItem{ Label("Workout", systemImage: "dumbbell") } .tag(5)
+            }
         }
         .onAppear{
             appController.loadLessonsFromStorage()
             if userConfig.count == 0 { setupDefaultUserConfig()
             } else { appController.updateLessonsWithUserConfig(userConfig: userConfig[0]) }
         }
+        .navigationViewStyle(.stack)
     }
     
     func setupDefaultUserConfig() {

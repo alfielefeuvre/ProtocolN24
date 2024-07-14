@@ -14,39 +14,6 @@ class AppController: NSObject, ObservableObject {
     
     @Published var expectedWeightLoss = 0.0
     
-//    @Published var demoWeighInData = [
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 80.5,
-//                date: dateGet(year: 2024, month: 7, day: 8)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.9,
-//                date: dateGet(year: 2024, month: 7, day: 9)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 80.6,
-//                date: dateGet(year: 2024, month: 7, day: 10)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 80.2,
-//                date: dateGet(year: 2024, month: 7, day: 11)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 80.0,
-//                date: dateGet(year: 2024, month: 7, day: 12)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 80.1,
-//                date: dateGet(year: 2024, month: 7, day: 13)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.8,
-//                date: dateGet(year: 2024, month: 7, day: 14)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.7,
-//                date: dateGet(year: 2024, month: 7, day: 15)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.5,
-//                date: dateGet(year: 2024, month: 7, day: 16)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.8,
-//                date: dateGet(year: 2024, month: 7, day: 17)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.3,
-//                date: dateGet(year: 2024, month: 7, day: 18)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.5,
-//                date: dateGet(year: 2024, month: 7, day: 19)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.2,
-//                date: dateGet(year: 2024, month: 7, day: 20)),
-//        WeighIn(weekOfYear: 28, dayOfWeek: 2, weight: 79.3,
-//                date: dateGet(year: 2024, month: 7, day: 21))
-//    ]
-    
-
-    
     // MARK: - Set-up
     func loadLessonsFromStorage() {
         lessons.append(Lesson000().lesson000)
@@ -60,6 +27,9 @@ class AppController: NSObject, ObservableObject {
         lessons.append(Lesson070().lesson070)
         lessons.append(Lesson080().lesson080)
         lessons.append(Lesson090().lesson090)
+        lessons.append(Lesson100().lesson100)
+        lessons.append(Lesson110().lesson110)
+        lessons.append(Lesson120().lesson120)
         lessons.sort { $0.id < $1.id }
     }
     
