@@ -9,7 +9,7 @@ import Foundation
 
 class Lesson030: NSObject, ObservableObject {
     
-    var lesson030 = Lesson(id: 030, headline: "How to control your weight",
+    var lesson030 = Lesson(id: 030, headline: "Secret 2: How to control your body weight",
                            dayRef: "Day 4",
                            module: .week1,
                            isComplete: false, isLocked: false,
@@ -69,6 +69,8 @@ class Lesson030: NSObject, ObservableObject {
                                                                                                    If we take in more energy (food/drink) than we burn (movement/exercise), our body stores this energy as fat.
                                                                                                    
                                                                                                    If we burn more energy than we take in, our body burns our fat stores to meet the demands of our movement and exercise.
+                                                                                                   
+                                                                                                   ProtocolN24 makes it easy to monitor your energy intake and monitor changes in your bodyweight. This gives us all the information we need for our fat loss process.
                                                                                                    """, uiText2: "UI Text 22 ",
                                                                                                             uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                             uiSegPickerOptions: ["xx"])),
@@ -76,20 +78,7 @@ class Lesson030: NSObject, ObservableObject {
                                                             UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
                                                                                     uiImage: "EnergyBal5", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                             uiSegPickerOptions: ["xx"])),
-                                                            
-                                                            UIComponent(type: .uiTextString, uiData: UIData(uiText: """
-                                                                                                   So how do you track this in real life? You track food/drink consumption using the 'Food & Drink' tab.
-                                                                                                   
-                                                                                                   The 'Workout' tab will guide you through resistance training.
-                                                                                                   
-                                                                                                   And, you can track your progress using the 'Progress' tab.
-                                                                                                   
-                                                                                                   Finally the 'Learn" tab will provide you with the knowledge that you need to take ownership for how your body looks and performs.
-                                                                                                   
-                                                                                                   """, uiText2: "UI Text 22 ",
-                                                                                                            uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
-                                                                                                            uiSegPickerOptions: ["xx"])),
-                               
+                                                           
                                                                                             UIComponent(type: .uiEnd, uiData: UIData(uiText: "xx", uiText2: "xx", uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                                 uiSegPickerOptions: ["xx"]))
                                 ])

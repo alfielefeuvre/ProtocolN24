@@ -9,7 +9,7 @@ import Foundation
 
 class Lesson000: NSObject, ObservableObject {
     
-    var lesson000 = Lesson(id: 000, headline: "START HERE!",
+    var lesson000 = Lesson(id: 000, headline: "START HERE!  \n",
                            dayRef: "Day 1",
                            module: .week1,
                            isComplete: false, isLocked: false,
@@ -69,9 +69,9 @@ class Lesson000: NSObject, ObservableObject {
                                                                                     uiImage: "BeforeAfter1", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                             uiSegPickerOptions: ["xx"])),
                                                             UIComponent(type: .uiTextString, uiData: UIData(uiText: """
-                                                    That’s why we have developed an 8-week process that will teach you all you need to know to get started building the body that you dream about. Here’s how it works:
+                                                    That’s why we have developed an 2-week process that will teach you all you need to know to get started building the body that you dream about. Here’s how it works:
 
-                                                    1) Check our first module ‘[name tbc], its yours, its free, enjoy. No sign-up or email address required.
+                                                    1) Check the first two weeks, they're yours, its free, enjoy. No sign-up or email address required.
                                                     
                                                     2) Learn our tried and tested methods for fat loss and muscle gain.
                                                     

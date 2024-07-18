@@ -9,7 +9,7 @@ import Foundation
 
 class Lesson010: NSObject, ObservableObject {
     
-    var lesson010 = Lesson(id: 010, headline: "What can this app do for you?",
+    var lesson010 = Lesson(id: 010, headline: "Do you want to lose fat or gain muscle (or both)?",
                            dayRef: "Day 2",
                            module: .week1,
                            isComplete: false, isLocked: false,
@@ -32,11 +32,11 @@ class Lesson010: NSObject, ObservableObject {
 
                                                                             All the above are waiting patiently for you within the ProtocolN24 programme. This has all become a reality for the people that complete the programme and it can become a reality for you too.
 
-                                                                            What makes this programme different is that it does not rely on shortcuts, hacks and work arounds, there are no secret methods. This process is designed to give YOU the knowledge to continue these practices long into the future.
+                                                                            What makes this programme different is that it does not rely on shortcuts, hacks and work arounds. This process is designed to give You the knowledge to continue these practices long into the future.
 
                                                                             ProtocolN24 will be your guide on your fitness adventure, it is available 24hrs a day, 7 days a week, 52 weeks a year. It will give you the knowledge you need to take ownership for how your body looks and performs. ProtocolN24 will teach you how to implement your training and nutrition so that it has the minimum impact on your day-to-day life.
 
-                                                                            Fat loss and muscle gain are not as difficult as you have been led to believe. There are no secrets methods or complex, advanced techniques that depend on ‘personal trainer’ words like glycogen.
+                                                                            Fat loss and muscle gain are not as difficult as you have been led to believe. There are no complex, advanced techniques that depend on ‘personal trainer’ words like glycogen.
 
                                                                             The tried and tested process is based on showing up regularly and putting in simple training and basic nutrition. It doesn’t require you to do anything difficult or complicated, but you do have to do simple things often, it can be summed up like this:
 
@@ -49,8 +49,7 @@ class Lesson010: NSObject, ObservableObject {
                                                                             Sound too good to be true? Let’s get into the detail and set-up ProtocolN24 so you can see how this works in real life.
 
                                                                             ProtocolN24 has two settings: ‘Fat Loss’ and ‘Muscle Gain'.  Our first task is to decide which one of these settings is best for you.
-
-                                                                            For some people this will be an obvious decision, those people should scroll down to the bottom and make your selection.   For those that are unsure or if you would like both ‘Fat Loss’ and ‘Muscle Gain’, here are some things you should know before you choose a setting:
+                                                                             For those that are unsure or if you would like both ‘Fat Loss’ and ‘Muscle Gain’, here are some things you should know before you choose a setting:
 
                                                                             The majority of people that choose ‘Fat Loss’ also gain some strength.
 

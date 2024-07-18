@@ -39,6 +39,7 @@ enum UIComponentType: String, CaseIterable, Codable {
     case uiStepper = "Stepper Int"
     case uiTextString = "Text"
     case uiWIChart = "WeighIn Chart"
+    case uiWCChart = "WeighCal Chart"
 }
 
 struct UIData: Codable {

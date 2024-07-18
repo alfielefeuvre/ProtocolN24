@@ -27,6 +27,8 @@
 		144C529A2BF93907006C14EC /* Lesson080.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52992BF93907006C14EC /* Lesson080.swift */; };
 		144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C529B2BF9390F006C14EC /* Lesson090.swift */; };
 		144C529E2BFA8834006C14EC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C529D2BFA8834006C14EC /* Module.swift */; };
+		14531FFD2C49A69B0084DADC /* DemoWeighCalChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14531FFC2C49A69B0084DADC /* DemoWeighCalChart.swift */; };
+		14531FFF2C49A7010084DADC /* UICompWCChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14531FFE2C49A7010084DADC /* UICompWCChart.swift */; };
 		147B9D382C2DEBD400227D80 /* UICompEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D372C2DEBD400227D80 /* UICompEnd.swift */; };
 		147B9D3B2C2F440000227D80 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D3A2C2F440000227D80 /* FoodView.swift */; };
 		147B9D3D2C2F448C00227D80 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D3C2C2F448C00227D80 /* WorkoutView.swift */; };
@@ -110,6 +112,8 @@
 		144C52992BF93907006C14EC /* Lesson080.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson080.swift; sourceTree = "<group>"; };
 		144C529B2BF9390F006C14EC /* Lesson090.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson090.swift; sourceTree = "<group>"; };
 		144C529D2BFA8834006C14EC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		14531FFC2C49A69B0084DADC /* DemoWeighCalChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoWeighCalChart.swift; sourceTree = "<group>"; };
+		14531FFE2C49A7010084DADC /* UICompWCChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompWCChart.swift; sourceTree = "<group>"; };
 		147B9D372C2DEBD400227D80 /* UICompEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompEnd.swift; sourceTree = "<group>"; };
 		147B9D3A2C2F440000227D80 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		147B9D3C2C2F448C00227D80 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				143A759F2C0484D300AB8029 /* UICompStepper.swift */,
 				143A75892BFD205A00AB8029 /* UICompText.swift */,
 				147B9D5B2C3DCD5600227D80 /* UICompWIChart.swift */,
+				14531FFE2C49A7010084DADC /* UICompWCChart.swift */,
 			);
 			path = LessonComponents;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				147B9D632C404B0700227D80 /* WeighCalChart.swift */,
+				14531FFC2C49A69B0084DADC /* DemoWeighCalChart.swift */,
 				147B9D572C3C582C00227D80 /* WeighInChart.swift */,
 				147B9D612C3EE09E00227D80 /* WeighInChartUp.swift */,
 				147B9D5D2C3E7DCF00227D80 /* Last14Chart.swift */,
@@ -544,6 +550,7 @@
 				144C52982BF938F8006C14EC /* Lesson070.swift in Sources */,
 				147B9D3B2C2F440000227D80 /* FoodView.swift in Sources */,
 				143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */,
+				14531FFF2C49A7010084DADC /* UICompWCChart.swift in Sources */,
 				14B5E5242BF69857006861A7 /* LessonView.swift in Sources */,
 				14D085532B073AA70037079F /* SeriesChartView.swift in Sources */,
 				144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */,
@@ -577,6 +584,7 @@
 				144C529A2BF93907006C14EC /* Lesson080.swift in Sources */,
 				14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */,
 				143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */,
+				14531FFD2C49A69B0084DADC /* DemoWeighCalChart.swift in Sources */,
 				147B9D542C3C179B00227D80 /* DemoData.swift in Sources */,
 				147B9D5A2C3C745E00227D80 /* Demo4Data.swift in Sources */,
 			);

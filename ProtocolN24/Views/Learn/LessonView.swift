@@ -25,7 +25,8 @@ struct LessonView: View {
                 case .uiStepper: UICompStepper(lessonId: lesson.id)
                 case .uiTextString: UICompText(uiData: uiComponent.uiData, lessonId: lesson.id)
                 case .uiWIChart: UICompWIChart(uiData: uiComponent.uiData)
-                }
+                case .uiWCChart: UICompWCChart(uiData: uiComponent.uiData)
+               }
             }
         }
       //  .onAppear{ viewModel.clearAnswers() }

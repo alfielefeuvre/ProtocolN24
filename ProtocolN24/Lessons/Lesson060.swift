@@ -9,8 +9,8 @@ import Foundation
 
 class Lesson060: NSObject, ObservableObject {
     
-    var lesson060 = Lesson(id: 060, headline: "We will keep you on track",
-                           dayRef: "Day8",
+    var lesson060 = Lesson(id: 060, headline: "Secret 6: How you can stay on track",
+                           dayRef: "Day 8",
                            module: .week2,
                            isComplete: false, 
                            isLocked: false,

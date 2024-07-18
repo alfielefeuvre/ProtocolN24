@@ -25,72 +25,95 @@ struct WeighCalChart: View {
     
     var calendar = Calendar(identifier: .gregorian)
     
+    let deviceWidth = UIScreen.main.bounds.width * 0.9
+    
     var body: some View {
         ZStack {
+            Rectangle()
+                .opacity(0.01)
+                .frame(width: deviceWidth, height: 200)
             
-            Chart {
-                ForEach(chartSeries) { series in
-                    ForEach(series.weighIns, id: \.date) { element in
-                        PointMark(
-                           x: .value("Day", element.date, unit: .day),
-                           y: .value("Sales", element.weight)
-                        ).opacity(series.name == "Average" ? 0 : 1)
-                        LineMark(
-                            x: .value("Day", element.date, unit: .day),
-                            y: .value("Sales", element.weight)
-                        ).opacity(series.name == "Weigh Ins" ? 0 : 1)
+         //   HStack {
+                Chart {
+                    ForEach(chartSeries) { series in
+                        ForEach(series.weighIns, id: \.date) { element in
+                            PointMark(
+                               x: .value("Day", element.date, unit: .day),
+                               y: .value("Sales", element.weight)
+                            ).opacity(series.name == "Average" ? 0 : 1)
+                            LineMark(
+                                x: .value("Day", element.date, unit: .day),
+                                y: .value("Sales", element.weight)
+                            ).opacity(series.name == "Weigh Ins" ? 0 : 1)
+                        }
+                        .foregroundStyle(by: .value("Series", series.name))
                     }
-                    .foregroundStyle(by: .value("Series", series.name))
-            //        .symbol(by: .value("City", series.name))
                 }
-            }.foregroundStyle(.clear)
-            .chartXAxis {
-                AxisMarks(values: .stride(by: .day)) { _ in
-       //             AxisTick()
-            //        AxisGridLine()
-                    AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
-                        .foregroundStyle(.clear)
-                }
-          
-            }
-            .chartYAxis {
-                AxisMarks(position: .leading)
-             //   AxisMarks(position: .trailing)
-            }
-            
-            
-            
-            
-            
-            Chart {
-                ForEach(chartSeries) { series in
-                    ForEach(series.weighIns, id: \.date) { element in
-                        PointMark(
-                           x: .value("Day", element.date, unit: .day),
-                           y: .value("Sales", element.weight)
-                        ).opacity(series.name == "Average" ? 0 : 1)
-                        LineMark(
-                            x: .value("Day", element.date, unit: .day),
-                            y: .value("Sales", element.weight)
-                        ).opacity(series.name == "Weigh Ins" ? 0 : 1)
+                .chartXAxis {
+                    AxisMarks(values: .stride(by: .day)) { _ in
+                        AxisTick()
+                        AxisGridLine()
+                        AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
+                    //        .foregroundStyle(.clear)
                     }
-                    .foregroundStyle(by: .value("Series", series.name))
-            //        .symbol(by: .value("City", series.name))
                 }
-            }
-            .chartXAxis {
-                AxisMarks(values: .stride(by: .day)) { _ in
-       //             AxisTick()
-                    AxisGridLine()
-                    AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
+                .chartYScale(domain: [98, 101])
+                .chartYAxis {
+                    AxisMarks(position: .trailing)
+                    AxisMarks(position: .leading) { _ in
+                        AxisValueLabel(centered: false)
+                           .foregroundStyle(.clear)
+                    }
                 }
-          
-            }
-            .chartYScale(domain: [98, 101])
+                .frame(width: deviceWidth, height: 200)
+                .padding()
+         //   }
+            
+            
+         //   HStack {
+                Chart {
+                    ForEach(chartSeries) { series in
+                        ForEach(series.weighIns, id: \.date) { element in
+                            PointMark(
+                               x: .value("Day", element.date, unit: .day),
+                               y: .value("Sales", element.weight)
+                            ).opacity( element.weight < 300 ? 0 : 1)
+                            LineMark(
+                                x: .value("Day", element.date, unit: .day),
+                                y: .value("Sales", element.weight)
+                            ).opacity(series.name == "Weigh Ins" ? 0 : 1)
+                        }
+                        .foregroundStyle(by: .value("Series", series.name))
+                    }
+                }
+                .chartXAxis {   // no x axis
+                    AxisMarks(values: .stride(by: .day)) { _ in
+                        AxisTick()
+                       AxisGridLine()
+                        AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
+                            .foregroundStyle(.clear)
+                    }
+              
+                }
+                .chartYScale(domain: [400, 1000])
+                .chartYAxis {
+                    AxisMarks(position: .leading)
+                    AxisMarks(position: .trailing) { _ in
+                        AxisValueLabel(centered: false)
+                           .foregroundStyle(.clear)
+                    }
+                }
+                .frame(width: deviceWidth, height: 200)
+                .padding()
+          //  }
+            
         }
         .frame(height: 200)
         .padding()
         .onAppear{ setupChart() }
+   
+            
+     
    }
    
    func setupChart() {

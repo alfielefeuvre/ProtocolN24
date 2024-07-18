@@ -37,9 +37,9 @@ struct LessonItem: View {
                         }
                         Spacer()
                     }.frame(width: 255, height: 125)
-                    .padding(.trailing)
+                        .padding(.trailing)
+                    
                 }
-
                 Text(lesson.headline)
                     .foregroundStyle(.primary)
                     .frame(width: 255)
@@ -47,9 +47,9 @@ struct LessonItem: View {
                  
                 Text(lesson.dayRef)
                     .foregroundStyle(.primary)
-                    .padding(.bottom)
-                Spacer()
-            }.frame(width: 255, height: 300)
+               //     .padding(.bottom)
+                
+            }.frame(width: 255, height: 255)
                 .padding()
         }.opacity(lesson.isComplete ? 0.5 : 1)
     }
