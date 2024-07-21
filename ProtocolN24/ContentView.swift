@@ -40,6 +40,14 @@ struct ContentView: View {
             appController.loadLessonsFromStorage()
             if userConfig.count == 0 { setupDefaultUserConfig()
             } else { appController.updateLessonsWithUserConfig(userConfig: userConfig[0]) }
+            
+            
+            for i in stride(from: 0, through: 24, by: 4) {
+                print(i)
+            }
+            
+            print("here")
+            
         }
         .navigationViewStyle(.stack)
     }

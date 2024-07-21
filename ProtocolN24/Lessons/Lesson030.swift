@@ -70,7 +70,7 @@ class Lesson030: NSObject, ObservableObject {
                                                                                                    
                                                                                                    If we burn more energy than we take in, our body burns our fat stores to meet the demands of our movement and exercise.
                                                                                                    
-                                                                                                   ProtocolN24 makes it easy to monitor your energy intake and monitor changes in your bodyweight. This gives us all the information we need for our fat loss process.
+                                                                                                   ProtocolN24 makes it easy to monitor your energy intake and changes in your bodyweight. This gives us all the information we need to control our bodyweight.
                                                                                                    """, uiText2: "UI Text 22 ",
                                                                                                             uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                             uiSegPickerOptions: ["xx"])),

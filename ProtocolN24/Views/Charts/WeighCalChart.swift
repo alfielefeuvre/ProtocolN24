@@ -33,13 +33,14 @@ struct WeighCalChart: View {
                 .opacity(0.01)
                 .frame(width: deviceWidth, height: 200)
             
-         //   HStack {
+            HStack {
+                
                 Chart {
                     ForEach(chartSeries) { series in
                         ForEach(series.weighIns, id: \.date) { element in
                             PointMark(
-                               x: .value("Day", element.date, unit: .day),
-                               y: .value("Sales", element.weight)
+                                x: .value("Day", element.date, unit: .day),
+                                y: .value("Sales", element.weight)
                             ).opacity(series.name == "Average" ? 0 : 1)
                             LineMark(
                                 x: .value("Day", element.date, unit: .day),
@@ -49,12 +50,13 @@ struct WeighCalChart: View {
                         .foregroundStyle(by: .value("Series", series.name))
                     }
                 }
+                .frame(width: deviceWidth, height: 200)
                 .chartXAxis {
                     AxisMarks(values: .stride(by: .day)) { _ in
                         AxisTick()
                         AxisGridLine()
                         AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
-                    //        .foregroundStyle(.clear)
+                        //        .foregroundStyle(.clear)
                     }
                 }
                 .chartYScale(domain: [98, 101])
@@ -62,51 +64,57 @@ struct WeighCalChart: View {
                     AxisMarks(position: .trailing)
                     AxisMarks(position: .leading) { _ in
                         AxisValueLabel(centered: false)
-                           .foregroundStyle(.clear)
-                    }
-                }
-                .frame(width: deviceWidth, height: 200)
-                .padding()
-         //   }
-            
-            
-         //   HStack {
-                Chart {
-                    ForEach(chartSeries) { series in
-                        ForEach(series.weighIns, id: \.date) { element in
-                            PointMark(
-                               x: .value("Day", element.date, unit: .day),
-                               y: .value("Sales", element.weight)
-                            ).opacity( element.weight < 300 ? 0 : 1)
-                            LineMark(
-                                x: .value("Day", element.date, unit: .day),
-                                y: .value("Sales", element.weight)
-                            ).opacity(series.name == "Weigh Ins" ? 0 : 1)
-                        }
-                        .foregroundStyle(by: .value("Series", series.name))
-                    }
-                }
-                .chartXAxis {   // no x axis
-                    AxisMarks(values: .stride(by: .day)) { _ in
-                        AxisTick()
-                       AxisGridLine()
-                        AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
                             .foregroundStyle(.clear)
                     }
-              
                 }
-                .chartYScale(domain: [400, 1000])
+                .padding()
+                Spacer()
+            }.opacity(0.4)
+            
+            VStack {
+                
+//                Text("")
+         
+                    Chart {
+                        ForEach(chartSeries) { series in
+                            ForEach(series.weighIns, id: \.date) { element in
+                                PointMark(
+                                    x: .value("Day", element.date, unit: .day),
+                                    y: .value("Sales", element.weight)
+                                ).opacity( element.weight < 50 ? 0 : 1)
+                                LineMark(
+                                    x: .value("Day", element.date, unit: .day),
+                                    y: .value("Sales", element.weight)
+                                ).opacity(series.name == "Weigh Ins" ? 0 : 1)
+                            }
+                      //      .foregroundStyle(by: .value("Series", series.name))
+                    
+                            
+                        }
+                    }
+                    .chartXAxis {
+                        AxisMarks(values: .stride(by: .day)) { _ in
+                    //              AxisTick()
+                    //               AxisGridLine()
+                            AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
+                                .foregroundStyle(.clear)
+                        }
+                        
+                    }
+                    Spacer()
+                }
+                .frame(width: deviceWidth, height: 200)
+                .chartYScale(domain: [0, 1500])
                 .chartYAxis {
                     AxisMarks(position: .leading)
                     AxisMarks(position: .trailing) { _ in
                         AxisValueLabel(centered: false)
-                           .foregroundStyle(.clear)
+                            .foregroundStyle(.clear)
                     }
                 }
-                .frame(width: deviceWidth, height: 200)
                 .padding()
-          //  }
-            
+                Spacer()
+    
         }
         .frame(height: 200)
         .padding()

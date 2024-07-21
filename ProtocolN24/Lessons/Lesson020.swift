@@ -65,9 +65,12 @@ class Lesson020: NSObject, ObservableObject {
                                                                                                                                                         uiSegPickerOptions: ["xx"])),
                                                             
                                                               UIComponent(type: .uiTextString, uiData: UIData(uiText: """
-                                                      So what is a realistic expectation for fat loss/muscle gain? Select your bodyweight below and ProtocolN24 will calculate your 8-week target.
-                                                      
-                                                      """, uiText2: "xx",
+                                                                                                    The truth is that you don’t know for a fact that any training programme will work for you. Some influencers will make promises that simply cannot be delivered, they take advantage of people so that they can make a quick buck.
+                                                                                                    
+                                                                                                    ProtocolN24 provides the evidence that the process is working for you. Our personal trainers can steer you back on track if you are not making good progress.
+                                                                                                    
+                                                                                                    So what is a realistic expectation for fat loss/muscle gain? Select your bodyweight below and ProtocolN24 will calculate your 8-week target.
+                                                                                                    """, uiText2: "xx",
                                                                                                               uiImage: "Bench", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                               uiSegPickerOptions: ["xx"])),
                                                               
