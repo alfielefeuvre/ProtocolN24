@@ -26,7 +26,9 @@ struct LessonView: View {
                 case .uiTextString: UICompText(uiData: uiComponent.uiData, lessonId: lesson.id)
                 case .uiWIChart: UICompWIChart(uiData: uiComponent.uiData)
                 case .uiWCChart: UICompWCChart(uiData: uiComponent.uiData)
-               }
+                case .uiLast19Cal: UICompLast19Cal()
+                case .uiLast19CalBW: UICompLast19CalBW()
+          }
             }
         }
       //  .onAppear{ viewModel.clearAnswers() }

@@ -28,13 +28,13 @@ struct ContentView: View {
             LearnView(lessons: appController.lessons)
                 .tabItem{ Label("Learn", systemImage: "book") } .tag(3)
             
-            if hasPaid == true {
+          //  if hasPaid == true {
                 ChatView()
                     .tabItem{ Label("Chat", systemImage: "bubble.left") } .tag(4)
                 
                 WorkoutView()
                     .tabItem{ Label("Workout", systemImage: "dumbbell") } .tag(5)
-            }
+          //  }
         }
         .onAppear{
             appController.loadLessonsFromStorage()

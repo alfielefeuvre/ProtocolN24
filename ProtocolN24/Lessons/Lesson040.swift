@@ -13,7 +13,7 @@ class Lesson040: NSObject, ObservableObject {
                            dayRef: "Day 5",
                            module: .week1,
                            isComplete: false, isLocked: false,
-                           imageName: "Dumbell", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "How to control your weight - II", uiText2: "",
+                           imageName: "Dumbell", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "Secret 2: Fat-Loss process", uiText2: "",
                                                                                                         uiImage: "Bench", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                         uiSegPickerOptions: ["xx"])),
                                                             
@@ -26,23 +26,23 @@ class Lesson040: NSObject, ObservableObject {
                                                                                                 
                                                                                                 So how does this work in real life?
                                                                                                 
-                                                                                                First we track our daily energy consumption (check out secret 4 for more info on this):
+                                                                                                First we track our daily energy consumption, in the example below 300 calories per day were consumed for a week, then this was reduced to 2500 calories per day. 
                                                                                                 """, uiText2: "xx",
                                                                                                          uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                          uiSegPickerOptions: ["xx"])),
                                                             
-                                                              UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                      uiImage: "WeightControl1", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+                                                              UIComponent(type: .uiLast19Cal, uiData: UIData(uiText: "xx", uiText2: "xx",
+                                                                                      uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                               uiSegPickerOptions: ["xx"])),
                                                               
                                                               UIComponent(type: .uiTextString, uiData: UIData(uiText: """
-                                                                                                     Below the balance point we can expect to lose weight, if this is supported with training/nutrition this will mostly be from fat stores on the body. The further we are below the balance point, the more weight we will lose.
+                                                                                                     Next we investigate what influence this change has had on bodyweight.
                                                                                                      """, uiText2: "xx",
                                                                                                               uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                               uiSegPickerOptions: ["xx"])),
                                                                  
-                                                                   UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                           uiImage: "WeightControl2", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+                                                                   UIComponent(type: .uiLast19CalBW, uiData: UIData(uiText: "xx", uiText2: "xx",
+                                                                                           uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                                    uiSegPickerOptions: ["xx"])),
                                                               
                                                               UIComponent(type: .uiTextString, uiData: UIData(uiText: """
@@ -57,27 +57,7 @@ class Lesson040: NSObject, ObservableObject {
                                                                                            uiImage: "WeightControl4", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                                    uiSegPickerOptions: ["xx"])),
                                                               
-                                                              UIComponent(type: .uiTextString, uiData: UIData(uiText: """
-                                                                                                     Anything beyond 1.2% is likely to lead to problems and eventual diet break/over-eating.
-                                                                                                                                                                                                          
-                                                                                                     Below 1.2% and it is likely that we will see some muscle loss, which for most people is the opposite of the training goals.
-                                                                                                                                                                                                       
-                                                                                                     Above the balance point is where we are consuming more energy than we need, this state supports muscle growth because our body has spare energy and can decide to assign it to muscle growth to support our training.
-                                                                                                     """, uiText2: "xx",
-                                                                                                              uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
-                                                                                                              uiSegPickerOptions: ["xx"])),
-                                                                 
-                                                                   UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                           uiImage: "WeightControl8", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                                                                                   uiSegPickerOptions: ["xx"])),
-                                                              
-                                                            UIComponent(type: .uiTextString, uiData: UIData(uiText: """
-                                                                                                    At first, the more energy we have spare, the more muscle we will grow.
-                                                                                                                                                                                                        
-                                                                                                    If we continue to consume more energy we will reach a point where all the additional energy is stored as fat.
-                                                                                                   """, uiText2: "UI Text 22 ",
-                                                                                                            uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
-                                                                                                            uiSegPickerOptions: ["xx"])),
+                                                            
                                                               
                                                               UIComponent(type: .uiImageName, uiData: UIData(uiText: "xx", uiText2: "xx",
                                                                                       uiImage: "WeightControl7", ratioOfDeviceWidth: 1, imageRatio: 0.6,
