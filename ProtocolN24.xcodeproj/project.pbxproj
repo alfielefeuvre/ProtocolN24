@@ -10,6 +10,10 @@
 		1403FB962BF54B01008E10DD /* ButtonStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403FB952BF54B01008E10DD /* ButtonStandard.swift */; };
 		141362A12C4D64BF00AC8E40 /* DailyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141362A02C4D64BF00AC8E40 /* DailyData.swift */; };
 		141362A52C4D667700AC8E40 /* last14DailyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141362A42C4D667700AC8E40 /* last14DailyChart.swift */; };
+		143A530C2C568A7000EE3067 /* DayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A530B2C568A7000EE3067 /* DayData.swift */; };
+		143A530E2C568CD900EE3067 /* AddMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A530D2C568CD900EE3067 /* AddMacros.swift */; };
+		143A53102C569B7400EE3067 /* ListMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A530F2C569B7400EE3067 /* ListMacros.swift */; };
+		143A53122C56C04100EE3067 /* DailyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A53112C56C04100EE3067 /* DailyChart.swift */; };
 		143A758A2BFD205A00AB8029 /* UICompText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A75892BFD205A00AB8029 /* UICompText.swift */; };
 		143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758B2BFD229700AB8029 /* UICompImage.swift */; };
 		143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758D2BFD298500AB8029 /* UICompHeader.swift */; };
@@ -101,6 +105,10 @@
 		1403FB952BF54B01008E10DD /* ButtonStandard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStandard.swift; sourceTree = "<group>"; };
 		141362A02C4D64BF00AC8E40 /* DailyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyData.swift; sourceTree = "<group>"; };
 		141362A42C4D667700AC8E40 /* last14DailyChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = last14DailyChart.swift; sourceTree = "<group>"; };
+		143A530B2C568A7000EE3067 /* DayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayData.swift; sourceTree = "<group>"; };
+		143A530D2C568CD900EE3067 /* AddMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMacros.swift; sourceTree = "<group>"; };
+		143A530F2C569B7400EE3067 /* ListMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMacros.swift; sourceTree = "<group>"; };
+		143A53112C56C04100EE3067 /* DailyChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChart.swift; sourceTree = "<group>"; };
 		143A75892BFD205A00AB8029 /* UICompText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompText.swift; sourceTree = "<group>"; };
 		143A758B2BFD229700AB8029 /* UICompImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompImage.swift; sourceTree = "<group>"; };
 		143A758D2BFD298500AB8029 /* UICompHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompHeader.swift; sourceTree = "<group>"; };
@@ -261,6 +269,9 @@
 			isa = PBXGroup;
 			children = (
 				147B9D3A2C2F440000227D80 /* FoodView.swift */,
+				143A530D2C568CD900EE3067 /* AddMacros.swift */,
+				143A530F2C569B7400EE3067 /* ListMacros.swift */,
+				143A53112C56C04100EE3067 /* DailyChart.swift */,
 			);
 			path = FoodView;
 			sourceTree = "<group>";
@@ -384,6 +395,7 @@
 				147B9D532C3C179B00227D80 /* DemoData.swift */,
 				147B9D592C3C745E00227D80 /* Demo4Data.swift */,
 				14AD6F0F2B03F82C005DE26E /* WeighIn.swift */,
+				143A530B2C568A7000EE3067 /* DayData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -578,11 +590,13 @@
 				14DDBCA02C273FE2006F9392 /* Lesson000.swift in Sources */,
 				144C52982BF938F8006C14EC /* Lesson070.swift in Sources */,
 				147B9D3B2C2F440000227D80 /* FoodView.swift in Sources */,
+				143A530E2C568CD900EE3067 /* AddMacros.swift in Sources */,
 				143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */,
 				14531FFF2C49A7010084DADC /* UICompWCChart.swift in Sources */,
 				14B5E5242BF69857006861A7 /* LessonView.swift in Sources */,
 				14D085532B073AA70037079F /* SeriesChartView.swift in Sources */,
 				144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */,
+				143A53102C569B7400EE3067 /* ListMacros.swift in Sources */,
 				14AD6F0B2B03ED52005DE26E /* LearnView.swift in Sources */,
 				147B9D5C2C3DCD5600227D80 /* UICompWIChart.swift in Sources */,
 				14AD6F132B03F84F005DE26E /* WeighWeek.swift in Sources */,
@@ -603,12 +617,14 @@
 				143A758A2BFD205A00AB8029 /* UICompText.swift in Sources */,
 				14D085512B0737020037079F /* Data.swift in Sources */,
 				147B9D6D2C44586B00227D80 /* Lesson120.swift in Sources */,
+				143A53122C56C04100EE3067 /* DailyChart.swift in Sources */,
 				1403FB962BF54B01008E10DD /* ButtonStandard.swift in Sources */,
 				14B33DCF2C52E144001ABF63 /* Last19CalBWChart.swift in Sources */,
 				14EC26BD2B0A824D00CAA9B4 /* Week4ChartView.swift in Sources */,
 				143A759C2C0213CF00AB8029 /* UserConfig.swift in Sources */,
 				147B9D502C3BEA8000227D80 /* Lesson045.swift in Sources */,
 				147B9D692C44585400227D80 /* Lesson100.swift in Sources */,
+				143A530C2C568A7000EE3067 /* DayData.swift in Sources */,
 				147B9D462C34911B00227D80 /* FatLossView.swift in Sources */,
 				147B9D6B2C44586000227D80 /* Lesson110.swift in Sources */,
 				14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */,

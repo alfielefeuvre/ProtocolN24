@@ -36,6 +36,8 @@ struct TrackingView: View {
 struct AddWeighInView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \WeighIn.weekOfYear) var weighIns: [WeighIn]
+    @Query var dailyData: [DayData]
+    
     var calendar = Calendar(identifier: .gregorian)
     
     @State private var dateToAdd = Date.now
@@ -70,19 +72,33 @@ struct AddWeighInView: View {
             }
         }.onAppear{
             if weighIns.count > 0 {
-                weightToAdd = 79
+                weightToAdd = 77
             }
         }
     }
     
     func addWeighIn() {
-        let newWeighIn = WeighIn(weekOfYear: calendar.component(.weekOfYear, from: dateToAdd),
-                                 dayOfWeek: calendar.component(.weekday, from: dateToAdd),
-                                 weight: weightToAdd,
-                                 date: dateGet(year: calendar.component(.year, from: dateToAdd),
-                                               month: calendar.component(.month, from: dateToAdd),
-                                               day: calendar.component(.day, from: dateToAdd)))
-        modelContext.insert(newWeighIn)
+        let selectedYear = calendar.component(.year, from: dateToAdd)
+        let selectedMonth = calendar.component(.month, from: dateToAdd)
+        let selectedDay = calendar.component(.day, from: dateToAdd)
+        var indexFound = false
+       
+        for index in 0...dailyData.count-1 {
+             if calendar.component(.year, from: dailyData[index].date) == selectedYear {
+                if calendar.component(.month, from: dailyData[index].date) == selectedMonth {
+                    if calendar.component(.day, from: dailyData[index].date) == selectedDay {
+                        indexFound = true
+                        dailyData[index].weight = weightToAdd
+                    }
+                }
+            }
+        }
+        
+        if indexFound == false {
+            let newDayData = DayData(date: dateToAdd, weight: weightToAdd,
+                                     calories: 0, proteins: 0, fats: 0, carbs: 0)
+            modelContext.insert(newDayData)
+        }
         try? modelContext.save()
         
         weightAdded = true
@@ -115,6 +131,6 @@ struct WeightWeekView: View {
     
     TrackingView()
         .environmentObject(AppController())
-        .modelContainer(for: [WeighWeek.self, UserConfig.self])
+        .modelContainer(for: [WeighWeek.self, UserConfig.self, DayData.self])
 
 }

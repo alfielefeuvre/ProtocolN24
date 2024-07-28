@@ -17,10 +17,10 @@ class UserConfig {
     var cutOrBulk: String = "Not Sure"
     var startWeightKGDouble: Double = 0
     var recentAvgBodyweightKG: Double = 0
-    var calories: Int = 0
-    var protein: Int = 0
-    var fat: Int = 0
-    var carbs: Int = 0
+    var calories: Int = 1800
+    var protein: Int = 175
+    var fat: Int = 40
+    var carbs: Int = 185
     
     // start at week 1
     var weeksIn = 1
