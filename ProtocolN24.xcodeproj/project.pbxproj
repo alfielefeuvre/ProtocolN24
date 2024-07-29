@@ -14,6 +14,7 @@
 		143A530E2C568CD900EE3067 /* AddMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A530D2C568CD900EE3067 /* AddMacros.swift */; };
 		143A53102C569B7400EE3067 /* ListMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A530F2C569B7400EE3067 /* ListMacros.swift */; };
 		143A53122C56C04100EE3067 /* DailyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A53112C56C04100EE3067 /* DailyChart.swift */; };
+		143A53142C5813C200EE3067 /* DailyChartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A53132C5813C200EE3067 /* DailyChartVM.swift */; };
 		143A758A2BFD205A00AB8029 /* UICompText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A75892BFD205A00AB8029 /* UICompText.swift */; };
 		143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758B2BFD229700AB8029 /* UICompImage.swift */; };
 		143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758D2BFD298500AB8029 /* UICompHeader.swift */; };
@@ -109,6 +110,7 @@
 		143A530D2C568CD900EE3067 /* AddMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMacros.swift; sourceTree = "<group>"; };
 		143A530F2C569B7400EE3067 /* ListMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMacros.swift; sourceTree = "<group>"; };
 		143A53112C56C04100EE3067 /* DailyChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChart.swift; sourceTree = "<group>"; };
+		143A53132C5813C200EE3067 /* DailyChartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChartVM.swift; sourceTree = "<group>"; };
 		143A75892BFD205A00AB8029 /* UICompText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompText.swift; sourceTree = "<group>"; };
 		143A758B2BFD229700AB8029 /* UICompImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompImage.swift; sourceTree = "<group>"; };
 		143A758D2BFD298500AB8029 /* UICompHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompHeader.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				143A530D2C568CD900EE3067 /* AddMacros.swift */,
 				143A530F2C569B7400EE3067 /* ListMacros.swift */,
 				143A53112C56C04100EE3067 /* DailyChart.swift */,
+				143A53132C5813C200EE3067 /* DailyChartVM.swift */,
 			);
 			path = FoodView;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */,
 				143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */,
 				14531FFD2C49A69B0084DADC /* DemoWeighCalChart.swift in Sources */,
+				143A53142C5813C200EE3067 /* DailyChartVM.swift in Sources */,
 				147B9D542C3C179B00227D80 /* DemoData.swift in Sources */,
 				147B9D5A2C3C745E00227D80 /* Demo4Data.swift in Sources */,
 			);

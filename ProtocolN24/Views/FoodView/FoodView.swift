@@ -17,7 +17,7 @@ struct FoodView: View {
         NavigationView {
             List {
                 AddMacros()
-                DailyChart()
+                DailyChart(dataToDisplay: dailyData)
                 ListMacros()
                 
                 Last14Chart()

@@ -9,42 +9,94 @@ import SwiftData
 import SwiftUI
 
 struct DailyChart: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query(sort: \DayData.date) var dailyData: [DayData]
     
-    let deviceWidth = UIScreen.main.bounds.width * 0.9
+    @State private var viewModel = ViewModel()
+    let dataToDisplay: [DayData]
     
     var body: some View {
         ZStack {
             Chart {
-                ForEach(dailyData, id: \.date) {
+                ForEach(viewModel.dataToDisplay, id: \.date) {
                     if $0.weight > 1 {
                         PointMark(
                             x: .value("Date", $0.date, unit: .day),
-                            y: .value("Bodyweight", $0.weight)
+                            y: .value("Bodyweight", ($0.weight - viewModel.bodyweightOffset))
                         )
                         .foregroundStyle(by: .value("Value", "Bodyweight"))
                         
+                        // average body weight
                         LineMark(
                             x: .value("Date", $0.date, unit: .day),
-                            y: .value("Calories", (($0.calories - 1000) / 500))
+                            y: .value("Bodyweight 2dMA", ($0.ma2d - viewModel.bodyweightOffset))
                         )
-                        .foregroundStyle(by: .value("Value", "Calories"))
+                        .foregroundStyle(by: .value("Value", "Bodyweight Avg"))
+                        
+                        // average body weight
+                        LineMark(
+                            x: .value("Date", $0.date, unit: .day),
+                            y: .value("Bodyweight 2dMA", ($0.ma3d - viewModel.bodyweightOffset))
+                        )
+                        .foregroundStyle(by: .value("Value", "Bodyweight 3dAvg"))
+                        
+                        //calories
+//                        LineMark(
+//                            x: .value("Date", $0.date, unit: .day),
+//                            y: .value("Calories", (($0.calories)))
+//                        )
+//                        .foregroundStyle(by: .value("Value", "Calories"))
                     }
                 }
             }
-            .frame(width: deviceWidth, height: 200)
+            .chartXAxis {
+                AxisMarks(values: .stride(by: .day)) { _ in
+                    AxisTick()
+                    AxisGridLine()
+                    AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
+                }
+            }
+            .chartYAxis {
+                AxisMarks(position: .leading, values: Array(stride(from: 0, through: 4, by: 1))){
+                    axis in
+                    AxisTick()
+                    AxisGridLine()
+//                    AxisValueLabel("\((axis.index * 500) + 1000)", centered: false)
+                }
+               
+                AxisMarks(position: .trailing, values: Array(stride(from: 0, through: 4, by: 1))){
+                    axis in
+                    AxisTick()
+                    AxisGridLine()
+                    AxisValueLabel("\((axis.index + Int(viewModel.bodyweightOffset)))", centered: false)
+             }
+            }
+            
+            // y scale leading axis
+            
+            // y scale trailing axis
+            
+            // adjust line data for 2 axis
+            
+            .frame(width: viewModel.deviceWidth, height: 200)
             .padding()
         }
-        .onAppear{ setUpChart() }
-    }
-    
-    func setUpChart() {
-        
+        .onAppear{ viewModel.setupChart(dataIn: dataToDisplay) }
     }
 }
 
 #Preview {
-    DailyChart()
-        .modelContainer(for: [WeighWeek.self, UserConfig.self, DayData.self])
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: DayData.self, configurations: config)
+
+        let day1 = DayData(date: Date.getDate(year: 2024, month: 07, day: 21), weight: 78.5, calories: 2009, proteins: 183, fats: 43, carbs: 223)
+        let day2 = DayData(date: Date.getDate(year: 2024, month: 07, day: 22), weight: 78.8, calories: 1826, proteins: 158, fats: 58, carbs: 167)
+        let day3 = DayData(date: Date.getDate(year: 2024, month: 07, day: 23), weight: 78.8, calories: 1921, proteins: 153, fats: 74, carbs: 147)
+        let day4 = DayData(date: Date.getDate(year: 2024, month: 07, day: 24), weight: 78.2, calories: 1724, proteins: 178, fats: 43, carbs: 157)
+        let day5 = DayData(date: Date.getDate(year: 2024, month: 07, day: 25), weight: 78.1, calories: 1713, proteins: 179, fats: 41, carbs: 158)
+        let day6 = DayData(date: Date.getDate(year: 2024, month: 07, day: 26), weight: 77.8, calories: 1746, proteins: 177, fats: 40, carbs: 169)
+        let day7 = DayData(date: Date.getDate(year: 2024, month: 07, day: 27), weight: 77.8, calories: 2003, proteins: 176, fats: 75, carbs: 156)
+        let day8 = DayData(date: Date.getDate(year: 2024, month: 07, day: 28), weight: 77.3, calories: 1789, proteins: 177, fats: 40, carbs: 181)
+        let dataToDisplay = [day1, day2, day3, day4, day5, day6, day7, day8 ]
+    
+    return DailyChart(dataToDisplay: dataToDisplay)
+                .modelContainer(for: [WeighWeek.self, UserConfig.self, DayData.self])
 }
