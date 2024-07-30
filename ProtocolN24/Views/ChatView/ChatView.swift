@@ -14,7 +14,7 @@ struct ChatView: View {
                 Section("Chat") {
                     last14DailyChart()
                 }
-            }
+            }.navigationTitle("Chat")
         }
     }
 }

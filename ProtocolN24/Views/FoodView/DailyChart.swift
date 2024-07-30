@@ -20,30 +20,30 @@ struct DailyChart: View {
                     if $0.weight > 1 {
                         PointMark(
                             x: .value("Date", $0.date, unit: .day),
-                            y: .value("Bodyweight", ($0.weight - viewModel.bodyweightOffset))
+                            y: .value("Bodyweight", (($0.weight - viewModel.bodyweightOffset) / Double(viewModel.trailingAxisAdjust)))
                         )
                         .foregroundStyle(by: .value("Value", "Bodyweight"))
                         
-                        // average body weight
+                        // average body weight 2dma
                         LineMark(
                             x: .value("Date", $0.date, unit: .day),
-                            y: .value("Bodyweight 2dMA", ($0.ma2d - viewModel.bodyweightOffset))
+                            y: .value("Bodyweight 2dMA", (($0.ma2d - viewModel.bodyweightOffset) / Double(viewModel.trailingAxisAdjust)))
                         )
-                        .foregroundStyle(by: .value("Value", "Bodyweight Avg"))
+                        .foregroundStyle(by: .value("Value", "BW Avg"))
                         
-                        // average body weight
+                        // average body weight 3dma
                         LineMark(
                             x: .value("Date", $0.date, unit: .day),
-                            y: .value("Bodyweight 2dMA", ($0.ma3d - viewModel.bodyweightOffset))
+                            y: .value("Bodyweight 3dMA", (($0.ma3d - viewModel.bodyweightOffset) / Double(viewModel.trailingAxisAdjust)))
                         )
-                        .foregroundStyle(by: .value("Value", "Bodyweight 3dAvg"))
+                        .foregroundStyle(by: .value("Value", "BW 3dAvg"))
                         
                         //calories
-//                        LineMark(
-//                            x: .value("Date", $0.date, unit: .day),
-//                            y: .value("Calories", (($0.calories)))
-//                        )
-//                        .foregroundStyle(by: .value("Value", "Calories"))
+                        LineMark(
+                            x: .value("Date", $0.date, unit: .day),
+                            y: .value("Calories", (($0.calories - Double(viewModel.calorieOffset)) / Double(viewModel.leadingAxisAdjust)))
+                        )
+                        .foregroundStyle(by: .value("Value", "Calories"))
                     }
                 }
             }
@@ -59,23 +59,16 @@ struct DailyChart: View {
                     axis in
                     AxisTick()
                     AxisGridLine()
-//                    AxisValueLabel("\((axis.index * 500) + 1000)", centered: false)
+                    AxisValueLabel("\((axis.index * viewModel.leadingAxisAdjust) + viewModel.calorieOffset)", centered: false) //viewModel.leadingAxisAdjust
                 }
                
                 AxisMarks(position: .trailing, values: Array(stride(from: 0, through: 4, by: 1))){
                     axis in
                     AxisTick()
                     AxisGridLine()
-                    AxisValueLabel("\((axis.index + Int(viewModel.bodyweightOffset)))", centered: false)
+                    AxisValueLabel("\((axis.index  * viewModel.trailingAxisAdjust + Int(viewModel.bodyweightOffset)))", centered: false)
              }
             }
-            
-            // y scale leading axis
-            
-            // y scale trailing axis
-            
-            // adjust line data for 2 axis
-            
             .frame(width: viewModel.deviceWidth, height: 200)
             .padding()
         }
@@ -94,7 +87,7 @@ struct DailyChart: View {
         let day5 = DayData(date: Date.getDate(year: 2024, month: 07, day: 25), weight: 78.1, calories: 1713, proteins: 179, fats: 41, carbs: 158)
         let day6 = DayData(date: Date.getDate(year: 2024, month: 07, day: 26), weight: 77.8, calories: 1746, proteins: 177, fats: 40, carbs: 169)
         let day7 = DayData(date: Date.getDate(year: 2024, month: 07, day: 27), weight: 77.8, calories: 2003, proteins: 176, fats: 75, carbs: 156)
-        let day8 = DayData(date: Date.getDate(year: 2024, month: 07, day: 28), weight: 77.3, calories: 1789, proteins: 177, fats: 40, carbs: 181)
+        let day8 = DayData(date: Date.getDate(year: 2024, month: 07, day: 28), weight: 77.3, calories: 3600, proteins: 177, fats: 40, carbs: 181)
         let dataToDisplay = [day1, day2, day3, day4, day5, day6, day7, day8 ]
     
     return DailyChart(dataToDisplay: dataToDisplay)

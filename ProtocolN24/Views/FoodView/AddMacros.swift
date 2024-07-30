@@ -31,7 +31,7 @@ struct AddMacros: View {
             
             Stepper("Calories: \(caloriesToAdd.formatted()) cal",
                     value: $caloriesToAdd,
-                    in: 0...3000, step: 1)
+                    in: 0...8000, step: 1)
             
             Stepper("Protein: \(proteinsToAdd.formatted())g",
                     value: $proteinsToAdd,
