@@ -37,7 +37,8 @@ struct DailyChart: View {
                             y: .value("Bodyweight 3dMA", (($0.ma3d - viewModel.bodyweightOffset) / Double(viewModel.trailingAxisAdjust)))
                         )
                         .foregroundStyle(by: .value("Value", "BW 3dAvg"))
-                        
+                    }
+                    if $0.calories > 1 {
                         //calories
                         LineMark(
                             x: .value("Date", $0.date, unit: .day),
@@ -79,7 +80,7 @@ struct DailyChart: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: DayData.self, configurations: config)
-
+    
         let day1 = DayData(date: Date.getDate(year: 2024, month: 07, day: 21), weight: 78.5, calories: 2009, proteins: 183, fats: 43, carbs: 223)
         let day2 = DayData(date: Date.getDate(year: 2024, month: 07, day: 22), weight: 78.8, calories: 1826, proteins: 158, fats: 58, carbs: 167)
         let day3 = DayData(date: Date.getDate(year: 2024, month: 07, day: 23), weight: 78.8, calories: 1921, proteins: 153, fats: 74, carbs: 147)
@@ -87,7 +88,7 @@ struct DailyChart: View {
         let day5 = DayData(date: Date.getDate(year: 2024, month: 07, day: 25), weight: 78.1, calories: 1713, proteins: 179, fats: 41, carbs: 158)
         let day6 = DayData(date: Date.getDate(year: 2024, month: 07, day: 26), weight: 77.8, calories: 1746, proteins: 177, fats: 40, carbs: 169)
         let day7 = DayData(date: Date.getDate(year: 2024, month: 07, day: 27), weight: 77.8, calories: 2003, proteins: 176, fats: 75, carbs: 156)
-        let day8 = DayData(date: Date.getDate(year: 2024, month: 07, day: 28), weight: 77.3, calories: 3600, proteins: 177, fats: 40, carbs: 181)
+        let day8 = DayData(date: Date.getDate(year: 2024, month: 07, day: 28), weight: 77.3, calories: 1800, proteins: 177, fats: 40, carbs: 181)
         let dataToDisplay = [day1, day2, day3, day4, day5, day6, day7, day8 ]
     
     return DailyChart(dataToDisplay: dataToDisplay)

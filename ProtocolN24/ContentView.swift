@@ -68,5 +68,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(AppController())
-        .modelContainer(for: [WeighWeek.self, UserConfig.self])
+        .modelContainer(for: [WeighWeek.self, UserConfig.self, DayData.self])
 }

@@ -22,40 +22,97 @@ struct AddMacros: View {
     @State private var carbsToAdd: Double = 185
     @State private var dataAdded = false
     
+
+    let formatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
     
+    @FocusState private var isFocused: Bool
+ 
     var body: some View {
         Section("Add Macros") {
             DatePicker(selection: $dateToAdd, in: ...Date.now, displayedComponents: .date) {
                 Text("Select a date")
+            }.onTapGesture{ isFocused = false }
+            
+            HStack {
+                Text("Calories (cal):")
+                Spacer()
+                TextField("", value: $caloriesToAdd, formatter: formatter)
+                    .multilineTextAlignment(.trailing)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                    .frame(width: 125)
+                    .focused($isFocused)
             }
             
-            Stepper("Calories: \(caloriesToAdd.formatted()) cal",
-                    value: $caloriesToAdd,
-                    in: 0...8000, step: 1)
+            HStack {
+                Text("Protein (g):")
+                Spacer()
+                TextField("", value: $proteinsToAdd, formatter: formatter)
+                    .multilineTextAlignment(.trailing)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                    .frame(width: 125)
+                    .focused($isFocused)
+            }
             
-            Stepper("Protein: \(proteinsToAdd.formatted())g",
-                    value: $proteinsToAdd,
-                    in: 0...500, step: 1)
+            HStack {
+                Text("Fats (g):")
+                Spacer()
+                TextField("", value: $fatsToAdd, formatter: formatter)
+                    .multilineTextAlignment(.trailing)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                    .frame(width: 125)
+                    .focused($isFocused)
+            }
             
-            Stepper("Fat: \(fatsToAdd.formatted())g",
-                    value: $fatsToAdd,
-                    in: 0...500, step: 1)
+            HStack {
+                Text("Carbs (g):")
+                Spacer()
+                TextField("", value: $carbsToAdd, formatter: formatter)
+                    .multilineTextAlignment(.trailing)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                    .frame(width: 125)
+                    .focused($isFocused)
+            }
             
-            Stepper("Carbs: \(carbsToAdd.formatted())g",
-                    value: $carbsToAdd,
-                    in: 0...500, step: 1)
-            
-            Text("Daily Data Count: \(dailyData.count)")
+            Text("Daily Data Count: \(dailyData.count)").onTapGesture{ isFocused = false }
             HStack {
                 Button("Add Macros") { addMacros() }
                     .disabled(dataAdded)
                 Spacer()
             }
-            
+        }.onAppear{ setupView() }
+    }
+       
+    func setupView() {
+        let todayYear = calendar.component(.year, from: .now)
+        let todayMonth = calendar.component(.month, from: .now)
+        let todayDay = calendar.component(.day, from: .now)
+        
+        for index in 0...dailyData.count-1 {
+            if calendar.component(.year, from: dailyData[index].date) ==  todayYear {
+                if calendar.component(.month, from: dailyData[index].date) ==  todayMonth {
+                    if calendar.component(.day, from: dailyData[index].date) ==  todayDay {
+                        if dailyData[index].calories != 0 { caloriesToAdd = dailyData[index].calories }
+                        if dailyData[index].proteins != 0 { proteinsToAdd = dailyData[index].proteins }
+                        if dailyData[index].fats != 0 { fatsToAdd = dailyData[index].fats }
+                        if dailyData[index].carbs != 0 { carbsToAdd = dailyData[index].carbs }
+                  }
+                }
+            }
         }
+      
     }
     
     func addMacros() {
+        isFocused = false
+        
         let selectedYear = calendar.component(.year, from: dateToAdd)
         let selectedMonth = calendar.component(.month, from: dateToAdd)
         let selectedDay = calendar.component(.day, from: dateToAdd)
@@ -88,7 +145,7 @@ struct AddMacros: View {
 }
 
 #Preview {
-    FoodView()
+    AddMacros()
         .environmentObject(AppController())
         .modelContainer(for: [WeighWeek.self, UserConfig.self, DayData.self])
 }

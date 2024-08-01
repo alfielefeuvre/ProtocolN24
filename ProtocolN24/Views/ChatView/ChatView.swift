@@ -12,7 +12,7 @@ struct ChatView: View {
         NavigationView {
             List {
                 Section("Chat") {
-                    last14DailyChart()
+                    Text("Chat View")
                 }
             }.navigationTitle("Chat")
         }
