@@ -11,6 +11,16 @@ import SwiftUI
 @main
 struct ProtocolN24App: App {
     @StateObject var appController = AppController()
+    
+    let modelContainer: ModelContainer
+        
+        init() {
+            do {
+                modelContainer = try ModelContainer(for: WeighWeek.self, UserConfig.self, DayData.self)
+            } catch {
+                fatalError("Could not initialise ModelContainer")
+            }
+        }
    
     var body: some Scene {
         WindowGroup {

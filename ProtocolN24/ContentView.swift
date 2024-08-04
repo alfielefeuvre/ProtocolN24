@@ -34,20 +34,12 @@ struct ContentView: View {
                 
                 WorkoutView()
                     .tabItem{ Label("Workout", systemImage: "dumbbell") } .tag(5)
-          //  }
+  //          }
         }
         .onAppear{
             appController.loadLessonsFromStorage()
             if userConfig.count == 0 { setupDefaultUserConfig()
             } else { appController.updateLessonsWithUserConfig(userConfig: userConfig[0]) }
-            
-            
-            for i in stride(from: 0, through: 24, by: 4) {
-                print(i)
-            }
-            
-            print("here")
-            
         }
         .navigationViewStyle(.stack)
     }
@@ -66,7 +58,12 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
-        .environmentObject(AppController())
-        .modelContainer(for: [WeighWeek.self, UserConfig.self, DayData.self])
+    do {
+        let previewer = try Previewer()
+        return ContentView()
+            .environmentObject(AppController())
+            .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }

@@ -9,16 +9,21 @@ import SwiftUI
 
 struct WorkoutView: View {
     
-var body: some View {
-    NavigationView {
-        List {
-            Text("Workout View")
-        }.navigationTitle("Workouts")
+    var body: some View {
+        NavigationView {
+            List {
+                Text("Workout View")
+            }.navigationTitle("Workouts")
+        }
     }
 }
-}
-
 
 #Preview {
-    WorkoutView()
+    do {
+        let previewer = try Previewer()
+        return WorkoutView()
+         //   .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }

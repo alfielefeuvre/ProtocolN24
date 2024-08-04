@@ -18,7 +18,7 @@ struct FoodView: View {
             List {
                 AddMacros()
                 DailyChart(dataToDisplay: dailyData)
-               ListMacros()
+                ListMacros()
             }.navigationTitle("Food & Drink")
         }
     }
