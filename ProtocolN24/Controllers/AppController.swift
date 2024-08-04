@@ -15,13 +15,25 @@ class AppController: NSObject, ObservableObject {
     @Published var expectedWeightLoss = 0.0
     
     let lesson3ChartData: [DayData] = [
-    
-        DayData(date: .now, weight: 77, calories: 1800, proteins: 175, fats: 41, carbs: 176),
-        DayData(date: .now, weight: 77, calories: 1800, proteins: 175, fats: 41, carbs: 176),
-        DayData(date: .now, weight: 77, calories: 1800, proteins: 175, fats: 41, carbs: 176),
-        DayData(date: .now, weight: 77, calories: 1800, proteins: 175, fats: 41, carbs: 176),
-        DayData(date: .now, weight: 77, calories: 1800, proteins: 175, fats: 41, carbs: 176)
-    
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 01), weight: 100, calories: 3000, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 02), weight: 100.2, calories: 3000, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 03), weight: 100, calories: 3000, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 04), weight: 100.3, calories: 3000, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 05), weight: 99.9, calories: 3000, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 06), weight: 100.2, calories: 3000, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 07), weight: 100.2, calories: 3000, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 08), weight: 99.8, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 09), weight: 99.9, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 10), weight: 99.5, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 11), weight: 99.9, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 12), weight: 99.1, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 13), weight: 99.6, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 14), weight: 98.7, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 15), weight: 99.1, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 16), weight: 98.5, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 17), weight: 98.9, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 18), weight: 98.2, calories: 2500, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: Date.getDate(year: 2024, month: 01, day: 19), weight: 98.6, calories: 2500, proteins: 175, fats: 41, carbs: 176)
     ]
     
     // MARK: - Set-up

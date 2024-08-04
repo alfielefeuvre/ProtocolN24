@@ -33,7 +33,6 @@ struct UICompImage: View {
                         ratioOfDeviceWidth: 1,
                         imageRatio: 1, 
                         uiSegPickerOptions: ["xx"])
-    let deviceWidth = UIScreen.main.bounds.width * 0.95
     return UICompImage(uiData: uiData)
 }
 
