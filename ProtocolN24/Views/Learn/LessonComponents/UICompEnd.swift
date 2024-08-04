@@ -53,16 +53,3 @@ struct UICompEnd: View {
         appController.updateLessonsWithUserConfig(userConfig: userConfig[0])
     }
 }
-
-#Preview {
-    let uiData = UIData(uiText: "Select a setting",
-                        uiText2: "Lesson 1",
-                        uiImage: "xx",
-                        ratioOfDeviceWidth: 1,
-                        imageRatio: 0,
-                        uiSegPickerOptions: ["Not Sure", "Fat Loss", "Muscle Gain"])
-    
-    return UICompEnd(uiData: uiData, lessonId: 00)
-                .environmentObject(AppController())
-                .modelContainer(for: [WeighWeek.self, UserConfig.self])
-}

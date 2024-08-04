@@ -19,17 +19,20 @@ struct UICompDDChart: View {
 }
 
 #Preview {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try! ModelContainer(for: DayData.self, configurations: config)
-    
-    let uiData = UIData(uiText: "true",
-                        uiText2: "true",
-                        uiImage: "xx",
-                        ratioOfDeviceWidth: 1,
-                        imageRatio: 0.7,
-                        uiSegPickerOptions: ["Not Sure", "Fat Loss", "Muscle Gain"])
-    
-    return UICompDDChart(uiData: uiData)
-                .environmentObject(AppController())
-                .modelContainer(for: [WeighWeek.self, UserConfig.self])
+    do {
+        let previewer = try Previewer()
+        
+        let uiData = UIData(uiText: "true",
+                            uiText2: "true",
+                            uiImage: "xx",
+                            ratioOfDeviceWidth: 1,
+                            imageRatio: 0.7,
+                            uiSegPickerOptions: ["Not Sure", "Fat Loss", "Muscle Gain"])
+        
+        return UICompDDChart(uiData: uiData)
+            .environmentObject(AppController())
+            .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }

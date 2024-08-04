@@ -33,14 +33,3 @@ struct UICompHeader: View {
         .padding()
     }
 }
-
-#Preview {
-    let uiData = UIData(uiText: "Header",
-                        uiText2: "Sub Header",
-                        uiImage: "Gym",
-                        ratioOfDeviceWidth: 1,
-                        imageRatio: 0.6, 
-                        uiSegPickerOptions: ["xx"])
-    let deviceWidth = UIScreen.main.bounds.width * 0.95
-    return UICompHeader(uiData: uiData)
-}

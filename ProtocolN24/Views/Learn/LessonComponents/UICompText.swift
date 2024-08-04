@@ -53,5 +53,5 @@ struct UICompText: View {
                         imageRatio: 0, 
                         uiSegPickerOptions: ["xx"])
     return UICompText(uiData: uiData, lessonId: 20)
-        .modelContainer(for: [WeighWeek.self, UserConfig.self])
+        .modelContainer(for: [UserConfig.self])
 }

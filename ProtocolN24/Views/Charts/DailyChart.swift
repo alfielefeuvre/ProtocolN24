@@ -77,7 +77,6 @@ struct DailyChart: View {
     }
 }
 
-
 #Preview {
     do {
         let previewer = try Previewer()

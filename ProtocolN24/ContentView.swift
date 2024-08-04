@@ -11,7 +11,6 @@ import SwiftData
 struct ContentView: View {
     @EnvironmentObject var appController: AppController
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \WeighIn.weekOfYear) var weighIns: [WeighIn]
     @Query var userConfig: [UserConfig]
     
     @State private var selection = 3

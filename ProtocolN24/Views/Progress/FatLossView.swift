@@ -25,7 +25,12 @@ struct FatLossView: View {
 }
 
 #Preview {
-    TrackingView()
-     //   .environmentObject(AppController())
-        .modelContainer(for: [WeighWeek.self, UserConfig.self])
+    do {
+        let previewer = try Previewer()
+        return TrackingView()
+            .environmentObject(AppController())
+            .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }

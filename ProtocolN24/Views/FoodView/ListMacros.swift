@@ -30,7 +30,12 @@ struct ListMacros: View {
 }
 
 #Preview {
-    ListMacros()
-        .environmentObject(AppController())
-        .modelContainer(for: [WeighWeek.self, UserConfig.self, DayData.self])
+    do {
+        let previewer = try Previewer()
+        return ListMacros()
+            .environmentObject(AppController())
+            .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }

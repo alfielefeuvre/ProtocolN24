@@ -16,7 +16,7 @@ struct ProtocolN24App: App {
         
         init() {
             do {
-                modelContainer = try ModelContainer(for: WeighWeek.self, UserConfig.self, DayData.self)
+                modelContainer = try ModelContainer(for: UserConfig.self, DayData.self)
             } catch {
                 fatalError("Could not initialise ModelContainer")
             }
@@ -27,6 +27,6 @@ struct ProtocolN24App: App {
             ContentView()
         }
         .environmentObject(appController)
-        .modelContainer(for: [WeighWeek.self, UserConfig.self, DayData.self])
+        .modelContainer(for: [UserConfig.self, DayData.self])
     }
 }

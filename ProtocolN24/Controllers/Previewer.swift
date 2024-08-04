@@ -14,7 +14,7 @@ struct Previewer {
 
     init() throws {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        container = try ModelContainer(for: WeighIn.self, UserConfig.self, DayData.self, configurations: config)
+        container = try ModelContainer(for: UserConfig.self, DayData.self, configurations: config)
 
         let userConfig = UserConfig(isLessonComplete: [ 010 : false ],
                                     isLessonLocked: [ 10: false ],

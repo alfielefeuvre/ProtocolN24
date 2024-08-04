@@ -28,15 +28,13 @@ struct TrackingView: View {
             weekRef = calendar.component(.weekOfYear, from: Date.now)
             weekRefPrevious = weekRef - 1
             if weekRefPrevious < 1 { weekRefPrevious = 52}
-            WeighInData.last7Days[1].weighIns[0].weight = 89
         }
     }
 }
 
 struct AddWeighInView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \WeighIn.weekOfYear) var weighIns: [WeighIn]
-    @Query var dailyData: [DayData]
+   @Query var dailyData: [DayData]
     
     var calendar = Calendar(identifier: .gregorian)
     
@@ -71,9 +69,7 @@ struct AddWeighInView: View {
                 Spacer()
             }
         }.onAppear{
-            if weighIns.count > 0 {
-                weightToAdd = 77
-            }
+
         }
     }
     
@@ -108,29 +104,13 @@ struct AddWeighInView: View {
     }
 }
 
-struct WeightWeekView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query(sort: \WeighWeek.weekRef) var weeks: [WeighWeek]
-    var calendar = Calendar(identifier: .gregorian)
-    @State var selectedWeek: WeighWeek = WeighWeek(weekRef: 0)
-   
-    var body: some View {
-        Section("Week Chart: \(calendar.component(.weekOfYear, from: .now))") {
-            WeightWeekViewChartView(week: calendar.component(.weekOfYear, from: .now))
-        }
-    }
-}
-
-
-////                SeriesChartView(weekRef: weekRef)
-////                SeriesChartView(weekRef: weekRefPrevious)
-//                Week4ChartView()
-//                WeighInDataView()
-
 #Preview {
-    
-    TrackingView()
-        .environmentObject(AppController())
-        .modelContainer(for: [WeighWeek.self, UserConfig.self, DayData.self])
-
+    do {
+        let previewer = try Previewer()
+        return TrackingView()
+            .environmentObject(AppController())
+            .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }

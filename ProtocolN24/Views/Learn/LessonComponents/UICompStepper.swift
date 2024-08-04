@@ -81,5 +81,5 @@ struct UICompStepper: View {
 #Preview {
     UICompStepper(lessonId: 20)
         .environmentObject(AppController())
-        .modelContainer(for: [WeighWeek.self, UserConfig.self])
+        .modelContainer(for: [UserConfig.self])
 }

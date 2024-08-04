@@ -55,19 +55,31 @@ struct LessonItem: View {
     }
 }
 
-//#Preview {
-//    let lesson = Lesson(id: 000, headline: "Headliner, multi line that goes over 2 lines ", dayRef: "Day 1 (1/3)", module: .quickStart, isComplete: false, isLocked: false, imageName: "Gym", uiComponents: [])
-//    return LessonItem(lesson: lesson)
-//}
-
-
 #Preview {
-    let lesson010 = Lesson010().lesson010
-    let lesson020 = Lesson020().lesson020
-    let lesson030 = Lesson030().lesson030
-    let lessons = [lesson010, lesson020, lesson030]
-    
-    return LearnView(lessons: lessons)
-        .environmentObject(AppController())
-        .modelContainer(for: [WeighWeek.self, UserConfig.self])
+    do {
+        let previewer = try Previewer()
+        let lesson010 = Lesson010().lesson010
+        let lesson020 = Lesson020().lesson020
+        let lesson030 = Lesson030().lesson030
+        let lesson040 = Lesson040().lesson040
+        let lesson050 = Lesson050().lesson050
+        let lesson060 = Lesson060().lesson060
+        let lesson070 = Lesson070().lesson070
+        let lesson080 = Lesson080().lesson080
+        let lesson090 = Lesson090().lesson090
+        let lesson100 = Lesson100().lesson100
+        let lesson110 = Lesson110().lesson110
+        let lesson120 = Lesson120().lesson120
+        let lessons = [lesson010, lesson020, lesson030,
+                       lesson040, lesson050, lesson060,
+                       lesson070, lesson080, lesson090,
+                       lesson100, lesson110, lesson120]
+        
+        return LearnView(lessons: lessons)
+            .environmentObject(AppController())
+            .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }
+

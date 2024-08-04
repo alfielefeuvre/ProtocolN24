@@ -62,7 +62,12 @@ struct StatItem: View {
 
 
 #Preview {
-    TrackingView()
-        .environmentObject(AppController())
-        .modelContainer(for: [WeighWeek.self, UserConfig.self])
+    do {
+        let previewer = try Previewer()
+        return FatStatsView()
+            .environmentObject(AppController())
+            .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }
