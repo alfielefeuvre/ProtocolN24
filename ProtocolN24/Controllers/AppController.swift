@@ -14,6 +14,16 @@ class AppController: NSObject, ObservableObject {
     
     @Published var expectedWeightLoss = 0.0
     
+    let lesson3ChartData: [DayData] = [
+    
+        DayData(date: .now, weight: 77, calories: 1800, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: .now, weight: 77, calories: 1800, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: .now, weight: 77, calories: 1800, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: .now, weight: 77, calories: 1800, proteins: 175, fats: 41, carbs: 176),
+        DayData(date: .now, weight: 77, calories: 1800, proteins: 175, fats: 41, carbs: 176)
+    
+    ]
+    
     // MARK: - Set-up
     func loadLessonsFromStorage() {
         lessons.append(Lesson000().lesson000)

@@ -31,9 +31,9 @@ class Lesson040: NSObject, ObservableObject {
                                                                                                          uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                          uiSegPickerOptions: ["xx"])),
                                                             
-                                                              UIComponent(type: .uiLast19Cal, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                      uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                                                                              uiSegPickerOptions: ["xx"])),
+//                                                              UIComponent(type: .uiLast19Cal, uiData: UIData(uiText: "xx", uiText2: "xx",
+//                                                                                      uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+//                                                                                                                                              uiSegPickerOptions: ["xx"])),
                                                               
                                                               UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                                                                      Next we investigate what influence this change has had on bodyweight.
@@ -41,9 +41,9 @@ class Lesson040: NSObject, ObservableObject {
                                                                                                               uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                               uiSegPickerOptions: ["xx"])),
                                                                  
-                                                                   UIComponent(type: .uiLast19CalBW, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                           uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                                                                                   uiSegPickerOptions: ["xx"])),
+//                                                                   UIComponent(type: .uiLast19CalBW, uiData: UIData(uiText: "xx", uiText2: "xx",
+//                                                                                           uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+//                                                                                                                                                   uiSegPickerOptions: ["xx"])),
                                                               
                                                               UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                                                                      If we push the weight loss too far, this can impact on mood/hunger and attention.

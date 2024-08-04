@@ -23,9 +23,9 @@ class Lesson045: NSObject, ObservableObject {
                                                                                                          uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                          uiSegPickerOptions: ["xx"])),
                                                             
-                                                              UIComponent(type: .uiWIChart, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                      uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                    uiSegPickerOptions: ["xx"])),
+//                                                              UIComponent(type: .uiWIChart, uiData: UIData(uiText: "xx", uiText2: "xx",
+//                                                                                      uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+//                                                                                    uiSegPickerOptions: ["xx"])),
                                                               
                                                               UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                                                                      Next we display an average for these data points, this brings the data to life. Using this information, we can start to see trends in our bodyweight.
@@ -35,9 +35,9 @@ class Lesson045: NSObject, ObservableObject {
                                                                                                               uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                               uiSegPickerOptions: ["xx"])),
                                                                  
-                                                              UIComponent(type: .uiWIChart, uiData: UIData(uiText: "true", uiText2: "xx",
-                                                                                      uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                    uiSegPickerOptions: ["xx"])),
+//                                                              UIComponent(type: .uiWIChart, uiData: UIData(uiText: "true", uiText2: "xx",
+//                                                                                      uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+//                                                                                    uiSegPickerOptions: ["xx"])),
                                                               
                                                               UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                                                                      If our body weight is increasing overtime, the line will move up.
@@ -45,9 +45,9 @@ class Lesson045: NSObject, ObservableObject {
                                                                                                               uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                               uiSegPickerOptions: ["xx"])),
                                                                  
-                                                                   UIComponent(type: .uiWIChart, uiData: UIData(uiText: "true", uiText2: "xx",
-                                                                                           uiImage: "Calorie7-DayAvg", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                                                                                   uiSegPickerOptions: ["xx"])),
+//                                                                   UIComponent(type: .uiWIChart, uiData: UIData(uiText: "true", uiText2: "xx",
+//                                                                                           uiImage: "Calorie7-DayAvg", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+//                                                                                                                                                   uiSegPickerOptions: ["xx"])),
                                                               
                                                             UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                                                                    This is a great way to observe changes in our bodyweight, but it's only half the story.

@@ -38,10 +38,7 @@ enum UIComponentType: String, CaseIterable, Codable {
     case uiSegPicker = "Segmented Picker"
     case uiStepper = "Stepper Int"
     case uiTextString = "Text"
-    case uiWIChart = "WeighIn Chart"
-    case uiWCChart = "WeighCal Chart"
-    case uiLast19Cal = "Last 19 Cal"
-    case uiLast19CalBW = "Last 19 Cal Bodyweight"
+    case uiDDChart = "DayData Chart"
 }
 
 struct UIData: Codable {

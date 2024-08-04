@@ -24,10 +24,7 @@ struct LessonView: View {
                                                    lessonId: lesson.id)
                 case .uiStepper: UICompStepper(lessonId: lesson.id)
                 case .uiTextString: UICompText(uiData: uiComponent.uiData, lessonId: lesson.id)
-                case .uiWIChart: UICompWIChart(uiData: uiComponent.uiData)
-                case .uiWCChart: UICompWCChart(uiData: uiComponent.uiData)
-                case .uiLast19Cal: UICompLast19Cal()
-                case .uiLast19CalBW: UICompLast19CalBW()
+                case .uiDDChart: UICompWIChart(uiData: uiComponent.uiData)
           }
             }
         }

@@ -72,6 +72,7 @@
 		14AD6F0D2B03ED67005DE26E /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0C2B03ED67005DE26E /* TrackingView.swift */; };
 		14AD6F102B03F82C005DE26E /* WeighIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0F2B03F82C005DE26E /* WeighIn.swift */; };
 		14AD6F132B03F84F005DE26E /* WeighWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F122B03F84F005DE26E /* WeighWeek.swift */; };
+		14B1F64D2C5EAC540082D158 /* UICompDDChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1F64C2C5EAC540082D158 /* UICompDDChart.swift */; };
 		14B33DCB2C52DDDF001ABF63 /* Last19CalChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B33DCA2C52DDDF001ABF63 /* Last19CalChart.swift */; };
 		14B33DCD2C52DFF9001ABF63 /* UICompLast19Cal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B33DCC2C52DFF9001ABF63 /* UICompLast19Cal.swift */; };
 		14B33DCF2C52E144001ABF63 /* Last19CalBWChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B33DCE2C52E144001ABF63 /* Last19CalBWChart.swift */; };
@@ -81,6 +82,7 @@
 		14D085512B0737020037079F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D085502B0737020037079F /* Data.swift */; };
 		14D085532B073AA70037079F /* SeriesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D085522B073AA70037079F /* SeriesChartView.swift */; };
 		14DDBCA02C273FE2006F9392 /* Lesson000.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDBC9F2C273FE2006F9392 /* Lesson000.swift */; };
+		14E6C0BE2C5F656600B2D9A2 /* Previewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */; };
 		14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */; };
 		14EC26BD2B0A824D00CAA9B4 /* Week4ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BC2B0A824D00CAA9B4 /* Week4ChartView.swift */; };
 /* End PBXBuildFile section */
@@ -171,6 +173,7 @@
 		14AD6F0C2B03ED67005DE26E /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		14AD6F0F2B03F82C005DE26E /* WeighIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighIn.swift; sourceTree = "<group>"; };
 		14AD6F122B03F84F005DE26E /* WeighWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighWeek.swift; sourceTree = "<group>"; };
+		14B1F64C2C5EAC540082D158 /* UICompDDChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompDDChart.swift; sourceTree = "<group>"; };
 		14B33DCA2C52DDDF001ABF63 /* Last19CalChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Last19CalChart.swift; sourceTree = "<group>"; };
 		14B33DCC2C52DFF9001ABF63 /* UICompLast19Cal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompLast19Cal.swift; sourceTree = "<group>"; };
 		14B33DCE2C52E144001ABF63 /* Last19CalBWChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Last19CalBWChart.swift; sourceTree = "<group>"; };
@@ -180,6 +183,7 @@
 		14D085502B0737020037079F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		14D085522B073AA70037079F /* SeriesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesChartView.swift; sourceTree = "<group>"; };
 		14DDBC9F2C273FE2006F9392 /* Lesson000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson000.swift; sourceTree = "<group>"; };
+		14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewer.swift; sourceTree = "<group>"; };
 		14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		14EC26BC2B0A824D00CAA9B4 /* Week4ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +227,7 @@
 		143A75882BFD201D00AB8029 /* LessonComponents */ = {
 			isa = PBXGroup;
 			children = (
+				14B1F64C2C5EAC540082D158 /* UICompDDChart.swift */,
 				147B9D372C2DEBD400227D80 /* UICompEnd.swift */,
 				143A758D2BFD298500AB8029 /* UICompHeader.swift */,
 				143A758B2BFD229700AB8029 /* UICompImage.swift */,
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				144C52862BF904EF006C14EC /* AppController.swift */,
+				14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -574,6 +580,7 @@
 				143A759E2C03BF6A00AB8029 /* UICompQuestion.swift in Sources */,
 				144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */,
 				147B9D4A2C34964300227D80 /* ArcProgressView.swift in Sources */,
+				14E6C0BE2C5F656600B2D9A2 /* Previewer.swift in Sources */,
 				147B9D4E2C35D65900227D80 /* FatStatsView.swift in Sources */,
 				147B9D3D2C2F448C00227D80 /* WorkoutView.swift in Sources */,
 				147B9D4C2C35BFA300227D80 /* DateHelpers.swift in Sources */,
@@ -629,6 +636,7 @@
 				147B9D692C44585400227D80 /* Lesson100.swift in Sources */,
 				143A530C2C568A7000EE3067 /* DayData.swift in Sources */,
 				147B9D462C34911B00227D80 /* FatLossView.swift in Sources */,
+				14B1F64D2C5EAC540082D158 /* UICompDDChart.swift in Sources */,
 				147B9D6B2C44586000227D80 /* Lesson110.swift in Sources */,
 				14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */,
 				144C528E2BF90DF0006C14EC /* Lesson030.swift in Sources */,

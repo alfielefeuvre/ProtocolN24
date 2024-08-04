@@ -145,7 +145,12 @@ struct AddMacros: View {
 }
 
 #Preview {
-    AddMacros()
-        .environmentObject(AppController())
-        .modelContainer(for: [WeighWeek.self, UserConfig.self, DayData.self])
+    do {
+        let previewer = try Previewer()
+        return AddMacros()
+            .environmentObject(AppController())
+            .modelContainer(previewer.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }

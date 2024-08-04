@@ -38,9 +38,9 @@ class Lesson020: NSObject, ObservableObject {
                                                                 uiSegPickerOptions: ["xx"])),
                                                               
                                                                  
-                                                                   UIComponent(type: .uiWIChart, uiData: UIData(uiText: "xx", uiText2: "xx",
-                                                                                           uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                         uiSegPickerOptions: ["xx"])),
+//                                                                   UIComponent(type: .uiWIChart, uiData: UIData(uiText: "xx", uiText2: "xx",
+//                                                                                           uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+//                                                                                         uiSegPickerOptions: ["xx"])),
                                                                    
                                                                    UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                                                                           Next we display an average for these data points, this brings the data to life. Using this information, we can start to see trends in our bodyweight.
@@ -50,9 +50,9 @@ class Lesson020: NSObject, ObservableObject {
                                                                                                                    uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                                    uiSegPickerOptions: ["xx"])),
                                                                       
-                                                                   UIComponent(type: .uiWIChart, uiData: UIData(uiText: "true", uiText2: "xx",
-                                                                                           uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                         uiSegPickerOptions: ["xx"])),
+//                                                                   UIComponent(type: .uiWIChart, uiData: UIData(uiText: "true", uiText2: "xx",
+//                                                                                           uiImage: "xx", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+//                                                                                         uiSegPickerOptions: ["xx"])),
                                                                    
                                                                    UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                                                                           If our bodyweight is increasing overtime, the line will move up. This is a great way to observe changes and we can use this process to confirm that our fitness is on track.
@@ -60,9 +60,9 @@ class Lesson020: NSObject, ObservableObject {
                                                                                                                    uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                                    uiSegPickerOptions: ["xx"])),
                                                                       
-                                                                        UIComponent(type: .uiWIChart, uiData: UIData(uiText: "true", uiText2: "xx",
-                                                                                                uiImage: "Calorie7-DayAvg", ratioOfDeviceWidth: 1, imageRatio: 0.6,
-                                                                                                                                                        uiSegPickerOptions: ["xx"])),
+//                                                                        UIComponent(type: .uiWIChart, uiData: UIData(uiText: "true", uiText2: "xx",
+//                                                                                                uiImage: "Calorie7-DayAvg", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+//                                                                                                                                                        uiSegPickerOptions: ["xx"])),
                                                             
                                                               UIComponent(type: .uiTextString, uiData: UIData(uiText: """
                                                                                                     The truth is that you don’t know for a fact that any training programme will work for you. Some influencers will make promises that simply cannot be delivered, they take advantage of people so that they can make a quick buck.
