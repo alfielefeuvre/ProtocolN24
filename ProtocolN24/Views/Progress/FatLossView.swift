@@ -15,7 +15,7 @@ struct FatLossView: View {
         Section("Fat Loss View") {
             VStack {
                 ArcProgressView()
-                BusStopView(stops: 12, stopsPassed: userConfig[0].weeksIn)
+                BusStopView(stops: 8, stopsPassed: userConfig[0].weeksIn)
                 BusStopTextView(weekIn: userConfig[0].weeksIn, startDate:
                                     userConfig[0].startDate,
                                     endDate: userConfig[0].endDate)

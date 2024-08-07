@@ -10,8 +10,8 @@ import Foundation
 class Lesson000: NSObject, ObservableObject {
     
     var lesson000 = Lesson(id: 000, headline: "START HERE!  \n",
-                           dayRef: "Day 1",
-                           module: .week1,
+                           dayRef: " ",
+                           module: .quickStart,
                            isComplete: false, isLocked: false,
                            imageName: "Gym", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "ProtocolN24", uiText2: "START HERE!",
                                                                                                                                    uiImage: "Gym", ratioOfDeviceWidth: 1, imageRatio: 0.6,

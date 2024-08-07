@@ -17,7 +17,6 @@ struct TrackingView: View {
     var body: some View {
         NavigationView {
             List{
-             //   WeighInChart(includeAverage: false, includeAveragePoint: false)
                 FatLossView()
            //     FatStatsView()
                 AddWeighInView()
@@ -34,7 +33,7 @@ struct TrackingView: View {
 
 struct AddWeighInView: View {
     @Environment(\.modelContext) private var modelContext
-   @Query var dailyData: [DayData]
+    @Query var dailyData: [DayData]
     
     var calendar = Calendar(identifier: .gregorian)
     
@@ -68,8 +67,12 @@ struct AddWeighInView: View {
                 Text("Day of Week: \(calendar.component(.weekday, from: dateToAdd))")
                 Spacer()
             }
-        }.onAppear{
-
+        }.onAppear{ setupView() }
+    }
+    
+    func setupView() {
+        if dailyData.count > 0 {    // there are previous weight measurements
+            weightToAdd = dailyData[dailyData.count-1].weight
         }
     }
     

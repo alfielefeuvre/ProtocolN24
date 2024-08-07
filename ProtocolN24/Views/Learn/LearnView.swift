@@ -20,6 +20,20 @@ struct LearnView: View {
     var body: some View {
         NavigationView {
                 List {
+                    Section("Quick Start") {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                         //   HStack(alignment: .top, spacing: 0) {
+                                ForEach(lessons) { lesson in
+                                    if lesson.module == .quickStart {
+                                        NavigationLink { LessonView(lesson: lesson)} label: { LessonItem(lesson: lesson) }
+                                    }
+                                }
+                         //   }
+                        }
+                        .frame(height: 235)
+                    }
+                    
+                    CountdownView()
                     
                     Section("Week 1") {
                         ScrollView(.horizontal, showsIndicators: false) {
@@ -85,6 +99,7 @@ struct LearnView: View {
 #Preview {
     do {
         let previewer = try Previewer()
+        let lesson000 = Lesson000().lesson000
         let lesson010 = Lesson010().lesson010
         let lesson020 = Lesson020().lesson020
         let lesson030 = Lesson030().lesson030
@@ -97,7 +112,7 @@ struct LearnView: View {
         let lesson100 = Lesson100().lesson100
         let lesson110 = Lesson110().lesson110
         let lesson120 = Lesson120().lesson120
-        let lessons = [lesson010, lesson020, lesson030,
+        let lessons = [lesson000, lesson010, lesson020, lesson030,
                        lesson040, lesson050, lesson060,
                        lesson070, lesson080, lesson090,
                        lesson100, lesson110, lesson120]

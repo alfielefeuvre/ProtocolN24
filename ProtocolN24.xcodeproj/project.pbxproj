@@ -46,6 +46,7 @@
 		147B9D692C44585400227D80 /* Lesson100.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D682C44585400227D80 /* Lesson100.swift */; };
 		147B9D6B2C44586000227D80 /* Lesson110.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D6A2C44586000227D80 /* Lesson110.swift */; };
 		147B9D6D2C44586B00227D80 /* Lesson120.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D6C2C44586B00227D80 /* Lesson120.swift */; };
+		14A717D92C62AADA0029818D /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A717D82C62AADA0029818D /* CountdownView.swift */; };
 		14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */; };
 		14AD6EE32B03EA6D005DE26E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EE22B03EA6D005DE26E /* ContentView.swift */; };
 		14AD6EE52B03EA6F005DE26E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14AD6EE42B03EA6F005DE26E /* Assets.xcassets */; };
@@ -120,6 +121,7 @@
 		147B9D682C44585400227D80 /* Lesson100.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson100.swift; sourceTree = "<group>"; };
 		147B9D6A2C44586000227D80 /* Lesson110.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson110.swift; sourceTree = "<group>"; };
 		147B9D6C2C44586B00227D80 /* Lesson120.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson120.swift; sourceTree = "<group>"; };
+		14A717D82C62AADA0029818D /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		14AD6EDD2B03EA6D005DE26E /* ProtocolN24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolN24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolN24App.swift; sourceTree = "<group>"; };
 		14AD6EE22B03EA6D005DE26E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				14AD6F0A2B03ED52005DE26E /* LearnView.swift */,
+				14A717D82C62AADA0029818D /* CountdownView.swift */,
 				14B5E5232BF69857006861A7 /* LessonView.swift */,
 				143A75882BFD201D00AB8029 /* LessonComponents */,
 				144C528F2BF92D96006C14EC /* LessonItem.swift */,
@@ -520,6 +523,7 @@
 				143A53102C569B7400EE3067 /* ListMacros.swift in Sources */,
 				14AD6F0B2B03ED52005DE26E /* LearnView.swift in Sources */,
 				144C52942BF938E5006C14EC /* Lesson051.swift in Sources */,
+				14A717D92C62AADA0029818D /* CountdownView.swift in Sources */,
 				143A75902BFD2E2F00AB8029 /* UICompSegPicker.swift in Sources */,
 				14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */,
 				147B9D672C42C26F00227D80 /* ChatView.swift in Sources */,
