@@ -9,11 +9,11 @@ import Foundation
 
 class Lesson010: NSObject, ObservableObject {
     
-    var lesson010 = Lesson(id: 010, headline: "Do you want to lose fat or gain muscle (or both)?",
-                           dayRef: "Day 2",
+    var lesson010 = Lesson(id: 010, headline: "Get ready for the '10 Secrets to Shredded'",
+                           dayRef: " ",
                            module: .week1,
                            isComplete: false, isLocked: false,
-                           imageName: "Dumbell", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "What can ProtocolN24 do for you?", uiText2: "",
+                           imageName: "Dumbell", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "Get ready for the '10 Secrets to Shredded'", uiText2: "",
                                                                                                                                    uiImage: "Dumbell", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                    uiSegPickerOptions: ["xx"])),
                                                                                        

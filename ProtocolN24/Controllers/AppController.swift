@@ -14,7 +14,7 @@ class AppController: NSObject, ObservableObject {
     
     @Published var expectedWeightLoss = 0.0
     
-    let next14DCStarts: Date = Date.getDate(year: 2024, month: 10, day: 12)
+    let next14DCStarts: Date = Date.getDate(year: 2024, month: 10, day: 12) + (8 * 3_600)
     
     let lesson3ChartData: [DayData] = [
         DayData(date: Date.getDate(year: 2024, month: 01, day: 01), weight: 100, calories: 3000, proteins: 175, fats: 41, carbs: 176),

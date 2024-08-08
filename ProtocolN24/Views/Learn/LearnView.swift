@@ -20,7 +20,7 @@ struct LearnView: View {
     var body: some View {
         NavigationView {
                 List {
-                    Section("Quick Start") {
+                    Section("10 Secrets to Shredded") {
                         ScrollView(.horizontal, showsIndicators: false) {
                          //   HStack(alignment: .top, spacing: 0) {
                                 ForEach(lessons) { lesson in

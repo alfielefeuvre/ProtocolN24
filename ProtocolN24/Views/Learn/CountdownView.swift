@@ -20,7 +20,7 @@ struct CountdownView: View {
     
     var body: some View {
         LazyVStack {
-           Text("Next 14-Day Challenge:")
+           Text("10 Secrets to Shredded:")
             HStack {
                 VStack {
                     Text("\(days)").font(.largeTitle)
