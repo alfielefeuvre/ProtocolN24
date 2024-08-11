@@ -35,7 +35,7 @@ struct AddMacros: View {
         Section("Add Macros") {
             DatePicker(selection: $dateToAdd, in: ...Date.now, displayedComponents: .date) {
                 Text("Select a date")
-            }.onTapGesture{ isFocused = false }
+            }//.onTapGesture{ isFocused = false }
             
             HStack {
                 Text("Calories (cal):")

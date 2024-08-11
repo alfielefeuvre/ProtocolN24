@@ -59,6 +59,7 @@
 		14B1F64D2C5EAC540082D158 /* UICompDDChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1F64C2C5EAC540082D158 /* UICompDDChart.swift */; };
 		14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5212BF695A4006861A7 /* Lesson.swift */; };
 		14B5E5242BF69857006861A7 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5232BF69857006861A7 /* LessonView.swift */; };
+		14C216A42C6910DA00F884EE /* AddWeighInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C216A32C6910DA00F884EE /* AddWeighInView.swift */; };
 		14DDBCA02C273FE2006F9392 /* Lesson000.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDBC9F2C273FE2006F9392 /* Lesson000.swift */; };
 		14E6C0BE2C5F656600B2D9A2 /* Previewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */; };
 		14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */; };
@@ -137,6 +138,7 @@
 		14B1F64C2C5EAC540082D158 /* UICompDDChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompDDChart.swift; sourceTree = "<group>"; };
 		14B5E5212BF695A4006861A7 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		14B5E5232BF69857006861A7 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		14C216A32C6910DA00F884EE /* AddWeighInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeighInView.swift; sourceTree = "<group>"; };
 		14DDBC9F2C273FE2006F9392 /* Lesson000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson000.swift; sourceTree = "<group>"; };
 		14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewer.swift; sourceTree = "<group>"; };
 		14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				14AD6F0C2B03ED67005DE26E /* TrackingView.swift */,
+				14C216A32C6910DA00F884EE /* AddWeighInView.swift */,
 				147B9D452C34911B00227D80 /* FatLossView.swift */,
 				147B9D492C34964300227D80 /* ArcProgressView.swift */,
 				147B9D432C333FC100227D80 /* BusStopView.swift */,
@@ -498,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				143A75A02C0484D300AB8029 /* UICompStepper.swift in Sources */,
+				14C216A42C6910DA00F884EE /* AddWeighInView.swift in Sources */,
 				147B9D482C34949D00227D80 /* BusStopTextView.swift in Sources */,
 				143A759E2C03BF6A00AB8029 /* UICompQuestion.swift in Sources */,
 				144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */,

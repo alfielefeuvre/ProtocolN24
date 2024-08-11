@@ -67,28 +67,29 @@ extension DailyChart {
         
         func idChartBWStats() {
             for index in 0...dataToDisplay.count-1 {
-                
-                // id lowest Bodyweight
-                if dataToDisplay[index].weight < bodyweightMin {
-                    bodyweightMin = Double(Int(dataToDisplay[index].weight))
-                }
-                
-                // id highest Bodyweight
-                if dataToDisplay[index].weight > bodyweightMax {
-                    bodyweightMax = Double(Int(dataToDisplay[index].weight))
-                }
-                
-                // load moving averages
-                if index == 0 { 
-                    dataToDisplay[0].ma2d = dataToDisplay[0].weight
-                    dataToDisplay[0].ma3d = dataToDisplay[0].weight
-                 }
-                else if index == 1 {
-                    dataToDisplay[index].ma2d = (dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 2
-                    dataToDisplay[index].ma3d = (dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 2
-                } else {
-                    dataToDisplay[index].ma2d = (dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 2
-                    dataToDisplay[index].ma3d = (dataToDisplay[index-2].weight + dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 3
+                if dataToDisplay[index].weight > 30 {
+                    // id lowest Bodyweight
+                    if dataToDisplay[index].weight < bodyweightMin {
+                        bodyweightMin = Double(Int(dataToDisplay[index].weight))
+                    }
+                    
+                    // id highest Bodyweight
+                    if dataToDisplay[index].weight > bodyweightMax {
+                        bodyweightMax = Double(Int(dataToDisplay[index].weight))
+                    }
+                    
+                    // load moving averages
+                    if index == 0 {
+                        dataToDisplay[0].ma2d = dataToDisplay[0].weight
+                        dataToDisplay[0].ma3d = dataToDisplay[0].weight
+                     }
+                    else if index == 1 {
+                        dataToDisplay[index].ma2d = (dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 2
+                        dataToDisplay[index].ma3d = (dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 2
+                    } else {
+                        dataToDisplay[index].ma2d = (dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 2
+                        dataToDisplay[index].ma3d = (dataToDisplay[index-2].weight + dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 3
+                    }
                 }
             }
             
@@ -106,22 +107,21 @@ extension DailyChart {
             if (bodyweightMax - bodyweightMin) > 32 { trailingAxisAdjust = 5 }
         }
         
-        
         func idChartCalStats() {
             for index in 0...dataToDisplay.count-1 {
-                
-                // id lowest Cal
-                if dataToDisplay[index].calories < calorieMin {
-                    calorieMin = Double(Int(dataToDisplay[index].calories))
-                }
-                
-                // id highest Cal
-                if dataToDisplay[index].calories > calorieMax {
-                    calorieMax = Double(Int(dataToDisplay[index].calories))
+                if dataToDisplay[index].calories > 300 {
+                    // id lowest Cal
+                    if dataToDisplay[index].calories < calorieMin {
+                        calorieMin = Double(Int(dataToDisplay[index].calories))
+                    }
+                    
+                    // id highest Cal
+                    if dataToDisplay[index].calories > calorieMax {
+                        calorieMax = Double(Int(dataToDisplay[index].calories))
+                    }
                 }
            }
-            
-            calcCalAxis()
+           calcCalAxis()
         }
         
         func calcCalAxis() {

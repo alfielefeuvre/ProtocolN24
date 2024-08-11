@@ -21,7 +21,7 @@ struct DailyChart: View {
         ZStack {
             Chart {
                 ForEach(viewModel.dataToDisplay, id: \.date) {
-                    if $0.weight > 1 {
+                    if $0.weight > 30 {
                         if displayBWDots == true {
                             PointMark(
                                 x: .value("Date", $0.date, unit: .day),
