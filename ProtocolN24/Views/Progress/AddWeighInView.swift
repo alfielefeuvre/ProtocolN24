@@ -49,6 +49,16 @@ struct AddWeighInView: View {
     func setupView() {
         if dailyData.count > 0 {    // there are previous weight measurements
             weightToAdd = dailyData[dailyData.count-1].weight
+            
+            if weightToAdd < 30 {
+                if dailyData.count > 1 {
+                    weightToAdd = dailyData[dailyData.count-2].weight
+                    
+                    if weightToAdd == 0 {
+                        weightToAdd = 76
+                    }
+                }
+            }
         }
     }
     

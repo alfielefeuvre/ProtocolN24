@@ -67,7 +67,7 @@ extension DailyChart {
         
         func idChartBWStats() {
             for index in 0...dataToDisplay.count-1 {
-                if dataToDisplay[index].weight > 30 {
+                if dataToDisplay[index].weight > 30 {   // so 0 values don't give mis-leading data
                     // id lowest Bodyweight
                     if dataToDisplay[index].weight < bodyweightMin {
                         bodyweightMin = Double(Int(dataToDisplay[index].weight))
@@ -79,16 +79,40 @@ extension DailyChart {
                     }
                     
                     // load moving averages
-                    if index == 0 {
+                    if index == 0 {                         // no previous readings for average calc so use existing weight
                         dataToDisplay[0].ma2d = dataToDisplay[0].weight
                         dataToDisplay[0].ma3d = dataToDisplay[0].weight
-                     }
-                    else if index == 1 {
-                        dataToDisplay[index].ma2d = (dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 2
-                        dataToDisplay[index].ma3d = (dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 2
-                    } else {
-                        dataToDisplay[index].ma2d = (dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 2
-                        dataToDisplay[index].ma3d = (dataToDisplay[index-2].weight + dataToDisplay[index-1].weight + dataToDisplay[index].weight) / 3
+                     } else if index == 1 {
+                        if dataToDisplay[0].weight < 30 {     // initial reading is zero, [1] is not
+                            dataToDisplay[1].ma2d = dataToDisplay[1].weight
+                            dataToDisplay[1].ma3d = dataToDisplay[1].weight
+                        } else {
+                            dataToDisplay[1].ma2d = (dataToDisplay[0].weight + dataToDisplay[1].weight) / 2
+                            dataToDisplay[1].ma3d = (dataToDisplay[0].weight + dataToDisplay[1].weight) / 2
+                        }
+                    } else {    
+                        // index is 2 or above
+                        // ongoing algorithm
+                        // this reading is not zero
+                        if dataToDisplay[index-1].weight < 30 { // [day before] is zero
+                            if dataToDisplay[index-2].weight < 30 {
+                                // [day before] and [2 days before] are both zero
+                                dataToDisplay[index].ma2d = dataToDisplay[index].weight
+                                dataToDisplay[index].ma3d = dataToDisplay[index].weight
+                            } else {
+                                // [just day before] is zero
+                                dataToDisplay[index].ma2d = dataToDisplay[index].weight
+                                dataToDisplay[index].ma3d = (dataToDisplay[index].weight + dataToDisplay[index-2].weight) / 2
+                            }
+                        } else if dataToDisplay[index-2].weight < 30 {
+                            // [just 2 days before] is zero
+                            dataToDisplay[index].ma3d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight) / 2
+                            
+                        } else {
+                            // no zeros
+                            dataToDisplay[index].ma2d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight) / 2
+                            dataToDisplay[index].ma3d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight + dataToDisplay[index-2].weight) / 3
+                        }
                     }
                 }
             }
