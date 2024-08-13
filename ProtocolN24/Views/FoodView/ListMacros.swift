@@ -14,7 +14,7 @@ struct ListMacros: View {
     var body: some View {
         Section("Data") {
             ForEach(dailyData, id: \.self) { dailyData in
-                Text("Weight: \(dailyData.weight.formatted()), Cal: \(dailyData.calories.formatted()), p: \(dailyData.proteins.formatted()), f: \(dailyData.fats.formatted()), c: \(dailyData.carbs.formatted()),  \(dailyData.date.formatted())")
+                Text("\(Date.getShortDate(date: dailyData.date)):          Weight: \(dailyData.weight.formatted())\nCal: \(dailyData.calories.formatted()), p: \(dailyData.proteins.formatted()), f: \(dailyData.fats.formatted()), c: \(dailyData.carbs.formatted())\n")
             }
             .onDelete(perform: deleteItems)
         }

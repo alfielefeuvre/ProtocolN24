@@ -14,7 +14,6 @@ struct UICompQuestion: View {
     @State private var answerDisplayed: Bool = false
     
     var body: some View {
-       
         if uiData.uiText.prefix(2) != "xx" {
             ZStack(alignment: .leading) {
                 RoundedRectangle(cornerRadius: 12.0)

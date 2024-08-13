@@ -19,6 +19,7 @@ struct LessonView: View {
                 case .uiEnd: UICompEnd(uiData: uiComponent.uiData, lessonId: lesson.id)
                 case .uiHeader: UICompHeader(uiData: uiComponent.uiData)
                 case .uiImageName: UICompImage(uiData: uiComponent.uiData)
+                case .uiNameInput: UICompNameInput(uiData: uiComponent.uiData)
                 case .uiQandA: UICompQuestion(uiData: uiComponent.uiData)
                 case .uiSegPicker: UICompSegPicker(uiData: uiComponent.uiData,
                                                    lessonId: lesson.id)

@@ -47,6 +47,14 @@ extension Date {
         }
     }
     
+    static func getShortDate(date: Date) -> String {
+        
+        let day = Date.getDay(date: date)
+        let month = Date.getMonth(date: date)
+        let year = Date.getYear(date: date)
+        
+        return "\(day)" + " " + month + " " + year
+    }
     static func getYear(date: Date) -> String {
         let year = calendar.component(.year, from: date)
         return String(year)

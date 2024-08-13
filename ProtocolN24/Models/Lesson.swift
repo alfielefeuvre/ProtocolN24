@@ -34,6 +34,7 @@ enum UIComponentType: String, CaseIterable, Codable {
     case uiEnd = "End"
     case uiHeader = "Header"
     case uiImageName = "Image"
+    case uiNameInput = "Name Input"
     case uiQandA = "Q & A"
     case uiSegPicker = "Segmented Picker"
     case uiStepper = "Stepper Int"

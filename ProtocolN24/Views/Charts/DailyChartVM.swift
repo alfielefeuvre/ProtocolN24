@@ -106,6 +106,7 @@ extension DailyChart {
                             }
                         } else if dataToDisplay[index-2].weight < 30 {
                             // [just 2 days before] is zero
+                            dataToDisplay[index].ma2d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight) / 2
                             dataToDisplay[index].ma3d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight) / 2
                             
                         } else {

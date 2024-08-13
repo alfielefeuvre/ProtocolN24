@@ -60,6 +60,7 @@
 		14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5212BF695A4006861A7 /* Lesson.swift */; };
 		14B5E5242BF69857006861A7 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5232BF69857006861A7 /* LessonView.swift */; };
 		14C216A42C6910DA00F884EE /* AddWeighInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C216A32C6910DA00F884EE /* AddWeighInView.swift */; };
+		14C216A62C6BEFD600F884EE /* UICompNameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C216A52C6BEFD600F884EE /* UICompNameInput.swift */; };
 		14DDBCA02C273FE2006F9392 /* Lesson000.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDBC9F2C273FE2006F9392 /* Lesson000.swift */; };
 		14E6C0BE2C5F656600B2D9A2 /* Previewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */; };
 		14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */; };
@@ -139,6 +140,7 @@
 		14B5E5212BF695A4006861A7 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		14B5E5232BF69857006861A7 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		14C216A32C6910DA00F884EE /* AddWeighInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeighInView.swift; sourceTree = "<group>"; };
+		14C216A52C6BEFD600F884EE /* UICompNameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompNameInput.swift; sourceTree = "<group>"; };
 		14DDBC9F2C273FE2006F9392 /* Lesson000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson000.swift; sourceTree = "<group>"; };
 		14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewer.swift; sourceTree = "<group>"; };
 		14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				147B9D372C2DEBD400227D80 /* UICompEnd.swift */,
 				143A758D2BFD298500AB8029 /* UICompHeader.swift */,
 				143A758B2BFD229700AB8029 /* UICompImage.swift */,
+				14C216A52C6BEFD600F884EE /* UICompNameInput.swift */,
 				143A759D2C03BF6A00AB8029 /* UICompQuestion.swift */,
 				143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */,
 				143A759F2C0484D300AB8029 /* UICompStepper.swift */,
@@ -526,6 +529,7 @@
 				144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */,
 				143A53102C569B7400EE3067 /* ListMacros.swift in Sources */,
 				14AD6F0B2B03ED52005DE26E /* LearnView.swift in Sources */,
+				14C216A62C6BEFD600F884EE /* UICompNameInput.swift in Sources */,
 				144C52942BF938E5006C14EC /* Lesson051.swift in Sources */,
 				14A717D92C62AADA0029818D /* CountdownView.swift in Sources */,
 				143A75902BFD2E2F00AB8029 /* UICompSegPicker.swift in Sources */,
