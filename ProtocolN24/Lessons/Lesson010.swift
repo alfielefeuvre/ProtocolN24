@@ -13,7 +13,7 @@ class Lesson010: NSObject, ObservableObject {
                            dayRef: " ",
                            module: .week1,
                            isComplete: false, isLocked: false,
-                           imageName: "Dumbell", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "Get ready for the '10 Secrets to Shredded'", uiText2: "",
+                           imageName: "Dumbell", uiComponents: [UIComponent(type: .uiHeader, uiData: UIData(uiText: "Get ready for the /n'10 Secrets to Shredded'", uiText2: "",
                                                                                                                                    uiImage: "Dumbell", ratioOfDeviceWidth: 1, imageRatio: 0.6,
                                                                                                                                    uiSegPickerOptions: ["xx"])),
                                                                                        
@@ -24,19 +24,25 @@ class Lesson010: NSObject, ObservableObject {
                                                                             
                                                                             Imagine there was science-based process for fat loss and muscle gain, one that you can use in the future whenever wanted to change your body composition?
                                                                             
-                                                                            All the above are waiting patiently for you within the '10 Secrets to Shredded'.
+                                                                            All the above are waiting for you within the '10 Secrets to Shredded'.
                                                                             
-                                                                            Over the next two weeks we will be uploading the '10 Secrets to Shredded' along with free ebooks which explain our fat loss and muscle growth protocols. This will give you all the information you need to get started building the body that you want.
+                                                                            Over the two weeks we will be uploading the '10 Secrets to Shredded' along with free ebooks which explain our fat loss and muscle growth protocols. This will give you all the information you need to get started building the body that you want.
                                                                             
                                                                             If you would like to join the '10 secrets to shredded', all you have to do is add your name below. If you have any questions throughout the 2 weeks, you can ask in the chat tab (your name will be shown in the chat).
                                                                             
-                                                                            Our personal trainers check the messages at 6pm each day so you may not receive a response straight away, but we will get back to you as soon as we can. All we ask is that you 'punch in' each day by tapping the 🤜 emoji. This lets us know that you are getting value from the secrets and you want to keep receiving them. If it's not for you, don't worry, after 3 days without a 'punch in' and we'll take it that you're done and we'll stop posting the secrets to you.
+                                                                            Our personal trainers check the messages at 6pm each day so you may not receive a response straight away, but we will get back to you as soon as we can. All we ask is that you 'punch in' each day by tapping the 🤜 emoji. 
+                                                                            
+                                                                            This lets us know that you are getting value from the secrets and you want to keep receiving them. If it's not for you, don't worry, after 3 days without a 'punch in' and we'll take it that you're done and we'll stop uploading the secrets.
                                                                             
                                                                             Fat loss and muscle gain are not as difficult as you have been led to believe. Join the '10 Secrets to Shredded' and find out how our fat loss and muscle growth protocols can work for you. To join, type in your name below:
                                                                             """, uiText2: "UI Text 22 ",
                                                                                                                                     uiImage: "xx", ratioOfDeviceWidth: 0, imageRatio: 0,
                                                                                                                                     uiSegPickerOptions: ["xx"])),
                                                                                       
+                                                                UIComponent(type: .uiNameInput, uiData: UIData(uiText: "", uiText2: "",
+                                                                                                                                                                        uiImage: "Dumbell", ratioOfDeviceWidth: 1, imageRatio: 0.6,
+                                                                                                                                                                        uiSegPickerOptions: ["xx"])),
+                                                                
                                                                                     ])
 }
 

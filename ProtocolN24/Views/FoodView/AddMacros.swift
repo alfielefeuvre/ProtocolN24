@@ -35,10 +35,10 @@ struct AddMacros: View {
         Section("Add Macros") {
             DatePicker(selection: $dateToAdd, in: ...Date.now, displayedComponents: .date) {
                 Text("Select a date")
-            }//.onTapGesture{ isFocused = false }
+            }.onTapGesture{ isFocused = false }
             
             HStack {
-                Text("Calories (cal):")
+                Text("Calories (cal):          ")
                 Spacer()
                 TextField("", value: $caloriesToAdd, formatter: formatter)
                     .multilineTextAlignment(.trailing)
@@ -46,10 +46,10 @@ struct AddMacros: View {
                     .keyboardType(.decimalPad)
                     .frame(width: 125)
                     .focused($isFocused)
-            }
+            }.onTapGesture{ isFocused = false }
             
             HStack {
-                Text("Protein (g):")
+                Text("Protein (g):            ")
                 Spacer()
                 TextField("", value: $proteinsToAdd, formatter: formatter)
                     .multilineTextAlignment(.trailing)
@@ -57,10 +57,10 @@ struct AddMacros: View {
                     .keyboardType(.decimalPad)
                     .frame(width: 125)
                     .focused($isFocused)
-            }
+            }.onTapGesture{ isFocused = false }
             
             HStack {
-                Text("Fats (g):")
+                Text("Fats (g):             ")
                 Spacer()
                 TextField("", value: $fatsToAdd, formatter: formatter)
                     .multilineTextAlignment(.trailing)
@@ -68,10 +68,10 @@ struct AddMacros: View {
                     .keyboardType(.decimalPad)
                     .frame(width: 125)
                     .focused($isFocused)
-            }
+            }.onTapGesture{ isFocused = false }
             
             HStack {
-                Text("Carbs (g):")
+                Text("Carbs (g):            ")
                 Spacer()
                 TextField("", value: $carbsToAdd, formatter: formatter)
                     .multilineTextAlignment(.trailing)
@@ -79,15 +79,19 @@ struct AddMacros: View {
                     .keyboardType(.decimalPad)
                     .frame(width: 125)
                     .focused($isFocused)
-            }
+            }.onTapGesture{ isFocused = false }
             
-            Text("Daily Data Count: \(dailyData.count)").onTapGesture{ isFocused = false }
+            Text("Daily Data Count: \(dailyData.count)")
+                .onTapGesture{ isFocused = false }
             HStack {
                 Button("Add Macros") { addMacros() }
                     .disabled(dataAdded)
+                    .focused($isFocused)
                 Spacer()
             }
         }.onAppear{ setupView() }
+        
+
     }
        
     func setupView() {
