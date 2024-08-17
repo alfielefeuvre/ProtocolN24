@@ -59,7 +59,7 @@ struct AddWeighInView: View {
                     }
                 }
             }
-        }
+        } else { weightToAdd = 76 }
     }
     
     func addWeighIn() {
@@ -68,12 +68,14 @@ struct AddWeighInView: View {
         let selectedDay = calendar.component(.day, from: dateToAdd)
         var indexFound = false
        
-        for index in 0...dailyData.count-1 {
-             if calendar.component(.year, from: dailyData[index].date) == selectedYear {
-                if calendar.component(.month, from: dailyData[index].date) == selectedMonth {
-                    if calendar.component(.day, from: dailyData[index].date) == selectedDay {
-                        indexFound = true
-                        dailyData[index].weight = weightToAdd
+        if dailyData.count > 0 {
+            for index in 0...dailyData.count-1 {
+                 if calendar.component(.year, from: dailyData[index].date) == selectedYear {
+                    if calendar.component(.month, from: dailyData[index].date) == selectedMonth {
+                        if calendar.component(.day, from: dailyData[index].date) == selectedDay {
+                            indexFound = true
+                            dailyData[index].weight = weightToAdd
+                        }
                     }
                 }
             }

@@ -52,67 +52,73 @@ extension DailyChart {
             loadChartData(dataIn: dataIn)
             idChartBWStats()
             idChartCalStats()
+            calcCalAxis()
         }
         
         func loadChartData(dataIn: [DayData]) {
             dataToDisplay = []
-            for index in 0...dataIn.count-1 {
-                let newData = ChartData(date: dataIn[index].date,
-                                        weight: dataIn[index].weight,
-                                        calories:   dataIn[index].calories)
-                dataToDisplay.append(newData)
+            
+            if dataIn.count > 0 {
+                for index in 0...dataIn.count-1 {
+                    let newData = ChartData(date: dataIn[index].date,
+                                            weight: dataIn[index].weight,
+                                            calories:   dataIn[index].calories)
+                    dataToDisplay.append(newData)
+                }
+                dataToDisplay = dataToDisplay.sorted()
             }
-            dataToDisplay = dataToDisplay.sorted()
         }
         
         func idChartBWStats() {
-            for index in 0...dataToDisplay.count-1 {
-                if dataToDisplay[index].weight > 30 {   // so 0 values don't give mis-leading data
-                    // id lowest Bodyweight
-                    if dataToDisplay[index].weight < bodyweightMin {
-                        bodyweightMin = Double(Int(dataToDisplay[index].weight))
-                    }
-                    
-                    // id highest Bodyweight
-                    if dataToDisplay[index].weight > bodyweightMax {
-                        bodyweightMax = Double(Int(dataToDisplay[index].weight))
-                    }
-                    
-                    // load moving averages
-                    if index == 0 {                         // no previous readings for average calc so use existing weight
-                        dataToDisplay[0].ma2d = dataToDisplay[0].weight
-                        dataToDisplay[0].ma3d = dataToDisplay[0].weight
-                     } else if index == 1 {
-                        if dataToDisplay[0].weight < 30 {     // initial reading is zero, [1] is not
-                            dataToDisplay[1].ma2d = dataToDisplay[1].weight
-                            dataToDisplay[1].ma3d = dataToDisplay[1].weight
-                        } else {
-                            dataToDisplay[1].ma2d = (dataToDisplay[0].weight + dataToDisplay[1].weight) / 2
-                            dataToDisplay[1].ma3d = (dataToDisplay[0].weight + dataToDisplay[1].weight) / 2
+            if dataToDisplay.count > 0 {
+                for index in 0...dataToDisplay.count-1 {
+                    if dataToDisplay[index].weight > 30 {   // so 0 values don't give mis-leading data
+                        // id lowest Bodyweight
+                        if dataToDisplay[index].weight < bodyweightMin {
+                            bodyweightMin = Double(Int(dataToDisplay[index].weight))
                         }
-                    } else {    
-                        // index is 2 or above
-                        // ongoing algorithm
-                        // this reading is not zero
-                        if dataToDisplay[index-1].weight < 30 { // [day before] is zero
-                            if dataToDisplay[index-2].weight < 30 {
-                                // [day before] and [2 days before] are both zero
-                                dataToDisplay[index].ma2d = dataToDisplay[index].weight
-                                dataToDisplay[index].ma3d = dataToDisplay[index].weight
+                        
+                        // id highest Bodyweight
+                        if dataToDisplay[index].weight > bodyweightMax {
+                            bodyweightMax = Double(Int(dataToDisplay[index].weight))
+                        }
+                        
+                        // load moving averages
+                        if index == 0 {                         // no previous readings for average calc so use existing weight
+                            dataToDisplay[0].ma2d = dataToDisplay[0].weight
+                            dataToDisplay[0].ma3d = dataToDisplay[0].weight
+                         } else if index == 1 {
+                            if dataToDisplay[0].weight < 30 {     // initial reading is zero, [1] is not
+                                dataToDisplay[1].ma2d = dataToDisplay[1].weight
+                                dataToDisplay[1].ma3d = dataToDisplay[1].weight
                             } else {
-                                // [just day before] is zero
-                                dataToDisplay[index].ma2d = dataToDisplay[index].weight
-                                dataToDisplay[index].ma3d = (dataToDisplay[index].weight + dataToDisplay[index-2].weight) / 2
+                                dataToDisplay[1].ma2d = (dataToDisplay[0].weight + dataToDisplay[1].weight) / 2
+                                dataToDisplay[1].ma3d = (dataToDisplay[0].weight + dataToDisplay[1].weight) / 2
                             }
-                        } else if dataToDisplay[index-2].weight < 30 {
-                            // [just 2 days before] is zero
-                            dataToDisplay[index].ma2d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight) / 2
-                            dataToDisplay[index].ma3d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight) / 2
-                            
                         } else {
-                            // no zeros
-                            dataToDisplay[index].ma2d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight) / 2
-                            dataToDisplay[index].ma3d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight + dataToDisplay[index-2].weight) / 3
+                            // index is 2 or above
+                            // ongoing algorithm
+                            // this reading is not zero
+                            if dataToDisplay[index-1].weight < 30 { // [day before] is zero
+                                if dataToDisplay[index-2].weight < 30 {
+                                    // [day before] and [2 days before] are both zero
+                                    dataToDisplay[index].ma2d = dataToDisplay[index].weight
+                                    dataToDisplay[index].ma3d = dataToDisplay[index].weight
+                                } else {
+                                    // [just day before] is zero
+                                    dataToDisplay[index].ma2d = dataToDisplay[index].weight
+                                    dataToDisplay[index].ma3d = (dataToDisplay[index].weight + dataToDisplay[index-2].weight) / 2
+                                }
+                            } else if dataToDisplay[index-2].weight < 30 {
+                                // [just 2 days before] is zero
+                                dataToDisplay[index].ma2d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight) / 2
+                                dataToDisplay[index].ma3d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight) / 2
+                                
+                            } else {
+                                // no zeros
+                                dataToDisplay[index].ma2d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight) / 2
+                                dataToDisplay[index].ma3d = (dataToDisplay[index].weight + dataToDisplay[index-1].weight + dataToDisplay[index-2].weight) / 3
+                            }
                         }
                     }
                 }
@@ -133,20 +139,21 @@ extension DailyChart {
         }
         
         func idChartCalStats() {
-            for index in 0...dataToDisplay.count-1 {
-                if dataToDisplay[index].calories > 300 {
-                    // id lowest Cal
-                    if dataToDisplay[index].calories < calorieMin {
-                        calorieMin = Double(Int(dataToDisplay[index].calories))
+            if dataToDisplay.count > 0 {
+                for index in 0...dataToDisplay.count-1 {
+                    if dataToDisplay[index].calories > 300 {
+                        // id lowest Cal
+                        if dataToDisplay[index].calories < calorieMin {
+                            calorieMin = Double(Int(dataToDisplay[index].calories))
+                        }
+                        
+                        // id highest Cal
+                        if dataToDisplay[index].calories > calorieMax {
+                            calorieMax = Double(Int(dataToDisplay[index].calories))
+                        }
                     }
-                    
-                    // id highest Cal
-                    if dataToDisplay[index].calories > calorieMax {
-                        calorieMax = Double(Int(dataToDisplay[index].calories))
-                    }
-                }
-           }
-           calcCalAxis()
+               }
+            }
         }
         
         func calcCalAxis() {
@@ -158,7 +165,6 @@ extension DailyChart {
             
 //            let rangeMax = calorieOffset + 2000
 //            let range = (rangeMax - Int(calorieMin))
-//            print("Range: \(range)")
 //            if range > 2000 { leadingAxisAdjust = 1_000 }
 //            if range > 4000 { leadingAxisAdjust = 2_000 }
 //            calorieOffset -= 500

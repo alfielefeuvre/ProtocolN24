@@ -34,8 +34,8 @@ struct AddMacros: View {
     var body: some View {
         Section("Add Macros") {
             DatePicker(selection: $dateToAdd, in: ...Date.now, displayedComponents: .date) {
-                Text("Select a date")
-            }.onTapGesture{ isFocused = false }
+                Text("Select a date")//.onTapGesture{ isFocused = false }
+            }.focused($isFocused)
             
             HStack {
                 Text("Calories (cal):          ")
@@ -99,19 +99,20 @@ struct AddMacros: View {
         let todayMonth = calendar.component(.month, from: .now)
         let todayDay = calendar.component(.day, from: .now)
         
-        for index in 0...dailyData.count-1 {
-            if calendar.component(.year, from: dailyData[index].date) ==  todayYear {
-                if calendar.component(.month, from: dailyData[index].date) ==  todayMonth {
-                    if calendar.component(.day, from: dailyData[index].date) ==  todayDay {
-                        if dailyData[index].calories != 0 { caloriesToAdd = dailyData[index].calories }
-                        if dailyData[index].proteins != 0 { proteinsToAdd = dailyData[index].proteins }
-                        if dailyData[index].fats != 0 { fatsToAdd = dailyData[index].fats }
-                        if dailyData[index].carbs != 0 { carbsToAdd = dailyData[index].carbs }
-                  }
+        if dailyData.count > 0 {
+            for index in 0...dailyData.count-1 {
+                if calendar.component(.year, from: dailyData[index].date) ==  todayYear {
+                    if calendar.component(.month, from: dailyData[index].date) ==  todayMonth {
+                        if calendar.component(.day, from: dailyData[index].date) ==  todayDay {
+                            if dailyData[index].calories != 0 { caloriesToAdd = dailyData[index].calories }
+                            if dailyData[index].proteins != 0 { proteinsToAdd = dailyData[index].proteins }
+                            if dailyData[index].fats != 0 { fatsToAdd = dailyData[index].fats }
+                            if dailyData[index].carbs != 0 { carbsToAdd = dailyData[index].carbs }
+                      }
+                    }
                 }
             }
         }
-      
     }
     
     func addMacros() {
@@ -122,20 +123,22 @@ struct AddMacros: View {
         let selectedDay = calendar.component(.day, from: dateToAdd)
         var indexFound = false
        
-        for index in 0...dailyData.count-1 {
-             if calendar.component(.year, from: dailyData[index].date) == selectedYear {
-                if calendar.component(.month, from: dailyData[index].date) == selectedMonth {
-                    if calendar.component(.day, from: dailyData[index].date) == selectedDay {
-                        indexFound = true
-                        dailyData[index].calories = caloriesToAdd
-                        dailyData[index].proteins = proteinsToAdd
-                        dailyData[index].fats = fatsToAdd
-                        dailyData[index].carbs = carbsToAdd
+        if dailyData.count > 0 {
+            for index in 0...dailyData.count-1 {
+                 if calendar.component(.year, from: dailyData[index].date) == selectedYear {
+                    if calendar.component(.month, from: dailyData[index].date) == selectedMonth {
+                        if calendar.component(.day, from: dailyData[index].date) == selectedDay {
+                            indexFound = true
+                            dailyData[index].calories = caloriesToAdd
+                            dailyData[index].proteins = proteinsToAdd
+                            dailyData[index].fats = fatsToAdd
+                            dailyData[index].carbs = carbsToAdd
+                        }
                     }
                 }
             }
         }
-        
+
         if indexFound == false {
             let newDayData = DayData(date: dateToAdd, weight: 0, calories: caloriesToAdd, proteins: proteinsToAdd, fats: fatsToAdd, carbs: carbsToAdd)
             modelContext.insert(newDayData)
