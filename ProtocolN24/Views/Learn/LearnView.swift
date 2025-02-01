@@ -33,7 +33,7 @@ struct LearnView: View {
                         .frame(height: 235)
                     }
                     
-                    CountdownView()
+                  //  CountdownView()
                     
                     Section("Week 1") {
                         ScrollView(.horizontal, showsIndicators: false) {

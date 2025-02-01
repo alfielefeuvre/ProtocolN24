@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListMacros: View {
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \DayData.date) var dailyData: [DayData]
+    @Query(sort: \DayData.date, order: .reverse) var dailyData: [DayData]
     
     var body: some View {
         Section("Data") {

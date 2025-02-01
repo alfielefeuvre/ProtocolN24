@@ -1,5 +1,5 @@
 //
-//  DailyData.swift
+//  DayData.swift
 //  ProtocolN24
 //
 //  Created by Alfie Le Feuvre on 28/07/2024.

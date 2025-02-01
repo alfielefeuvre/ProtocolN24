@@ -17,11 +17,11 @@ struct FoodView: View {
         NavigationView {
             List {
                 AddMacros()
-                DailyChart(dataToDisplay: dailyData,
-                        displayBWDots: true,
-                        displayBWAvg2d: true,
-                        displayBWAvg3d: true,
-                        displayCalories: true)
+//                DailyChart(dataToDisplay: dailyData,
+//                        displayBWDots: true,
+//                        displayBWAvg2d: true,
+//                        displayBWAvg3d: true,
+//                        displayCalories: true)
                 ListMacros()
             }.navigationTitle("Food & Drink")
         }

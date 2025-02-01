@@ -85,6 +85,8 @@
 
 /* Begin PBXFileReference section */
 		1403FB952BF54B01008E10DD /* ButtonStandard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStandard.swift; sourceTree = "<group>"; };
+		143677392C71229000B53C11 /* ProtocolN24Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProtocolN24Debug.entitlements; sourceTree = "<group>"; };
+		1436773A2C71230300B53C11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		143A530B2C568A7000EE3067 /* DayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayData.swift; sourceTree = "<group>"; };
 		143A530D2C568CD900EE3067 /* AddMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMacros.swift; sourceTree = "<group>"; };
 		143A530F2C569B7400EE3067 /* ListMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMacros.swift; sourceTree = "<group>"; };
@@ -275,6 +277,8 @@
 		14AD6EDF2B03EA6D005DE26E /* ProtocolN24 */ = {
 			isa = PBXGroup;
 			children = (
+				1436773A2C71230300B53C11 /* Info.plist */,
+				143677392C71229000B53C11 /* ProtocolN24Debug.entitlements */,
 				14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */,
 				14AD6EE22B03EA6D005DE26E /* ContentView.swift */,
 				144C52852BF904DC006C14EC /* Controllers */,
@@ -715,12 +719,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ProtocolN24/ProtocolN24Debug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProtocolN24/Preview Content\"";
 				DEVELOPMENT_TEAM = SWP7JZ8MD8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProtocolN24/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -754,6 +760,7 @@
 				DEVELOPMENT_TEAM = SWP7JZ8MD8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProtocolN24/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -17,7 +17,7 @@ struct TrackingView: View {
     var body: some View {
         NavigationView {
             List{
-                FatLossView()
+            //    FatLossView()
            //     FatStatsView()
                 AddWeighInView()
             }
