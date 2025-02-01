@@ -62,6 +62,8 @@
 		14C216A42C6910DA00F884EE /* AddWeighInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C216A32C6910DA00F884EE /* AddWeighInView.swift */; };
 		14C216A62C6BEFD600F884EE /* UICompNameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C216A52C6BEFD600F884EE /* UICompNameInput.swift */; };
 		14DDBCA02C273FE2006F9392 /* Lesson000.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDBC9F2C273FE2006F9392 /* Lesson000.swift */; };
+		14DE52212D4E88F200EC0EB3 /* L14DChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE52202D4E88F200EC0EB3 /* L14DChart.swift */; };
+		14DE52222D4E88F200EC0EB3 /* L14DChartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE521F2D4E88C600EC0EB3 /* L14DChartVM.swift */; };
 		14E6C0BE2C5F656600B2D9A2 /* Previewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */; };
 		14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */; };
 /* End PBXBuildFile section */
@@ -144,6 +146,8 @@
 		14C216A32C6910DA00F884EE /* AddWeighInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeighInView.swift; sourceTree = "<group>"; };
 		14C216A52C6BEFD600F884EE /* UICompNameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompNameInput.swift; sourceTree = "<group>"; };
 		14DDBC9F2C273FE2006F9392 /* Lesson000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson000.swift; sourceTree = "<group>"; };
+		14DE521F2D4E88C600EC0EB3 /* L14DChartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L14DChartVM.swift; sourceTree = "<group>"; };
+		14DE52202D4E88F200EC0EB3 /* L14DChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L14DChart.swift; sourceTree = "<group>"; };
 		14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewer.swift; sourceTree = "<group>"; };
 		14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,8 +252,8 @@
 		14A80C492B055381009F46C9 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				143A53112C56C04100EE3067 /* DailyChart.swift */,
-				143A53132C5813C200EE3067 /* DailyChartVM.swift */,
+				14DE521E2D4E88AE00EC0EB3 /* L14DChart */,
+				14DE521D2D4E87AE00EC0EB3 /* Daily Chart */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -339,6 +343,24 @@
 				143A530B2C568A7000EE3067 /* DayData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		14DE521D2D4E87AE00EC0EB3 /* Daily Chart */ = {
+			isa = PBXGroup;
+			children = (
+				143A53112C56C04100EE3067 /* DailyChart.swift */,
+				143A53132C5813C200EE3067 /* DailyChartVM.swift */,
+			);
+			path = "Daily Chart";
+			sourceTree = "<group>";
+		};
+		14DE521E2D4E88AE00EC0EB3 /* L14DChart */ = {
+			isa = PBXGroup;
+			children = (
+				14DE52202D4E88F200EC0EB3 /* L14DChart.swift */,
+				14DE521F2D4E88C600EC0EB3 /* L14DChartVM.swift */,
+			);
+			path = L14DChart;
 			sourceTree = "<group>";
 		};
 		14EC26AF2B0A5B3400CAA9B4 /* Progress */ = {
@@ -510,6 +532,7 @@
 				143A75A02C0484D300AB8029 /* UICompStepper.swift in Sources */,
 				14C216A42C6910DA00F884EE /* AddWeighInView.swift in Sources */,
 				147B9D482C34949D00227D80 /* BusStopTextView.swift in Sources */,
+				14DE52212D4E88F200EC0EB3 /* L14DChart.swift in Sources */,
 				143A759E2C03BF6A00AB8029 /* UICompQuestion.swift in Sources */,
 				144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */,
 				147B9D4A2C34964300227D80 /* ArcProgressView.swift in Sources */,
@@ -536,6 +559,7 @@
 				14C216A62C6BEFD600F884EE /* UICompNameInput.swift in Sources */,
 				144C52942BF938E5006C14EC /* Lesson051.swift in Sources */,
 				14A717D92C62AADA0029818D /* CountdownView.swift in Sources */,
+				14DE52222D4E88F200EC0EB3 /* L14DChartVM.swift in Sources */,
 				143A75902BFD2E2F00AB8029 /* UICompSegPicker.swift in Sources */,
 				14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */,
 				147B9D672C42C26F00227D80 /* ChatView.swift in Sources */,

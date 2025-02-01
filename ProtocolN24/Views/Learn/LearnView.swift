@@ -20,6 +20,11 @@ struct LearnView: View {
     var body: some View {
         NavigationView {
                 List {
+                    Section("14d Chart") {
+                        L14DChart()
+                            .frame(height: 200)
+                            .padding()
+                    }
                     Section("10 Secrets to Shredded") {
                         ScrollView(.horizontal, showsIndicators: false) {
                          //   HStack(alignment: .top, spacing: 0) {
@@ -30,7 +35,7 @@ struct LearnView: View {
                                 }
                          //   }
                         }
-                        .frame(height: 235)
+                        .frame(height: 535)
                     }
                     
                   //  CountdownView()

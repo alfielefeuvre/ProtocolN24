@@ -96,6 +96,12 @@ struct DailyChart: View {
         let previewer = try Previewer()
         
         let day1 = DayData(date: Date.getDate(year: 2024, month: 01, day: 01), weight: 100, calories: 3000, proteins: 175, fats: 41, carbs: 176)
+                let day2 = DayData(date: Date.getDate(year: 2024, month: 01, day: 02), weight: 103.2, calories: 3000, proteins: 175, fats: 41, carbs: 176)
+                let day3 =  DayData(date: Date.getDate(year: 2024, month: 01, day: 03), weight: 103, calories: 3000, proteins: 175, fats: 41, carbs: 176)
+                let day4 = DayData(date: Date.getDate(year: 2024, month: 01, day: 04), weight: 100.3, calories: 3000, proteins: 175, fats: 41, carbs: 176)
+                let day5 = DayData(date: Date.getDate(year: 2024, month: 01, day: 05), weight: 99.9, calories: 3000, proteins: 175, fats: 41, carbs: 176)
+                let day6 = DayData(date: Date.getDate(year: 2024, month: 01, day: 06), weight: 100.2, calories: 3000, proteins: 175, fats: 41, carbs: 176)
+                let day7 = DayData(date: Date.getDate(year: 2024, month: 01, day: 07), weight: 100.2, calories: 3000, proteins: 175, fats: 41, carbs: 176)
         
         let dataToDisplay = [day1 ]
         
