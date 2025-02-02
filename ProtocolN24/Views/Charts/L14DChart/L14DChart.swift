@@ -10,6 +10,9 @@ import SwiftUI
 
 struct L14DChart: View {
     @State private var viewModel = ViewModel()
+    
+    @Environment(\.modelContext) private var modelContext
+    @Query(sort: \DayData.date) var dailyData: [DayData]
 
     var body: some View {
         VStack {
@@ -21,19 +24,12 @@ struct L14DChart: View {
                     )
                     .foregroundStyle(by: .value("Value", "Bodyweight"))
                     
-                    
                     PointMark(
                         x: .value("Date", $0.date, unit: .day),
                         y: .value("Weekly Average", $0.weeklyAvg)
                     )
                     .foregroundStyle(by: .value("Value", "Weekly Average"))
-                    
-                    
                 }
-                
- 
-                
-                
             }
             .chartXAxis {
                 AxisMarks(values: .stride(by: .day)) { _ in
@@ -42,14 +38,12 @@ struct L14DChart: View {
                     AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
                 }
             }
-            .frame(width: viewModel.deviceWidth)
-            .padding()
-
+            .chartYScale(domain: viewModel.chartYAxisLower...viewModel.chartYAxisUpper)
             
-            
-            
-            
-        }.chartYScale(domain: viewModel.chartYAxisLower...viewModel.chartYAxisUpper)
+            Text("Fat Loss: \(viewModel.fatLossKg, specifier: "%.1f")kg, \(viewModel.fatLossPercent, specifier: "%.1f")%").padding(.top)
+        }
+        .frame(width: viewModel.deviceWidth)
+        .onAppear{ if dailyData.count > 0 {  viewModel.setupChart(dataIn: dailyData) } }
     }
 }
 

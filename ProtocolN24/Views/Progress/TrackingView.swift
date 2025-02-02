@@ -17,9 +17,16 @@ struct TrackingView: View {
     var body: some View {
         NavigationView {
             List{
-            //    FatLossView()
-           //     FatStatsView()
                 AddWeighInView()
+                
+                Section("14d Chart") {
+                    L14DChart()
+                        .frame(height: 200)
+                        .padding()
+                }
+                FatLossView()
+                FatStatsView()
+                
             }
             .navigationTitle("Progress")
         }
