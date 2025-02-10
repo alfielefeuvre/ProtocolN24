@@ -97,7 +97,7 @@ extension L14DChart {
             }
             dataToDisplay[3].weeklyAvg = thisWeekTotal / Double(thisWeekCount)
             dataToDisplay[10].weeklyAvg = lastWeekTotal / Double(lastWeekCount)
-            fatLossKg = dataToDisplay[10].weeklyAvg - dataToDisplay[3].weeklyAvg
+            fatLossKg = dataToDisplay[3].weeklyAvg - dataToDisplay[10].weeklyAvg
             fatLossPercent = (fatLossKg / dataToDisplay[3].weeklyAvg) * 100
         }
         

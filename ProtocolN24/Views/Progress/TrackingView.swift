@@ -19,6 +19,12 @@ struct TrackingView: View {
             List{
                 AddWeighInView()
                 
+                Section("SwiftData Chart") {
+                    SDChart()
+                        .frame(height: 200)
+                        .padding()
+                }
+                
                 Section("14d Chart") {
                     L14DChart()
                         .frame(height: 200)

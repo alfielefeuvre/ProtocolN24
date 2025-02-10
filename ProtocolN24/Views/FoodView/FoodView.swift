@@ -11,7 +11,7 @@ import SwiftData
 
 struct FoodView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \DayData.date) var dailyData: [DayData]
+    @Query(sort: \DayData.date) var dailyData: [DayData]  
         
     var body: some View {
         NavigationView {

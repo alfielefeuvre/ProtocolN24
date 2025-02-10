@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -152,6 +152,10 @@
 		14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		143B6A682D5AA31A0079B0EA /* SDChart */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SDChart; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		14AD6EDA2B03EA6D005DE26E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -252,6 +256,7 @@
 		14A80C492B055381009F46C9 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				143B6A682D5AA31A0079B0EA /* SDChart */,
 				14DE521E2D4E88AE00EC0EB3 /* L14DChart */,
 				14DE521D2D4E87AE00EC0EB3 /* Daily Chart */,
 			);
@@ -413,6 +418,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				143B6A682D5AA31A0079B0EA /* SDChart */,
 			);
 			name = ProtocolN24;
 			productName = ProtocolN24;
