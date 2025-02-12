@@ -22,7 +22,7 @@ struct LearnView: View {
                 List {
                     Section("SwiftData Chart") {
                         SDChart()
-                            .frame(height: 200)
+                            .frame(height: 300)
                             .padding()
                     }
                     Section("14d Chart") {

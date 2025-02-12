@@ -27,6 +27,14 @@ struct SDChart: View {
                         .foregroundStyle(by: .value("Value", "Bodyweight"))
                     }
                 }
+                
+                ForEach(viewModel.averageDataToDisplay, id: \.date) {
+                        LineMark(
+                            x: .value("Date", $0.date, unit: .day),
+                            y: .value("Bodyweight", $0.weeklyAvg)
+                        )
+                        .foregroundStyle(by: .value("Value", "Weekly Average"))
+                }
             }
             .chartXAxis {
                 AxisMarks(values: .stride(by: .day)) { _ in
@@ -35,17 +43,20 @@ struct SDChart: View {
                     AxisValueLabel(format: .dateTime.weekday(.narrow), centered: true)
                 }
             }
-            .chartYScale(domain: 72...74)
+            .chartYScale(domain: viewModel.chartYAxisLower...viewModel.chartYAxisUpper)
             
-            Text("Fat Loss: 4.0kg, 2.4)%").padding(.top)
-        }
+            Text("Fat Loss: \(viewModel.fatLossKg, specifier: "%.1f")kg, \(viewModel.fatLossPercent, specifier: "%.1f")%").padding(.top)
+            Text("calsUnderFeedPerDay: \(-viewModel.calsUnderFeedPerDay, specifier: "%.1f")kcal").padding(.top)
+            Text("maintCal: \((-viewModel.calsUnderFeedPerDay + 1745), specifier: "%.0f")kcal").padding(.top)
+      }
         .frame(width: viewModel.viewWidth)
+        .onAppear{ if dailyData.count > 0 { viewModel.setupChart(dataIn: dailyData) } }
     }
     
     func dataUpdate() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.5) {
-            
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.5) {
+//            
+//        }
     }
 }
 
