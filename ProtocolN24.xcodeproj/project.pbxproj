@@ -3,12 +3,50 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14A80C4D2B055683009F46C9 /* WeightWeekViewChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */; };
-		14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */; };
+		1403FB962BF54B01008E10DD /* ButtonStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403FB952BF54B01008E10DD /* ButtonStandard.swift */; };
+		143A530C2C568A7000EE3067 /* DayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A530B2C568A7000EE3067 /* DayData.swift */; };
+		143A530E2C568CD900EE3067 /* AddMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A530D2C568CD900EE3067 /* AddMacros.swift */; };
+		143A53102C569B7400EE3067 /* ListMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A530F2C569B7400EE3067 /* ListMacros.swift */; };
+		143A53122C56C04100EE3067 /* DailyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A53112C56C04100EE3067 /* DailyChart.swift */; };
+		143A53142C5813C200EE3067 /* DailyChartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A53132C5813C200EE3067 /* DailyChartVM.swift */; };
+		143A758A2BFD205A00AB8029 /* UICompText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A75892BFD205A00AB8029 /* UICompText.swift */; };
+		143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758B2BFD229700AB8029 /* UICompImage.swift */; };
+		143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758D2BFD298500AB8029 /* UICompHeader.swift */; };
+		143A75902BFD2E2F00AB8029 /* UICompSegPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */; };
+		143A759C2C0213CF00AB8029 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A759B2C0213CF00AB8029 /* UserConfig.swift */; };
+		143A759E2C03BF6A00AB8029 /* UICompQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A759D2C03BF6A00AB8029 /* UICompQuestion.swift */; };
+		143A75A02C0484D300AB8029 /* UICompStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A759F2C0484D300AB8029 /* UICompStepper.swift */; };
+		144C52872BF904EF006C14EC /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52862BF904EF006C14EC /* AppController.swift */; };
+		144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52882BF90B0D006C14EC /* Lesson010.swift */; };
+		144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C528B2BF90DE5006C14EC /* Lesson020.swift */; };
+		144C528E2BF90DF0006C14EC /* Lesson030.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C528D2BF90DF0006C14EC /* Lesson030.swift */; };
+		144C52902BF92D96006C14EC /* LessonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C528F2BF92D96006C14EC /* LessonItem.swift */; };
+		144C52922BF938DD006C14EC /* Lesson040.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52912BF938DD006C14EC /* Lesson040.swift */; };
+		144C52942BF938E5006C14EC /* Lesson051.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52932BF938E5006C14EC /* Lesson051.swift */; };
+		144C52962BF938EE006C14EC /* Lesson060.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52952BF938EE006C14EC /* Lesson060.swift */; };
+		144C52982BF938F8006C14EC /* Lesson070.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52972BF938F8006C14EC /* Lesson070.swift */; };
+		144C529A2BF93907006C14EC /* Lesson080.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C52992BF93907006C14EC /* Lesson080.swift */; };
+		144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C529B2BF9390F006C14EC /* Lesson090.swift */; };
+		144C529E2BFA8834006C14EC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144C529D2BFA8834006C14EC /* Module.swift */; };
+		147B9D382C2DEBD400227D80 /* UICompEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D372C2DEBD400227D80 /* UICompEnd.swift */; };
+		147B9D3B2C2F440000227D80 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D3A2C2F440000227D80 /* FoodView.swift */; };
+		147B9D3D2C2F448C00227D80 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D3C2C2F448C00227D80 /* WorkoutView.swift */; };
+		147B9D442C333FC100227D80 /* BusStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D432C333FC100227D80 /* BusStopView.swift */; };
+		147B9D462C34911B00227D80 /* FatLossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D452C34911B00227D80 /* FatLossView.swift */; };
+		147B9D482C34949D00227D80 /* BusStopTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D472C34949D00227D80 /* BusStopTextView.swift */; };
+		147B9D4A2C34964300227D80 /* ArcProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D492C34964300227D80 /* ArcProgressView.swift */; };
+		147B9D4C2C35BFA300227D80 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D4B2C35BFA300227D80 /* DateHelpers.swift */; };
+		147B9D4E2C35D65900227D80 /* FatStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D4D2C35D65900227D80 /* FatStatsView.swift */; };
+		147B9D502C3BEA8000227D80 /* Lesson045.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D4F2C3BEA8000227D80 /* Lesson045.swift */; };
+		147B9D672C42C26F00227D80 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D662C42C26F00227D80 /* ChatView.swift */; };
+		147B9D692C44585400227D80 /* Lesson100.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D682C44585400227D80 /* Lesson100.swift */; };
+		147B9D6B2C44586000227D80 /* Lesson110.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D6A2C44586000227D80 /* Lesson110.swift */; };
+		147B9D6D2C44586B00227D80 /* Lesson120.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B9D6C2C44586B00227D80 /* Lesson120.swift */; };
+		14A717D92C62AADA0029818D /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A717D82C62AADA0029818D /* CountdownView.swift */; };
 		14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */; };
 		14AD6EE32B03EA6D005DE26E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EE22B03EA6D005DE26E /* ContentView.swift */; };
 		14AD6EE52B03EA6F005DE26E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14AD6EE42B03EA6F005DE26E /* Assets.xcassets */; };
@@ -17,17 +55,17 @@
 		14AD6EFC2B03EA6F005DE26E /* ProtocolN24UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EFB2B03EA6F005DE26E /* ProtocolN24UITests.swift */; };
 		14AD6EFE2B03EA6F005DE26E /* ProtocolN24UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6EFD2B03EA6F005DE26E /* ProtocolN24UITestsLaunchTests.swift */; };
 		14AD6F0B2B03ED52005DE26E /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0A2B03ED52005DE26E /* LearnView.swift */; };
-		14AD6F0D2B03ED67005DE26E /* WeighInsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0C2B03ED67005DE26E /* WeighInsView.swift */; };
-		14AD6F102B03F82C005DE26E /* WeighIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0F2B03F82C005DE26E /* WeighIn.swift */; };
-		14AD6F132B03F84F005DE26E /* WeighWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F122B03F84F005DE26E /* WeighWeek.swift */; };
-		14D085512B0737020037079F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D085502B0737020037079F /* Data.swift */; };
-		14D085532B073AA70037079F /* SeriesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D085522B073AA70037079F /* SeriesChartView.swift */; };
-		14EC26B22B0A5BC400CAA9B4 /* Lesson1Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26B12B0A5BC400CAA9B4 /* Lesson1Card.swift */; };
-		14EC26B42B0A5D0600CAA9B4 /* Lesson1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26B32B0A5D0600CAA9B4 /* Lesson1.swift */; };
-		14EC26B62B0A5F4000CAA9B4 /* Lesson2Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26B52B0A5F4000CAA9B4 /* Lesson2Card.swift */; };
-		14EC26B82B0A5F4B00CAA9B4 /* Lesson2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26B72B0A5F4B00CAA9B4 /* Lesson2.swift */; };
+		14AD6F0D2B03ED67005DE26E /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD6F0C2B03ED67005DE26E /* TrackingView.swift */; };
+		14B1F64D2C5EAC540082D158 /* UICompDDChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1F64C2C5EAC540082D158 /* UICompDDChart.swift */; };
+		14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5212BF695A4006861A7 /* Lesson.swift */; };
+		14B5E5242BF69857006861A7 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5E5232BF69857006861A7 /* LessonView.swift */; };
+		14C216A42C6910DA00F884EE /* AddWeighInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C216A32C6910DA00F884EE /* AddWeighInView.swift */; };
+		14C216A62C6BEFD600F884EE /* UICompNameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C216A52C6BEFD600F884EE /* UICompNameInput.swift */; };
+		14DDBCA02C273FE2006F9392 /* Lesson000.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDBC9F2C273FE2006F9392 /* Lesson000.swift */; };
+		14DE52212D4E88F200EC0EB3 /* L14DChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE52202D4E88F200EC0EB3 /* L14DChart.swift */; };
+		14DE52222D4E88F200EC0EB3 /* L14DChartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE521F2D4E88C600EC0EB3 /* L14DChartVM.swift */; };
+		14E6C0BE2C5F656600B2D9A2 /* Previewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */; };
 		14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */; };
-		14EC26BD2B0A824D00CAA9B4 /* Week4ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC26BC2B0A824D00CAA9B4 /* Week4ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +86,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightWeekViewChartView.swift; sourceTree = "<group>"; };
-		14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighInDataView.swift; sourceTree = "<group>"; };
+		1403FB952BF54B01008E10DD /* ButtonStandard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStandard.swift; sourceTree = "<group>"; };
+		143677392C71229000B53C11 /* ProtocolN24Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProtocolN24Debug.entitlements; sourceTree = "<group>"; };
+		1436773A2C71230300B53C11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		143A530B2C568A7000EE3067 /* DayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayData.swift; sourceTree = "<group>"; };
+		143A530D2C568CD900EE3067 /* AddMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMacros.swift; sourceTree = "<group>"; };
+		143A530F2C569B7400EE3067 /* ListMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMacros.swift; sourceTree = "<group>"; };
+		143A53112C56C04100EE3067 /* DailyChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChart.swift; sourceTree = "<group>"; };
+		143A53132C5813C200EE3067 /* DailyChartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChartVM.swift; sourceTree = "<group>"; };
+		143A75892BFD205A00AB8029 /* UICompText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompText.swift; sourceTree = "<group>"; };
+		143A758B2BFD229700AB8029 /* UICompImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompImage.swift; sourceTree = "<group>"; };
+		143A758D2BFD298500AB8029 /* UICompHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompHeader.swift; sourceTree = "<group>"; };
+		143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompSegPicker.swift; sourceTree = "<group>"; };
+		143A759B2C0213CF00AB8029 /* UserConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
+		143A759D2C03BF6A00AB8029 /* UICompQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompQuestion.swift; sourceTree = "<group>"; };
+		143A759F2C0484D300AB8029 /* UICompStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompStepper.swift; sourceTree = "<group>"; };
+		144C52862BF904EF006C14EC /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		144C52882BF90B0D006C14EC /* Lesson010.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson010.swift; sourceTree = "<group>"; };
+		144C528B2BF90DE5006C14EC /* Lesson020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson020.swift; sourceTree = "<group>"; };
+		144C528D2BF90DF0006C14EC /* Lesson030.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson030.swift; sourceTree = "<group>"; };
+		144C528F2BF92D96006C14EC /* LessonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonItem.swift; sourceTree = "<group>"; };
+		144C52912BF938DD006C14EC /* Lesson040.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson040.swift; sourceTree = "<group>"; };
+		144C52932BF938E5006C14EC /* Lesson051.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson051.swift; sourceTree = "<group>"; };
+		144C52952BF938EE006C14EC /* Lesson060.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson060.swift; sourceTree = "<group>"; };
+		144C52972BF938F8006C14EC /* Lesson070.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson070.swift; sourceTree = "<group>"; };
+		144C52992BF93907006C14EC /* Lesson080.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson080.swift; sourceTree = "<group>"; };
+		144C529B2BF9390F006C14EC /* Lesson090.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson090.swift; sourceTree = "<group>"; };
+		144C529D2BFA8834006C14EC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		147B9D372C2DEBD400227D80 /* UICompEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompEnd.swift; sourceTree = "<group>"; };
+		147B9D3A2C2F440000227D80 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		147B9D3C2C2F448C00227D80 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		147B9D432C333FC100227D80 /* BusStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopView.swift; sourceTree = "<group>"; };
+		147B9D452C34911B00227D80 /* FatLossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatLossView.swift; sourceTree = "<group>"; };
+		147B9D472C34949D00227D80 /* BusStopTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopTextView.swift; sourceTree = "<group>"; };
+		147B9D492C34964300227D80 /* ArcProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcProgressView.swift; sourceTree = "<group>"; };
+		147B9D4B2C35BFA300227D80 /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
+		147B9D4D2C35D65900227D80 /* FatStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatStatsView.swift; sourceTree = "<group>"; };
+		147B9D4F2C3BEA8000227D80 /* Lesson045.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson045.swift; sourceTree = "<group>"; };
+		147B9D662C42C26F00227D80 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		147B9D682C44585400227D80 /* Lesson100.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson100.swift; sourceTree = "<group>"; };
+		147B9D6A2C44586000227D80 /* Lesson110.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson110.swift; sourceTree = "<group>"; };
+		147B9D6C2C44586B00227D80 /* Lesson120.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson120.swift; sourceTree = "<group>"; };
+		14A717D82C62AADA0029818D /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		14AD6EDD2B03EA6D005DE26E /* ProtocolN24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolN24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolN24App.swift; sourceTree = "<group>"; };
 		14AD6EE22B03EA6D005DE26E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,18 +139,22 @@
 		14AD6EFB2B03EA6F005DE26E /* ProtocolN24UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolN24UITests.swift; sourceTree = "<group>"; };
 		14AD6EFD2B03EA6F005DE26E /* ProtocolN24UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolN24UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14AD6F0A2B03ED52005DE26E /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
-		14AD6F0C2B03ED67005DE26E /* WeighInsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighInsView.swift; sourceTree = "<group>"; };
-		14AD6F0F2B03F82C005DE26E /* WeighIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighIn.swift; sourceTree = "<group>"; };
-		14AD6F122B03F84F005DE26E /* WeighWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighWeek.swift; sourceTree = "<group>"; };
-		14D085502B0737020037079F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		14D085522B073AA70037079F /* SeriesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesChartView.swift; sourceTree = "<group>"; };
-		14EC26B12B0A5BC400CAA9B4 /* Lesson1Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1Card.swift; sourceTree = "<group>"; };
-		14EC26B32B0A5D0600CAA9B4 /* Lesson1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1.swift; sourceTree = "<group>"; };
-		14EC26B52B0A5F4000CAA9B4 /* Lesson2Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson2Card.swift; sourceTree = "<group>"; };
-		14EC26B72B0A5F4B00CAA9B4 /* Lesson2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson2.swift; sourceTree = "<group>"; };
+		14AD6F0C2B03ED67005DE26E /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
+		14B1F64C2C5EAC540082D158 /* UICompDDChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompDDChart.swift; sourceTree = "<group>"; };
+		14B5E5212BF695A4006861A7 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		14B5E5232BF69857006861A7 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		14C216A32C6910DA00F884EE /* AddWeighInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeighInView.swift; sourceTree = "<group>"; };
+		14C216A52C6BEFD600F884EE /* UICompNameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICompNameInput.swift; sourceTree = "<group>"; };
+		14DDBC9F2C273FE2006F9392 /* Lesson000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson000.swift; sourceTree = "<group>"; };
+		14DE521F2D4E88C600EC0EB3 /* L14DChartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L14DChartVM.swift; sourceTree = "<group>"; };
+		14DE52202D4E88F200EC0EB3 /* L14DChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L14DChart.swift; sourceTree = "<group>"; };
+		14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewer.swift; sourceTree = "<group>"; };
 		14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
-		14EC26BC2B0A824D00CAA9B4 /* Week4ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		143B6A682D5AA31A0079B0EA /* SDChart */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SDChart; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		14AD6EDA2B03EA6D005DE26E /* Frameworks */ = {
@@ -99,11 +181,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143A75882BFD201D00AB8029 /* LessonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				14B1F64C2C5EAC540082D158 /* UICompDDChart.swift */,
+				147B9D372C2DEBD400227D80 /* UICompEnd.swift */,
+				143A758D2BFD298500AB8029 /* UICompHeader.swift */,
+				143A758B2BFD229700AB8029 /* UICompImage.swift */,
+				14C216A52C6BEFD600F884EE /* UICompNameInput.swift */,
+				143A759D2C03BF6A00AB8029 /* UICompQuestion.swift */,
+				143A758F2BFD2E2F00AB8029 /* UICompSegPicker.swift */,
+				143A759F2C0484D300AB8029 /* UICompStepper.swift */,
+				143A75892BFD205A00AB8029 /* UICompText.swift */,
+			);
+			path = LessonComponents;
+			sourceTree = "<group>";
+		};
+		144C52852BF904DC006C14EC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				144C52862BF904EF006C14EC /* AppController.swift */,
+				14E6C0BD2C5F656600B2D9A2 /* Previewer.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		144C528A2BF90B1B006C14EC /* Lessons */ = {
+			isa = PBXGroup;
+			children = (
+				14DDBC9F2C273FE2006F9392 /* Lesson000.swift */,
+				144C52882BF90B0D006C14EC /* Lesson010.swift */,
+				144C528B2BF90DE5006C14EC /* Lesson020.swift */,
+				144C528D2BF90DF0006C14EC /* Lesson030.swift */,
+				144C52912BF938DD006C14EC /* Lesson040.swift */,
+				147B9D4F2C3BEA8000227D80 /* Lesson045.swift */,
+				144C52932BF938E5006C14EC /* Lesson051.swift */,
+				144C52952BF938EE006C14EC /* Lesson060.swift */,
+				144C52972BF938F8006C14EC /* Lesson070.swift */,
+				144C52992BF93907006C14EC /* Lesson080.swift */,
+				144C529B2BF9390F006C14EC /* Lesson090.swift */,
+				147B9D682C44585400227D80 /* Lesson100.swift */,
+				147B9D6A2C44586000227D80 /* Lesson110.swift */,
+				147B9D6C2C44586B00227D80 /* Lesson120.swift */,
+			);
+			path = Lessons;
+			sourceTree = "<group>";
+		};
+		147B9D392C2F43EE00227D80 /* FoodView */ = {
+			isa = PBXGroup;
+			children = (
+				147B9D3A2C2F440000227D80 /* FoodView.swift */,
+				143A530D2C568CD900EE3067 /* AddMacros.swift */,
+				143A530F2C569B7400EE3067 /* ListMacros.swift */,
+			);
+			path = FoodView;
+			sourceTree = "<group>";
+		};
+		147B9D3E2C2F469900227D80 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				147B9D3C2C2F448C00227D80 /* WorkoutView.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
+		147B9D652C42C25E00227D80 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				147B9D662C42C26F00227D80 /* ChatView.swift */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
 		14A80C492B055381009F46C9 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				14A80C4C2B055683009F46C9 /* WeightWeekViewChartView.swift */,
-				14D085502B0737020037079F /* Data.swift */,
+				143B6A682D5AA31A0079B0EA /* SDChart */,
+				14DE521E2D4E88AE00EC0EB3 /* L14DChart */,
+				14DE521D2D4E87AE00EC0EB3 /* Daily Chart */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -131,8 +286,12 @@
 		14AD6EDF2B03EA6D005DE26E /* ProtocolN24 */ = {
 			isa = PBXGroup;
 			children = (
+				1436773A2C71230300B53C11 /* Info.plist */,
+				143677392C71229000B53C11 /* ProtocolN24Debug.entitlements */,
 				14AD6EE02B03EA6D005DE26E /* ProtocolN24App.swift */,
 				14AD6EE22B03EA6D005DE26E /* ContentView.swift */,
+				144C52852BF904DC006C14EC /* Controllers */,
+				144C528A2BF90B1B006C14EC /* Lessons */,
 				14AD6F112B03F832005DE26E /* Models */,
 				14AD6F0E2B03F7C7005DE26E /* Views */,
 				14AD6EE42B03EA6F005DE26E /* Assets.xcassets */,
@@ -169,10 +328,13 @@
 		14AD6F0E2B03F7C7005DE26E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				14EC26B92B0A626B00CAA9B4 /* Helpers */,
-				14EC26AF2B0A5B3400CAA9B4 /* WeighIns */,
-				14EC26B02B0A5B4000CAA9B4 /* Lessons */,
+				147B9D652C42C25E00227D80 /* ChatView */,
+				147B9D392C2F43EE00227D80 /* FoodView */,
+				14EC26AF2B0A5B3400CAA9B4 /* Progress */,
+				14EC26B02B0A5B4000CAA9B4 /* Learn */,
+				147B9D3E2C2F469900227D80 /* Workouts */,
 				14A80C492B055381009F46C9 /* Charts */,
+				14EC26B92B0A626B00CAA9B4 /* Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,39 +342,64 @@
 		14AD6F112B03F832005DE26E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				14AD6F122B03F84F005DE26E /* WeighWeek.swift */,
-				14AD6F0F2B03F82C005DE26E /* WeighIn.swift */,
+				14B5E5212BF695A4006861A7 /* Lesson.swift */,
+				143A759B2C0213CF00AB8029 /* UserConfig.swift */,
+				144C529D2BFA8834006C14EC /* Module.swift */,
+				143A530B2C568A7000EE3067 /* DayData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		14EC26AF2B0A5B3400CAA9B4 /* WeighIns */ = {
+		14DE521D2D4E87AE00EC0EB3 /* Daily Chart */ = {
 			isa = PBXGroup;
 			children = (
-				14AD6F0C2B03ED67005DE26E /* WeighInsView.swift */,
-				14EC26BC2B0A824D00CAA9B4 /* Week4ChartView.swift */,
-				14A80C4E2B05E895009F46C9 /* WeighInDataView.swift */,
-				14D085522B073AA70037079F /* SeriesChartView.swift */,
+				143A53112C56C04100EE3067 /* DailyChart.swift */,
+				143A53132C5813C200EE3067 /* DailyChartVM.swift */,
 			);
-			path = WeighIns;
+			path = "Daily Chart";
 			sourceTree = "<group>";
 		};
-		14EC26B02B0A5B4000CAA9B4 /* Lessons */ = {
+		14DE521E2D4E88AE00EC0EB3 /* L14DChart */ = {
+			isa = PBXGroup;
+			children = (
+				14DE52202D4E88F200EC0EB3 /* L14DChart.swift */,
+				14DE521F2D4E88C600EC0EB3 /* L14DChartVM.swift */,
+			);
+			path = L14DChart;
+			sourceTree = "<group>";
+		};
+		14EC26AF2B0A5B3400CAA9B4 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				14AD6F0C2B03ED67005DE26E /* TrackingView.swift */,
+				14C216A32C6910DA00F884EE /* AddWeighInView.swift */,
+				147B9D452C34911B00227D80 /* FatLossView.swift */,
+				147B9D492C34964300227D80 /* ArcProgressView.swift */,
+				147B9D432C333FC100227D80 /* BusStopView.swift */,
+				147B9D472C34949D00227D80 /* BusStopTextView.swift */,
+				147B9D4D2C35D65900227D80 /* FatStatsView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		14EC26B02B0A5B4000CAA9B4 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
 				14AD6F0A2B03ED52005DE26E /* LearnView.swift */,
-				14EC26B12B0A5BC400CAA9B4 /* Lesson1Card.swift */,
-				14EC26B52B0A5F4000CAA9B4 /* Lesson2Card.swift */,
-				14EC26B32B0A5D0600CAA9B4 /* Lesson1.swift */,
-				14EC26B72B0A5F4B00CAA9B4 /* Lesson2.swift */,
+				14A717D82C62AADA0029818D /* CountdownView.swift */,
+				14B5E5232BF69857006861A7 /* LessonView.swift */,
+				143A75882BFD201D00AB8029 /* LessonComponents */,
+				144C528F2BF92D96006C14EC /* LessonItem.swift */,
 			);
-			path = Lessons;
+			path = Learn;
 			sourceTree = "<group>";
 		};
 		14EC26B92B0A626B00CAA9B4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				14EC26BA2B0A627F00CAA9B4 /* CircleImage.swift */,
+				1403FB952BF54B01008E10DD /* ButtonStandard.swift */,
+				147B9D4B2C35BFA300227D80 /* DateHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -231,6 +418,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				143B6A682D5AA31A0079B0EA /* SDChart */,
 			);
 			name = ProtocolN24;
 			productName = ProtocolN24;
@@ -347,22 +537,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14A80C4F2B05E895009F46C9 /* WeighInDataView.swift in Sources */,
+				143A75A02C0484D300AB8029 /* UICompStepper.swift in Sources */,
+				14C216A42C6910DA00F884EE /* AddWeighInView.swift in Sources */,
+				147B9D482C34949D00227D80 /* BusStopTextView.swift in Sources */,
+				14DE52212D4E88F200EC0EB3 /* L14DChart.swift in Sources */,
+				143A759E2C03BF6A00AB8029 /* UICompQuestion.swift in Sources */,
+				144C529C2BF9390F006C14EC /* Lesson090.swift in Sources */,
+				147B9D4A2C34964300227D80 /* ArcProgressView.swift in Sources */,
+				14E6C0BE2C5F656600B2D9A2 /* Previewer.swift in Sources */,
+				147B9D4E2C35D65900227D80 /* FatStatsView.swift in Sources */,
+				147B9D3D2C2F448C00227D80 /* WorkoutView.swift in Sources */,
+				147B9D4C2C35BFA300227D80 /* DateHelpers.swift in Sources */,
+				147B9D442C333FC100227D80 /* BusStopView.swift in Sources */,
+				144C529E2BFA8834006C14EC /* Module.swift in Sources */,
 				14AD6EE32B03EA6D005DE26E /* ContentView.swift in Sources */,
-				14D085532B073AA70037079F /* SeriesChartView.swift in Sources */,
-				14EC26B22B0A5BC400CAA9B4 /* Lesson1Card.swift in Sources */,
-				14EC26B62B0A5F4000CAA9B4 /* Lesson2Card.swift in Sources */,
+				147B9D382C2DEBD400227D80 /* UICompEnd.swift in Sources */,
+				144C52922BF938DD006C14EC /* Lesson040.swift in Sources */,
+				144C52962BF938EE006C14EC /* Lesson060.swift in Sources */,
+				144C52892BF90B0D006C14EC /* Lesson010.swift in Sources */,
+				14DDBCA02C273FE2006F9392 /* Lesson000.swift in Sources */,
+				144C52982BF938F8006C14EC /* Lesson070.swift in Sources */,
+				147B9D3B2C2F440000227D80 /* FoodView.swift in Sources */,
+				143A530E2C568CD900EE3067 /* AddMacros.swift in Sources */,
+				143A758C2BFD229700AB8029 /* UICompImage.swift in Sources */,
+				14B5E5242BF69857006861A7 /* LessonView.swift in Sources */,
+				144C528C2BF90DE5006C14EC /* Lesson020.swift in Sources */,
+				143A53102C569B7400EE3067 /* ListMacros.swift in Sources */,
 				14AD6F0B2B03ED52005DE26E /* LearnView.swift in Sources */,
-				14AD6F132B03F84F005DE26E /* WeighWeek.swift in Sources */,
-				14AD6F102B03F82C005DE26E /* WeighIn.swift in Sources */,
-				14A80C4D2B055683009F46C9 /* WeightWeekViewChartView.swift in Sources */,
-				14AD6F0D2B03ED67005DE26E /* WeighInsView.swift in Sources */,
-				14EC26B42B0A5D0600CAA9B4 /* Lesson1.swift in Sources */,
-				14D085512B0737020037079F /* Data.swift in Sources */,
-				14EC26BD2B0A824D00CAA9B4 /* Week4ChartView.swift in Sources */,
-				14EC26B82B0A5F4B00CAA9B4 /* Lesson2.swift in Sources */,
+				14C216A62C6BEFD600F884EE /* UICompNameInput.swift in Sources */,
+				144C52942BF938E5006C14EC /* Lesson051.swift in Sources */,
+				14A717D92C62AADA0029818D /* CountdownView.swift in Sources */,
+				14DE52222D4E88F200EC0EB3 /* L14DChartVM.swift in Sources */,
+				143A75902BFD2E2F00AB8029 /* UICompSegPicker.swift in Sources */,
+				14B5E5222BF695A4006861A7 /* Lesson.swift in Sources */,
+				147B9D672C42C26F00227D80 /* ChatView.swift in Sources */,
+				144C52872BF904EF006C14EC /* AppController.swift in Sources */,
+				144C52902BF92D96006C14EC /* LessonItem.swift in Sources */,
+				14AD6F0D2B03ED67005DE26E /* TrackingView.swift in Sources */,
+				143A758A2BFD205A00AB8029 /* UICompText.swift in Sources */,
+				147B9D6D2C44586B00227D80 /* Lesson120.swift in Sources */,
+				143A53122C56C04100EE3067 /* DailyChart.swift in Sources */,
+				1403FB962BF54B01008E10DD /* ButtonStandard.swift in Sources */,
+				143A759C2C0213CF00AB8029 /* UserConfig.swift in Sources */,
+				147B9D502C3BEA8000227D80 /* Lesson045.swift in Sources */,
+				147B9D692C44585400227D80 /* Lesson100.swift in Sources */,
+				143A530C2C568A7000EE3067 /* DayData.swift in Sources */,
+				147B9D462C34911B00227D80 /* FatLossView.swift in Sources */,
+				14B1F64D2C5EAC540082D158 /* UICompDDChart.swift in Sources */,
+				147B9D6B2C44586000227D80 /* Lesson110.swift in Sources */,
 				14AD6EE12B03EA6D005DE26E /* ProtocolN24App.swift in Sources */,
+				144C528E2BF90DF0006C14EC /* Lesson030.swift in Sources */,
+				144C529A2BF93907006C14EC /* Lesson080.swift in Sources */,
 				14EC26BB2B0A627F00CAA9B4 /* CircleImage.swift in Sources */,
+				143A758E2BFD298500AB8029 /* UICompHeader.swift in Sources */,
+				143A53142C5813C200EE3067 /* DailyChartVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,17 +751,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ProtocolN24/ProtocolN24Debug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProtocolN24/Preview Content\"";
 				DEVELOPMENT_TEAM = SWP7JZ8MD8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProtocolN24/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,11 +792,12 @@
 				DEVELOPMENT_TEAM = SWP7JZ8MD8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProtocolN24/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
