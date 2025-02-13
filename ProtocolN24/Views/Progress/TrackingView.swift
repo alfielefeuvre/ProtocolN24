@@ -21,7 +21,7 @@ struct TrackingView: View {
                 
                 Section("SwiftData Chart") {
                     SDChart()
-                        .frame(height: 200)
+                        .frame(height: 300)
                         .padding()
                 }
                 

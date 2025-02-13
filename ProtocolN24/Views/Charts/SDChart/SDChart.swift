@@ -45,7 +45,7 @@ struct SDChart: View {
             }
             .chartYScale(domain: viewModel.chartYAxisLower...viewModel.chartYAxisUpper)
             
-            Text("Fat Loss: \(viewModel.fatLossKg, specifier: "%.1f")kg, \(viewModel.fatLossPercent, specifier: "%.1f")%").padding(.top)
+            Text("Fat Loss: \(viewModel.fatLossKg, specifier: "%.2f")kg, \(viewModel.fatLossPercent, specifier: "%.2f")%").padding(.top)
             Text("calsUnderFeedPerDay: \(-viewModel.calsUnderFeedPerDay, specifier: "%.1f")kcal").padding(.top)
             Text("maintCal: \((-viewModel.calsUnderFeedPerDay + 1745), specifier: "%.0f")kcal").padding(.top)
       }
